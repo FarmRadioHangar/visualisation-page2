@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/visualisation-page/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/visualisation-page/static/js/main.0adc81be.chunk.js",
+    "main.js.map": "/visualisation-page/static/js/main.0adc81be.chunk.js.map",
+    "runtime-main.js": "/visualisation-page/static/js/runtime-main.8ee89ea4.js",
+    "runtime-main.js.map": "/visualisation-page/static/js/runtime-main.8ee89ea4.js.map",
+    "static/css/2.3e1e3d2f.chunk.css": "/visualisation-page/static/css/2.3e1e3d2f.chunk.css",
+    "static/js/2.8f177136.chunk.js": "/visualisation-page/static/js/2.8f177136.chunk.js",
+    "static/js/2.8f177136.chunk.js.map": "/visualisation-page/static/js/2.8f177136.chunk.js.map",
+    "static/js/3.60527408.chunk.js": "/visualisation-page/static/js/3.60527408.chunk.js",
+    "static/js/3.60527408.chunk.js.map": "/visualisation-page/static/js/3.60527408.chunk.js.map",
+    "index.html": "/visualisation-page/index.html",
+    "static/css/2.3e1e3d2f.chunk.css.map": "/visualisation-page/static/css/2.3e1e3d2f.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/visualisation-page/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.8f177136.chunk.js.LICENSE.txt": "/visualisation-page/static/js/2.8f177136.chunk.js.LICENSE.txt",
+    "static/media/9958-particle-explosion.728c8d99.gif": "/visualisation-page/static/media/9958-particle-explosion.728c8d99.gif",
+    "static/media/UNfoodSystemsLogos-300x134-1.44279b1c.png": "/visualisation-page/static/media/UNfoodSystemsLogos-300x134-1.44279b1c.png",
+    "static/media/fss_icon_1.23f0b731.png": "/visualisation-page/static/media/fss_icon_1.23f0b731.png",
+    "static/media/fss_icon_11.fc905c9c.png": "/visualisation-page/static/media/fss_icon_11.fc905c9c.png",
+    "static/media/fss_icon_2.3351bfaf.png": "/visualisation-page/static/media/fss_icon_2.3351bfaf.png",
+    "static/media/fss_icon_3.4be2afcd.png": "/visualisation-page/static/media/fss_icon_3.4be2afcd.png",
+    "static/media/fss_icon_4.dbc3e093.png": "/visualisation-page/static/media/fss_icon_4.dbc3e093.png",
+    "static/media/fss_icon_5.27bf35f9.png": "/visualisation-page/static/media/fss_icon_5.27bf35f9.png",
+    "static/media/fss_icon_6.7cfa93a0.png": "/visualisation-page/static/media/fss_icon_6.7cfa93a0.png",
+    "static/media/fss_icon_7.78fcf922.png": "/visualisation-page/static/media/fss_icon_7.78fcf922.png",
+    "static/media/fss_icon_8.26f5405a.png": "/visualisation-page/static/media/fss_icon_8.26f5405a.png",
+    "static/media/ifad-logo.c415706b.svg": "/visualisation-page/static/media/ifad-logo.c415706b.svg",
+    "static/media/on-air-dialogues-white.7174d080.svg": "/visualisation-page/static/media/on-air-dialogues-white.7174d080.svg",
+    "static/media/on-air-dialogues.240b5d54.svg": "/visualisation-page/static/media/on-air-dialogues.240b5d54.svg",
+    "static/media/test.9efa1f91.mp3": "/visualisation-page/static/media/test.9efa1f91.mp3",
+    "static/media/wv-logo.ce79785d.jpg": "/visualisation-page/static/media/wv-logo.ce79785d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8ee89ea4.js",
+    "static/css/2.3e1e3d2f.chunk.css",
+    "static/js/2.8f177136.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.0adc81be.chunk.js"
+  ]
+}
