@@ -9,10 +9,12 @@ function Landing() {
   return (
     <>
       <Header />
+      {/*
       <Hero />
       <Summary />
       <Results />
       <Footer />
+      */}
     </>
   );
 }

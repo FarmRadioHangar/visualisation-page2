@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   Img,
   Link,
@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import logo from "../img/on-air-dialogues.svg";
 import logoAlt from "../img/on-air-dialogues-white.svg";
+import { AppContext } from "../contexts/App";
 
 function MenuItem({ children, isLast, to = "/", ...props }) {
   return (
@@ -24,6 +25,8 @@ function MenuItem({ children, isLast, to = "/", ...props }) {
 }
 
 function MenuLinks({ isOpen }) {
+  const { language, setLanguage } = useContext(AppContext);
+
   return (
     <Box
       display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -49,20 +52,22 @@ function MenuLinks({ isOpen }) {
         >
           About the project
         </MenuItem>
-        <MenuItem>
-          <Select
-            color={"#4c9f38"}
-            borderColor={"#4c9f3880"}
-            bg={{ sm: "white" }}
-            placeholder="Language"
-            size="md"
-          >
-            <option value="en">English</option>
-            <option value="fr">French</option>
-            <option value="ki">Swahili</option>
-          </Select>
-        </MenuItem>
-        <MenuItem to="/donate" isLast>
+        <Select
+          color={{ base: "#dfa400", md: "#4c9f38" }}
+          borderColor={{ base: "#dfa400", md: "#4c9f3880" }}
+          bg={{ sm: "white" }}
+          onChange={(e) => {
+            setLanguage(e.target.value);
+          }}
+          value={language}
+          size="md"
+          w={{ base: "100%", sm: "140px" }}
+        >
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="ki">Swahili</option>
+        </Select>
+        <Link w={{ base: "100%", sm: "auto" }} href="/donate" isLast>
           <Button
             size="md"
             rounded="md"
@@ -71,10 +76,11 @@ function MenuLinks({ isOpen }) {
             _hover={{
               bg: "#4c9f38",
             }}
+            w={{ base: "100%", sm: "auto" }}
           >
             Donate!
           </Button>
-        </MenuItem>
+        </Link>
       </Stack>
     </Box>
   );

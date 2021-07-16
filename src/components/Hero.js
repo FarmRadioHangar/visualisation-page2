@@ -53,7 +53,7 @@ function Hero() {
 
   const onLoaded = (container) => {
     container.addClickHandler(() => {
-      console.log('click');
+      console.log("click");
     });
   };
 
@@ -110,117 +110,117 @@ function Hero() {
             },
             pauseOnBlur: true,
             //              fpsLimit: 60,
-                          interactivity: {
-                            detectsOn: "canvas",
-                            events: {
-                              //onClick: {
-                              //  enable: true,
-                              //  mode: "push",
-                              //},
-                              onHover: {
-                                enable: true,
-                                mode: "grab",
-                              },
-                              resize: true,
-                            },
-                            //modes: {
-                            //  bubble: {
-                            //    distance: 400,
-                            //    duration: 2,
-                            //    opacity: 0.8,
-                            //    size: 40,
-                            //  },
-                            //  push: {
-                            //    quantity: 4,
-                            //  },
-                            //  repulse: {
-                            //    distance: 200,
-                            //    duration: 0.4,
-                            //  },
-                            //},
-                          },
-                          particles: {
-                            color: {
-                              value: "#ffffff",
-                            },
-                            //links: {
-                            //  color: "#ffffff",
-                            //  distance: 300,
-                            //  enable: true,
-                            //  opacity: 0.1,
-                            //  width: 1,
-                            //},
-                            collisions: {
-                              enable: false,
-                            },
-                            move: {
-                              direction: "none",
-                              enable: true,
-                              outMode: "bounce",
-                              random: true,
-                              speed: 1.5,
-                              straight: false,
-                              attract: {
-                                enable: true,
-                              },
-                            },
-                            number: {
-                              value: 40,
-                            },
-                            opacity: {
-                              value: 0.5,
-                            },
-                            shape: {
-                              type: ["circle", "image"],
-                              image: [
-                                {
-                                  src: fssIcon1,
-                                }, 
-                                {
-                                  src: fssIcon2,
-                                },
-                                {
-                                  src: fssIcon3,
-                                }, 
-                                {
-                                  src: fssIcon4,
-                                }, 
-                                {
-                                  src: fssIcon5,
-                                }, 
-                                {
-                                  src: fssIcon6,
-                                }, 
-                                {
-                                  src: fssIcon7,
-                                }, 
-                                {
-                                  src: fssIcon8,
-                                }, 
-                                {
-                                  src: fssIcon11,
-                                }, 
-                              ],
-                            },
-                            //opacity: {
-                            //  animation: {
-                            //    enable: true,
-                            //  },
-                            //},
-                            rotate: {
-                              random: true,
-                              animation: {
-                                enable: true,
-                              },
-                            },
-                            size: {
-                              random: true,
-                              value: 75,
-                              animation: {
-                                enable: true,
-                              },
-                            },
-                          },
+            interactivity: {
+              detectsOn: "canvas",
+              events: {
+                //onClick: {
+                //  enable: true,
+                //  mode: "push",
+                //},
+                //onHover: {
+                //  enable: true,
+                //  mode: "grab",
+                //},
+                resize: true,
+              },
+              //modes: {
+              //  bubble: {
+              //    distance: 400,
+              //    duration: 2,
+              //    opacity: 0.8,
+              //    size: 40,
+              //  },
+              //  push: {
+              //    quantity: 4,
+              //  },
+              //  repulse: {
+              //    distance: 200,
+              //    duration: 0.4,
+              //  },
+              //},
+            },
+            particles: {
+              color: {
+                value: "#ffffff",
+              },
+              //links: {
+              //  color: "#ffffff",
+              //  distance: 300,
+              //  enable: true,
+              //  opacity: 0.1,
+              //  width: 1,
+              //},
+              collisions: {
+                enable: false,
+              },
+              move: {
+                direction: "none",
+                enable: true,
+                outMode: "bounce",
+                random: true,
+                speed: 1.5,
+                straight: false,
+                attract: {
+                  enable: true,
+                },
+              },
+              number: {
+                value: 40,
+              },
+              opacity: {
+                value: 0.5,
+              },
+              shape: {
+                type: ["circle", "image"],
+                image: [
+                  {
+                    src: fssIcon1,
+                  },
+                  {
+                    src: fssIcon2,
+                  },
+                  {
+                    src: fssIcon3,
+                  },
+                  {
+                    src: fssIcon4,
+                  },
+                  {
+                    src: fssIcon5,
+                  },
+                  {
+                    src: fssIcon6,
+                  },
+                  {
+                    src: fssIcon7,
+                  },
+                  {
+                    src: fssIcon8,
+                  },
+                  {
+                    src: fssIcon11,
+                  },
+                ],
+              },
+              //opacity: {
+              //  animation: {
+              //    enable: true,
+              //  },
+              //},
+              rotate: {
+                random: true,
+                animation: {
+                  enable: true,
+                },
+              },
+              size: {
+                random: true,
+                value: 75,
+                animation: {
+                  enable: true,
+                },
+              },
+            },
             //              detectRetina: true,
           }}
         />

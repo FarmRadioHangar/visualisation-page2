@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import MapChart from "./MapChart";
 import { CheckIcon } from "@chakra-ui/icons";
 import { Pie, Bar } from "react-chartjs-2";
 import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
   SimpleGrid,
   Box,
   HStack,
+  Heading,
   Select,
   Icon,
   Container,
   Stack,
   VStack,
-  Heading,
   Text,
 } from "@chakra-ui/react";
+import { AppContext } from "../contexts/App";
 
 function Chart1() {
   return (
@@ -212,10 +216,23 @@ function Episode({ title, text, children }) {
 }
 
 function Results() {
-  const [country, setCountry] = useState("");
+  const { country, setCountry } = useContext(AppContext);
 
   const handleChangeCountry = (e) => {
     setCountry(e.target.value);
+  };
+
+  const getCountryName = (code) => {
+    switch (code) {
+      case "gh":
+        return "Ghana";
+      case "tz":
+        return "Tanzania";
+      case "ug":
+        return "Uganda";
+      case "bf":
+        return "Burkina Faso";
+    }
   };
 
   return (
@@ -267,7 +284,7 @@ function Results() {
           </Stack>
         </Box>
       </Box>
-      <Container maxW={"6xl"} mt={10} py={20}>
+      <Container maxW={"6xl"} my={10} py={10}>
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           <Episode
             title="Episode 1"
