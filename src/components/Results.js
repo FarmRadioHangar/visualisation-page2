@@ -1,6 +1,9 @@
 import React, { useContext, useState } from "react";
 import MapChart from "./MapChart";
 import { CheckIcon } from "@chakra-ui/icons";
+import { MdChatBubbleOutline } from "react-icons/md";
+import { BiRadio } from "react-icons/bi";
+import { AiOutlineLineChart } from "react-icons/ai";
 import { Pie, Bar } from "react-chartjs-2";
 import {
   Breadcrumb,
@@ -16,6 +19,7 @@ import {
   Stack,
   VStack,
   Text,
+  Tag,
 } from "@chakra-ui/react";
 import { AppContext } from "../contexts/App";
 
@@ -232,6 +236,23 @@ function Results() {
         return "Uganda";
       case "bf":
         return "Burkina Faso";
+      default:
+        return "";
+    }
+  };
+
+  const getFlag = (code) => {
+    switch (code) {
+      case "gh":
+        return "🇬🇭";
+      case "tz":
+        return "🇹🇿";
+      case "ug":
+        return "🇺🇬";
+      case "bf":
+        return "🇧🇫";
+      default:
+        return "";
     }
   };
 
@@ -267,10 +288,10 @@ function Results() {
                   border="none"
                   size="lg"
                 >
-                  <option value="bf">Burkina Faso</option>
-                  <option value="gh">Ghana</option>
-                  <option value="tz">Tanzania</option>
-                  <option value="ug">Uganda</option>
+                  <option value="bf">{getFlag("bf")} Burkina Faso</option>
+                  <option value="gh">{getFlag("gh")} Ghana</option>
+                  <option value="tz">{getFlag("tz")} Tanzania</option>
+                  <option value="ug">{getFlag("ug")} Uganda</option>
                 </Select>
               </Box>
             </Stack>
@@ -285,6 +306,15 @@ function Results() {
         </Box>
       </Box>
       <Container maxW={"6xl"} my={10} py={10}>
+        {country && (
+          <>
+            <Heading mb={10} size="lg" align="center">
+              <Icon as={BiRadio} mr={2} mb="2" /> Results from{" "}
+              {getCountryName(country)}{" "}
+              <Icon ml={2} mb="2" as={AiOutlineLineChart} />
+            </Heading>
+          </>
+        )}
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           <Episode
             title="Episode 1"

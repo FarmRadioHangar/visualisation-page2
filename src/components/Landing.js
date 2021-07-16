@@ -12,9 +12,9 @@ function Landing() {
       {/*
       <Hero />
       <Summary />
+      */}
       <Results />
       <Footer />
-      */}
     </>
   );
 }
