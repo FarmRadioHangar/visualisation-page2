@@ -65,8 +65,8 @@ function Hero() {
         }}
         bg={"#15760d"}
         position={"relative"}
-        height={"100%"}
       >
+        {/*
         <Fab
           icon={<AiOutlinePlus size={32} />}
           style={{ position: "absolute", bottom: 10, left: 10 }}
@@ -77,6 +77,7 @@ function Hero() {
             height: "70px",
           }}
         ></Fab>
+        */}
         {bubbleVisible && (
           <div
             style={{

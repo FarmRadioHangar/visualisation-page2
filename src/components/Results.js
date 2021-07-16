@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import MapChart from "./MapChart";
-import { CheckIcon } from "@chakra-ui/icons";
+import { ChatIcon } from "@chakra-ui/icons";
 import { MdChatBubbleOutline } from "react-icons/md";
 import { BiRadio } from "react-icons/bi";
 import { AiOutlineLineChart } from "react-icons/ai";
@@ -199,8 +199,8 @@ function Chart3() {
 function Episode({ title, text, children }) {
   return (
     <HStack align={"top"}>
-      <Box color={"green.400"} px={2}>
-        <Icon as={CheckIcon} />
+      <Box px={2}>
+        <Icon as={ChatIcon} />
       </Box>
       <VStack align={"start"} width="100%">
         <Heading fontSize="xl" fontWeight={600} mb={6}>
@@ -307,17 +307,16 @@ function Results() {
       </Box>
       <Container maxW={"6xl"} my={10} py={10}>
         {country && (
-          <Box align="center">
+          <Box>
             <Heading
               color="#4c9f38"
               mb={10}
               size="xl"
               display="flex"
-              justifyContent="center"
               alignItems="center"
             >
               <Icon mr={3} as={AiOutlineLineChart} />
-              {getCountryName(country)}{" "}
+              Results from {getCountryName(country)}{" "}
             </Heading>
           </Box>
         )}
@@ -346,21 +345,6 @@ function Results() {
           >
             <Chart3 />
           </Episode>
-          {/*
-          <Episode
-            title="Summary"
-            text={
-              <>
-                Zombie ipsum reversus ab viral inferno, nam rick grimes malum
-                cerebro. De carne lumbering animata corpora quaeritis.
-              </>
-            }
-          >
-            <Box align="center" py={6}>
-              <Button size="lg">Download the report</Button>
-            </Box>
-          </Episode>
-          */}
         </SimpleGrid>
       </Container>
     </Box>
