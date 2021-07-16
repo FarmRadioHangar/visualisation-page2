@@ -8,11 +8,15 @@ import Summary from "./Summary";
 function Landing() {
   return (
     <>
+      {/*
       <Header />
+      */}
       <Hero />
+    {/*
       <Summary />
       <Results />
       <Footer />
+      */}
     </>
   );
 }

@@ -1,14 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import MapChart from "./MapChart";
 import { ChatIcon } from "@chakra-ui/icons";
-import { MdChatBubbleOutline } from "react-icons/md";
-import { BiRadio } from "react-icons/bi";
 import { AiOutlineLineChart } from "react-icons/ai";
 import { Pie, Bar } from "react-chartjs-2";
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
   SimpleGrid,
   Box,
   HStack,
@@ -19,7 +14,6 @@ import {
   Stack,
   VStack,
   Text,
-  Tag,
 } from "@chakra-ui/react";
 import { AppContext } from "../contexts/App";
 
