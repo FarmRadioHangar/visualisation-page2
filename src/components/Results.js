@@ -307,13 +307,19 @@ function Results() {
       </Box>
       <Container maxW={"6xl"} my={10} py={10}>
         {country && (
-          <>
-            <Heading mb={10} size="lg" align="center">
-              <Icon as={BiRadio} mr={2} mb="2" /> Results from{" "}
+          <Box align="center">
+            <Heading
+              color="#4c9f38"
+              mb={10}
+              size="xl"
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Icon mr={3} as={AiOutlineLineChart} />
               {getCountryName(country)}{" "}
-              <Icon ml={2} mb="2" as={AiOutlineLineChart} />
             </Heading>
-          </>
+          </Box>
         )}
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
           <Episode
