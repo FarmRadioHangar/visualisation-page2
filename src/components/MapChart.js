@@ -52,25 +52,40 @@ function MapChart({ selectedCountry }) {
           {!selectedCountry && (
             <>
               <Marker coordinates={[32.006, 2.7128]}>
-                <circle r={1.5} fill="#5f4511" />
+                <circle r={1.8} fill="#5f4511" />
               </Marker>
               <Marker coordinates={[33.006, 1.7128]}>
-                <circle r={1.5} fill="#5f4511" />
+                <circle r={1.8} fill="#5f4511" />
               </Marker>
               <Marker coordinates={[31.006, 0.3128]}>
-                <circle r={1.5} fill="#5f4511" />
+                <circle r={1.8} fill="#5f4511" />
               </Marker>
               <Marker coordinates={[35.006, -4.7128]}>
-                <circle r={1.5} fill="#5f4511" />
+                <circle r={1.8} fill="#5f4511" />
               </Marker>
               <Marker coordinates={[33.006, -3.7128]}>
-                <circle r={1.5} fill="#5f4511" />
+                <circle r={1.8} fill="#5f4511" />
               </Marker>
               <Marker coordinates={[30.006, -5.7128]}>
-                <circle r={1.5} fill="#5f4511" />
+                <circle r={1.8} fill="#5f4511" />
               </Marker>
               <Marker coordinates={[37.006, -8.7128]}>
-                <circle r={1.5} fill="#5f4511" />
+                <circle r={1.8} fill="#5f4511" />
+              </Marker>
+              <Marker coordinates={[-1.006, 8.7128]}>
+                <circle r={1.8} fill="#5f4511" />
+              </Marker>
+              <Marker coordinates={[-2.006, 9.7128]}>
+                <circle r={1.8} fill="#5f4511" />
+              </Marker>
+              <Marker coordinates={[-1.906, 5.7128]}>
+                <circle r={1.8} fill="#5f4511" />
+              </Marker>
+              <Marker coordinates={[-2.906, 12.7128]}>
+                <circle r={1.8} fill="#5f4511" />
+              </Marker>
+              <Marker coordinates={[0.506, 11.7128]}>
+                <circle r={1.8} fill="#5f4511" />
               </Marker>
             </>
           )}
