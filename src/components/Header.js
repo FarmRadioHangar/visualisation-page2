@@ -17,7 +17,7 @@ import { AppContext } from "../contexts/App";
 function MenuItem({ children, isLast, to = "/", ...props }) {
   return (
     <Link href={to}>
-      <Text display="block" {...props}>
+      <Text display="block" mx={1} {...props}>
         {children}
       </Text>
     </Link>
@@ -33,7 +33,7 @@ function MenuLinks({ isOpen }) {
       flexBasis={{ base: "100%", md: "auto" }}
     >
       <Stack
-        spacing={8}
+        spacing={6}
         align="center"
         justify={["center", "space-between", "flex-end", "flex-end"]}
         direction={["column", "row", "row", "row"]}
@@ -67,7 +67,7 @@ function MenuLinks({ isOpen }) {
           <option value="fr">French</option>
           <option value="ki">Swahili</option>
         </Select>
-        <Link w={{ base: "100%", sm: "auto" }} href="/donate" isLast>
+        <Link w={{ base: "100%", sm: "auto" }} href="/donate">
           <Button
             size="md"
             rounded="md"
