@@ -120,11 +120,10 @@ function Summary() {
                   </Box>
                 </SummaryItem>
                 <SummaryItem
-                  heading={"1,005,819"}
+                  heading={"???"}
                   text={
                     <>
-                      <StatsText>Citizens engaged</StatsText> in 3 days in
-                      Tanzania
+                      <StatsText>Female and male farmers engaged</StatsText> in Burkina Faso, Ghana, Tanzania, and Uganda
                     </>
                   }
                 >

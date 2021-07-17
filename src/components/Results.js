@@ -318,7 +318,6 @@ function Chart1({ data, labels, colors }) {
         datasets: [
           {
             borderWidth: 0.5,
-            label: "# of Votes",
             data,
             borderColor: colors,
             backgroundColor: colors,
