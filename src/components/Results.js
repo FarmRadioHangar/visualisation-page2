@@ -7,6 +7,8 @@ import {
   SimpleGrid,
   Box,
   HStack,
+  Img,
+  Button,
   Heading,
   Select,
   Icon,
@@ -16,6 +18,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { AppContext } from "../contexts/App";
+import { RiBook2Line } from "react-icons/ri";
+import illustration from "../img/illustration.png";
 
 function Chart1() {
   return (
@@ -194,17 +198,12 @@ function Episode({ title, text, children }) {
   return (
     <HStack align={"top"}>
       <Box px={2}>
-        <Icon as={ChatIcon} />
+        <Icon as={ChatIcon} color="#4c9f38" />
       </Box>
       <VStack align={"start"} width="100%">
         <Heading fontSize="xl" fontWeight={600} mb={6}>
           {title}
         </Heading>
-        {/*
-        <Text color={"gray.600"} pb={4}>
-          {text}
-        </Text>
-        */}
         <Box height="190px" width="100%">
           {children}
         </Box>
@@ -299,47 +298,96 @@ function Results() {
           </Stack>
         </Box>
       </Box>
-      <Container maxW={"6xl"} my={10} py={10}>
-        {country && (
-          <Box>
-            <Heading
-              color="#4c9f38"
+      <Container maxW={"6xl"} my={10} pt={8} pb={10}>
+        {country ? (
+          <>
+            <Box>
+              <Heading
+                color="#4c9f38"
+                mb={10}
+                size="xl"
+                display="flex"
+                alignItems="center"
+              >
+                <Icon mr={3} my={5} as={AiOutlineLineChart} />
+                Results from {getCountryName(country)}{" "}
+              </Heading>
+            </Box>
+            <SimpleGrid
+              columns={{ base: 1, md: 2, lg: 3 }}
+              spacing={10}
               mb={10}
-              size="xl"
-              display="flex"
-              alignItems="center"
             >
-              <Icon mr={3} as={AiOutlineLineChart} />
-              Results from {getCountryName(country)}{" "}
-            </Heading>
-          </Box>
+              <Episode
+                title="Episode 1"
+                text={
+                  <>
+                    This episode's question was about mango. De carne lumbering.
+                  </>
+                }
+              >
+                <Chart1 />
+              </Episode>
+              <Episode
+                title="Episode 2"
+                text={
+                  <>
+                    This episode's question was about mango. De carne lumbering.
+                  </>
+                }
+              >
+                <Chart2 />
+              </Episode>
+              <Episode
+                title="Episode 3"
+                text={
+                  <>
+                    This episode's question was about mango. De carne lumbering.
+                  </>
+                }
+              >
+                <Chart3 />
+              </Episode>
+            </SimpleGrid>
+          </>
+        ) : (
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+            <Box
+              align="center"
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Img src={illustration} w="350px" />
+              <Text color="gray" fontSize="12px">
+                <a href="https://storyset.com/data">
+                  Data illustrations by Storyset
+                </a>
+              </Text>
+            </Box>
+            <Box justifyContent="center" display="flex" flexDirection="column">
+              <Box>
+                <Heading
+                  color="#4c9f38"
+                  size="xl"
+                  display="flex"
+                  alignItems="center"
+                >
+                  <Icon mr={3} as={RiBook2Line} />
+                  Report
+                </Heading>
+              </Box>
+              <Text color="#4c9f38" py={4} fontSize="1.3em">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed the
+                report
+              </Text>
+              <Button py={8} my={5} size="lg" color="white" bg="#01add8">
+                Download the report
+              </Button>
+            </Box>
+          </SimpleGrid>
         )}
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
-          <Episode
-            title="Episode 1"
-            text={
-              <>This episode's question was about mango. De carne lumbering.</>
-            }
-          >
-            <Chart1 />
-          </Episode>
-          <Episode
-            title="Episode 2"
-            text={
-              <>This episode's question was about mango. De carne lumbering.</>
-            }
-          >
-            <Chart2 />
-          </Episode>
-          <Episode
-            title="Episode 3"
-            text={
-              <>This episode's question was about mango. De carne lumbering.</>
-            }
-          >
-            <Chart3 />
-          </Episode>
-        </SimpleGrid>
       </Container>
     </Box>
   );
