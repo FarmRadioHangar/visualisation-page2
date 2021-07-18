@@ -464,24 +464,6 @@ function Chart4({ data, labels, colors }) {
   );
 }
 
-//function Episode({ title, text, children }) {
-//  return (
-//    <HStack align={"top"}>
-//      <Box px={2}>
-//        <Icon as={ChatIcon} color="#4c9f38" />
-//      </Box>
-//      <VStack align={"start"} width="100%">
-//        <Heading fontSize="xl" fontWeight={600} mb={6}>
-//          {title}
-//        </Heading>
-//        <Box height="190px" width="100%">
-//          {children}
-//        </Box>
-//      </VStack>
-//    </HStack>
-//  );
-//}
-
 function Results() {
   const { country, setCountry } = useContext(AppContext);
 
@@ -519,10 +501,9 @@ function Results() {
     }
   };
 
-  //console.log(getResults(country, "1.1", "adults"));
-
   return (
     <Box>
+      <a id="results" />
       <Box bg="#dfa400" px={0} py={0} position="relative">
         <Box
           position="absolute"
@@ -707,28 +688,6 @@ function Results() {
                   />
                 </VStack>
               </HStack>
-              {/*
-              <Episode
-                title="Episode 2"
-                text={
-                  <>
-                    This episode's question was about mango. De carne lumbering.
-                  </>
-                }
-              >
-                <Chart2 />
-              </Episode>
-              <Episode
-                title="Episode 3"
-                text={
-                  <>
-                    This episode's question was about mango. De carne lumbering.
-                  </>
-                }
-              >
-                <Chart3 />
-              </Episode>
-              */}
             </SimpleGrid>
           </>
         ) : (

@@ -42,15 +42,15 @@ function MenuLinks({ isOpen }) {
         <Spacer display={{ base: "none", sm: "block" }} />
         <MenuItem
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
-          to="/insights"
+          to="#insights"
         >
           Insights
         </MenuItem>
         <MenuItem
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
-          to="/about"
+          to="#results"
         >
-          About the project
+          Get the results
         </MenuItem>
         <Select
           color={{ base: "#dfa400", md: "#4c9f38" }}
@@ -156,7 +156,7 @@ function Header(props) {
           <Img src={logoAlt} w={90} />
         </Box>
         <Box display={["none", "none", "flex", "flex"]}>
-          <Img src={logo} w={120} />
+          <a href="/"><Img src={logo} w={120} /></a>
         </Box>
       </Box>
       <MenuToggle toggle={toggleMenu} isOpen={menuOpen} />

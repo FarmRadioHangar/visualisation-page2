@@ -43,6 +43,7 @@ function Summary() {
             justify={{ lg: "center" }}
             py={{ base: 4, md: 10, xl: 20 }}
           >
+            <a id="insights" />
             <Box mb={{ base: 8, md: 20 }}>
               <Text
                 fontFamily={"heading"}
