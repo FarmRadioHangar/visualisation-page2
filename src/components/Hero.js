@@ -71,7 +71,7 @@ function Hero() {
           borderRadius="50%"
           background="rgb(239 65 42)"
           onClick={playing ? pause : play}
-          boxShadow="0 4px 5px #888888"
+          boxShadow="0 4px 10px #00000050"
           _hover={{
             background: "rgb(239 65 42)",
           }}

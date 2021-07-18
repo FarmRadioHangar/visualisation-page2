@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import MapChart from "./MapChart";
 import { ChatIcon } from "@chakra-ui/icons";
 import { AiOutlineLineChart } from "react-icons/ai";
@@ -13,8 +13,6 @@ import {
   Tabs,
   TabList,
   Tab,
-  TabPanels,
-  TabPanel,
   HStack,
   Img,
   Button,
@@ -236,6 +234,7 @@ function getResults(country, question) {
 }
 
 function QuestionCard({ episode, question, chart: Chart, options = [] }) {
+  const [tabIndex, setTabIndex] = useState(0);
   const { country } = useContext(AppContext);
 
   const results = getResults(country, `${episode}.${question.number}`);
@@ -281,23 +280,21 @@ function QuestionCard({ episode, question, chart: Chart, options = [] }) {
           ))}
         </Tbody>
       </Table>
-      <Tabs variant="soft-rounded" size="sm">
+      <Tabs variant="soft-rounded" size="sm" onChange={setTabIndex}>
         <TabList>
           <Tab>Adults</Tab>
           <Tab>Youth</Tab>
           <Tab>Female</Tab>
           <Tab>Male</Tab>
         </TabList>
-        <TabPanels>
-          {["adults", "youth", "female", "male"].map((group, i) => (
-            <TabPanel key={i}>
-              <Box height="190px" width="100%">
-                <Chart data={results[group]} labels={options} colors={colors} />
-              </Box>
-            </TabPanel>
-          ))}
-        </TabPanels>
       </Tabs>
+      <Box mt={5} height="190px" width="100%">
+        <Chart
+          data={results[["adults", "youth", "female", "male"][tabIndex]]}
+          labels={options}
+          colors={colors}
+        />
+      </Box>
     </Card>
   );
 }
@@ -325,6 +322,7 @@ function Chart1({ data, labels, colors }) {
         ],
       }}
       options={{
+        animations: true,
         maintainAspectRatio: false,
         responsive: true,
         plugins: {
@@ -351,6 +349,7 @@ function Chart2({ data, labels, colors }) {
         ],
       }}
       options={{
+        animations: true,
         maintainAspectRatio: false,
         responsive: true,
         indexAxis: "x",
@@ -399,6 +398,7 @@ function Chart3({ data, labels, colors }) {
         ],
       }}
       options={{
+        animations: true,
         maintainAspectRatio: false,
         responsive: true,
         indexAxis: "y",
@@ -447,6 +447,7 @@ function Chart4({ data, labels, colors }) {
         ],
       }}
       options={{
+        animations: true,
         maintainAspectRatio: false,
         responsive: true,
         elements: {
@@ -503,7 +504,9 @@ function Results() {
 
   return (
     <Box>
-      <a id="results" />
+      <a href="/" id="results" style={{ display: "none" }}>
+        &nbsp;
+      </a>
       <Box bg="#dfa400" px={0} py={0} position="relative">
         <Box
           position="absolute"

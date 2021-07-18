@@ -43,7 +43,9 @@ function Summary() {
             justify={{ lg: "center" }}
             py={{ base: 4, md: 10, xl: 20 }}
           >
-            <a id="insights" />
+            <a href="/" id="insights" style={{ display: "none" }}>
+              &nbsp;
+            </a>
             <Box mb={{ base: 8, md: 20 }}>
               <Text
                 fontFamily={"heading"}
@@ -124,7 +126,8 @@ function Summary() {
                   heading={"???"}
                   text={
                     <>
-                      <StatsText>Female and male farmers engaged</StatsText> in Burkina Faso, Ghana, Tanzania, and Uganda
+                      <StatsText>Female and male farmers engaged</StatsText> in
+                      Burkina Faso, Ghana, Tanzania, and Uganda
                     </>
                   }
                 >

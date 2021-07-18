@@ -50,7 +50,7 @@ function MenuLinks({ isOpen }) {
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#results"
         >
-          Get the results
+          Explore the results
         </MenuItem>
         <Select
           color={{ base: "#dfa400", md: "#4c9f38" }}
@@ -156,7 +156,9 @@ function Header(props) {
           <Img src={logoAlt} w={90} />
         </Box>
         <Box display={["none", "none", "flex", "flex"]}>
-          <a href="/"><Img src={logo} w={120} /></a>
+          <a href="/">
+            <Img src={logo} w={120} />
+          </a>
         </Box>
       </Box>
       <MenuToggle toggle={toggleMenu} isOpen={menuOpen} />
