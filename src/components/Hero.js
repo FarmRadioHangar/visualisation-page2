@@ -59,7 +59,7 @@ function Hero() {
 
       //setAudioSrc(response['Link']);
 
-      setAudioSrc('https://drive.google.com/file/d/1laJThnB4gZL55rTocsuhdLhWQtZyKncW/preview');
+      setAudioSrc('https://drive.google.com/uc?export=download&id=1laJThnB4gZL55rTocsuhdLhWQtZyKncW');
 
       //setResponseInfo({
       //  transcription_en: response['Transcription (ENG)'],
