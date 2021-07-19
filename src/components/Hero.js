@@ -59,7 +59,7 @@ function Hero() {
 
       //setAudioSrc(response['Link']);
 
-      setAudioSrc('https://drive.google.com/file/d/1laJThnB4gZL55rTocsuhdLhWQtZyKncW/view');
+      setAudioSrc('https://drive.google.com/file/d/1laJThnB4gZL55rTocsuhdLhWQtZyKncW/preview');
 
       //setResponseInfo({
       //  transcription_en: response['Transcription (ENG)'],
@@ -117,6 +117,7 @@ function Hero() {
           src={audioSrc}
           autoPlay={true}
           onEnded={handlePlaybackEnded}
+          crossOrigin='anonymous'
         />
         {audioSrc && playing && (
           <>
