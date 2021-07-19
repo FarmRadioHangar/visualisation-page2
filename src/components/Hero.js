@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Particles from "react-tsparticles";
 import ReactAudioPlayer from "react-audio-player";
 import Spinner from "react-spinkit";
-import audioFile from "../audio/test.mp3";
+//import audioFile from "../audio/test.mp3";
 import fssIcon1 from "../img/icons/fss_icon_1.png";
 import fssIcon11 from "../img/icons/fss_icon_11.png";
 import fssIcon2 from "../img/icons/fss_icon_2.png";
@@ -12,6 +12,10 @@ import fssIcon5 from "../img/icons/fss_icon_5.png";
 import fssIcon6 from "../img/icons/fss_icon_6.png";
 import fssIcon7 from "../img/icons/fss_icon_7.png";
 import fssIcon8 from "../img/icons/fss_icon_8.png";
+//import resultsBf from "../data/bf.json";
+//import resultsGh from "../data/gh.json";
+//import resultsTz from "../data/tz.json";
+//import resultsUg from "../data/ug.json";
 import { AiOutlineFolderOpen, AiOutlineClose } from "react-icons/ai";
 import { BiPlay, BiPause } from "react-icons/bi";
 import { HiOutlineCursorClick } from "react-icons/hi";
@@ -20,6 +24,7 @@ import { IconButton, Box, Heading, Text } from "@chakra-ui/react";
 function Hero() {
   const [overlayExpanded, setOverlayExpanded] = useState(true);
   const [audioSrc, setAudioSrc] = useState();
+  const [responseInfo, setResponseInfo] = useState();
   const [playing, setPlaying] = useState(false);
 
   const playerRef = useRef();
@@ -30,7 +35,36 @@ function Hero() {
 
   const onLoaded = (container) => {
     container.addClickHandler((e, ps) => {
-      setAudioSrc(audioFile);
+
+      //const getResultsSet = () => {
+      //    switch (Math.floor(4*Math.random())) {
+      //      case 0:
+      //        return resultsBf;
+      //      case 1:
+      //        return resultsGh;
+      //      case 2:
+      //        return resultsTz;
+      //      case 3:
+      //      default:
+      //        return resultsUg;
+      //    }
+      //};
+
+      //const getResponse = () => {
+      //  const results = getResultsSet();
+      //  return results[Math.floor(results.length*Math.random())];
+      //};
+
+      //const response = getResponse();
+
+      //setAudioSrc(response['Link']);
+
+      setAudioSrc('https://drive.google.com/file/d/1laJThnB4gZL55rTocsuhdLhWQtZyKncW/view');
+
+      //setResponseInfo({
+      //  transcription_en: response['Transcription (ENG)'],
+      //});
+
       audioApi().load();
       setPlaying(true);
     });
@@ -111,13 +145,11 @@ function Hero() {
                     />
                   </Box>
                   <Box mx={2}>
-                    <Text fontSize="10.5pt" py={3} color="gray">
-                      We asked listeners to leave their feedback on the topic of
-                      food systems And here is the result. This allows you to
-                      monitor your crops and get complete insights at real time.
-                      The proprietary software/hardware ecosystem prevents your
-                      plants from getting neglected.
-                    </Text>
+                    {responseInfo && (
+                      <Text fontSize="10.5pt" py={3} color="gray">
+                        {responseInfo.transcription_en}
+                      </Text>
+                    )}
                   </Box>
                 </>
               )}
