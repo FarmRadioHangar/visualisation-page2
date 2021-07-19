@@ -59,7 +59,7 @@ function Hero() {
 
       //setAudioSrc(response['Link']);
 
-      setAudioSrc('https://drive.google.com/file/d/1laJThnB4gZL55rTocsuhdLhWQtZyKncW');
+      setAudioSrc(process.env.PUBLIC_URL + '/audio/001.wav');
 
       //setResponseInfo({
       //  transcription_en: response['Transcription (ENG)'],
