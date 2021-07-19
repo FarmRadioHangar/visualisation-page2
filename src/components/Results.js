@@ -504,10 +504,7 @@ function Results() {
 
   return (
     <Box>
-      <a href="/" id="results" style={{ display: "none" }}>
-        &nbsp;
-      </a>
-      <Box bg="#dfa400" px={0} py={0} position="relative">
+      <Box id="results" bg="#dfa400" px={0} py={0} position="relative">
         <Box
           position="absolute"
           w="100%"

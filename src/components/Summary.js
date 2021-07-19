@@ -43,10 +43,7 @@ function Summary() {
             justify={{ lg: "center" }}
             py={{ base: 4, md: 10, xl: 20 }}
           >
-            <a href="/" id="insights" style={{ display: "none" }}>
-              &nbsp;
-            </a>
-            <Box mb={{ base: 8, md: 20 }}>
+            <Box id="insights" mb={{ base: 8, md: 20 }}>
               <Text
                 fontFamily={"heading"}
                 fontWeight={700}
