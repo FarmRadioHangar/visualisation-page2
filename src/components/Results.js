@@ -552,7 +552,7 @@ function Results() {
         </Box>
       </Box>
       <Container maxW={"6xl"} my={10} pt={8} pb={10}>
-        {country ? (
+        {country && (
           <>
             <Box>
               <Heading
@@ -690,44 +690,43 @@ function Results() {
               </HStack>
             </SimpleGrid>
           </>
-        ) : (
-          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-            <Box
-              align="center"
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              justifyContent="center"
-            >
-              <Img src={illustration} w="350px" />
-              <Text color="gray" fontSize="12px">
-                <a href="https://storyset.com/data">
-                  Data illustrations by Storyset
-                </a>
-              </Text>
-            </Box>
-            <Box justifyContent="center" display="flex" flexDirection="column">
-              <Box>
-                <Heading
-                  color="#4c9f38"
-                  size="xl"
-                  display="flex"
-                  alignItems="center"
-                >
-                  <Icon mr={3} as={RiBook2Line} />
-                  Report
-                </Heading>
-              </Box>
-              <Text color="#4c9f38" py={4} fontSize="1.3em">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed the
-                report
-              </Text>
-              <Button py={8} my={5} size="lg" color="white" bg="#01add8">
-                Download the report (PDF)
-              </Button>
-            </Box>
-          </SimpleGrid>
         )}
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+          <Box
+            align="center"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Img src={illustration} w="350px" />
+            <Text color="gray" fontSize="12px">
+              <a href="https://storyset.com/data">
+                Data illustrations by Storyset
+              </a>
+            </Text>
+          </Box>
+          <Box justifyContent="center" display="flex" flexDirection="column">
+            <Box>
+              <Heading
+                color="#4c9f38"
+                size="xl"
+                display="flex"
+                alignItems="center"
+              >
+                <Icon mr={3} as={RiBook2Line} />
+                Report
+              </Heading>
+            </Box>
+            <Text color="#4c9f38" py={4} fontSize="1.3em">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed the
+              report
+            </Text>
+            <Button py={8} my={5} size="lg" color="white" bg="#01add8">
+              Download the report (PDF)
+            </Button>
+          </Box>
+        </SimpleGrid>
       </Container>
     </Box>
   );

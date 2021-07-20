@@ -12,19 +12,20 @@ import fssIcon5 from "../img/icons/fss_icon_5.png";
 import fssIcon6 from "../img/icons/fss_icon_6.png";
 import fssIcon7 from "../img/icons/fss_icon_7.png";
 import fssIcon8 from "../img/icons/fss_icon_8.png";
-//import resultsBf from "../data/bf.json";
-//import resultsGh from "../data/gh.json";
-//import resultsTz from "../data/tz.json";
-//import resultsUg from "../data/ug.json";
+import resultsBf from "../data/bf.json";
+import resultsGh from "../data/gh.json";
+import resultsTz from "../data/tz.json";
+import resultsUg from "../data/ug.json";
 import { AiOutlineFolderOpen, AiOutlineClose } from "react-icons/ai";
 import { BiPlay, BiPause } from "react-icons/bi";
 import { HiOutlineCursorClick } from "react-icons/hi";
-import { IconButton, Box, Heading, Text } from "@chakra-ui/react";
+import { Link, VStack, IconButton, Box, Heading, Text } from "@chakra-ui/react";
 
 function Hero() {
   const [overlayExpanded, setOverlayExpanded] = useState(true);
   const [audioSrc, setAudioSrc] = useState();
   const [responseInfo, setResponseInfo] = useState();
+  const [transcriptionLang, setTranscriptionLang] = useState("en");
   const [playing, setPlaying] = useState(false);
 
   const playerRef = useRef();
@@ -35,35 +36,37 @@ function Hero() {
 
   const onLoaded = (container) => {
     container.addClickHandler((e, ps) => {
+      const getResultsSet = () => {
+        switch (Math.floor(4 * Math.random())) {
+          case 0:
+            return resultsBf;
+          case 1:
+            return resultsGh;
+          case 2:
+            return resultsTz;
+          case 3:
+          default:
+            return resultsUg;
+        }
+      };
 
-      //const getResultsSet = () => {
-      //    switch (Math.floor(4*Math.random())) {
-      //      case 0:
-      //        return resultsBf;
-      //      case 1:
-      //        return resultsGh;
-      //      case 2:
-      //        return resultsTz;
-      //      case 3:
-      //      default:
-      //        return resultsUg;
-      //    }
-      //};
+      const getResponse = () => {
+        const results = getResultsSet();
+        return results[Math.floor(results.length * Math.random())];
+      };
 
-      //const getResponse = () => {
-      //  const results = getResultsSet();
-      //  return results[Math.floor(results.length*Math.random())];
-      //};
+      const response = getResponse();
+      console.log(response);
 
-      //const response = getResponse();
+      setAudioSrc(`${process.env.PUBLIC_URL}/audio/${response.ID}.wav`);
+      //setAudioSrc(`${process.env.PUBLIC_URL}/audio/TZEP2010.wav`);
 
-      //setAudioSrc(response['Link']);
+      //      setAudioSrc(process.env.PUBLIC_URL + '/audio/001.wav');
 
-      setAudioSrc(process.env.PUBLIC_URL + '/audio/001.wav');
-
-      //setResponseInfo({
-      //  transcription_en: response['Transcription (ENG)'],
-      //});
+      setResponseInfo({
+        transcription_en: response["Transcription (ENG)"],
+        transcription_fr: response["Transcription (FR)"],
+      });
 
       audioApi().load();
       setPlaying(true);
@@ -88,6 +91,8 @@ function Hero() {
     setAudioSrc(null);
     setPlaying(false);
   };
+
+  console.log(process.env.PUBLIC_URL);
 
   return (
     <>
@@ -117,7 +122,9 @@ function Hero() {
           src={audioSrc}
           autoPlay={true}
           onEnded={handlePlaybackEnded}
-          crossOrigin='anonymous'
+          onError={(err) => {
+            console.log(err);
+          }}
         />
         {audioSrc && playing && (
           <>
@@ -147,9 +154,44 @@ function Hero() {
                   </Box>
                   <Box mx={2}>
                     {responseInfo && (
-                      <Text fontSize="10.5pt" py={3} color="gray">
-                        {responseInfo.transcription_en}
-                      </Text>
+                      <>
+                        <VStack spacing={0} align="left">
+                          <Box fontSize="0.7em" py={3}>
+                            <Link
+                              color={
+                                transcriptionLang === "en" ? "gray" : "white"
+                              }
+                              mr={2}
+                              onClick={() => {
+                                setTranscriptionLang("en");
+                              }}
+                            >
+                              EN
+                            </Link>
+                            <Link
+                              color={
+                                transcriptionLang === "fr" ? "gray" : "white"
+                              }
+                              onClick={() => {
+                                setTranscriptionLang("fr");
+                              }}
+                            >
+                              FR
+                            </Link>
+                          </Box>
+                          <Box>
+                            {transcriptionLang === "en" ? (
+                              <Text fontSize="10.5pt" pb={3} color="gray">
+                                {responseInfo.transcription_en}
+                              </Text>
+                            ) : (
+                              <Text fontSize="10.5pt" pb={3} color="gray">
+                                {responseInfo.transcription_fr}
+                              </Text>
+                            )}
+                          </Box>
+                        </VStack>
+                      </>
                     )}
                   </Box>
                 </>
@@ -208,7 +250,7 @@ function Hero() {
                   value: "#15760d",
                 },
               },
-              pauseOnBlur: true,
+              pauseOnBlur: false,
               particles: {
                 color: {
                   value: "#ffffff",
