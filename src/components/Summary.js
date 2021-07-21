@@ -6,6 +6,7 @@ import {
   Img,
   Heading,
   Container,
+  Tag,
   Stack,
 } from "@chakra-ui/react";
 import particlesAnimation from "../img/9958-particle-explosion.gif";
@@ -17,6 +18,7 @@ import conversationIcon from "../img/conversation.png";
 import questionIcon from "../img/question.png";
 import photo1 from "../img/photo1.jpg";
 import photo2 from "../img/photo2.jpg";
+import photo3 from "../img/photo3.jpg";
 
 function StatsText({ children }) {
   return (
@@ -28,11 +30,11 @@ function StatsText({ children }) {
 
 function SummaryItem({ heading, text, children }) {
   return (
-    <Box mt={5} p={8}>
+    <Box mt={5} p={3}>
       {children}
-      <Text fontFamily={"heading"} fontSize={"5xl"} mb={3}>
+      <Tag bg="#4c9f38" color="white" fontFamily={"heading"} fontSize={"5xl"} mb={3}>
         {heading}
-      </Text>
+      </Tag>
       <Text fontSize={"xl"} color={"gray.800"}>
         {text}
       </Text>
@@ -81,7 +83,7 @@ function Summary() {
                   </Text>
                 </Box>
               </SimpleGrid>
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={10} py={5}>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} py={5}>
                 <Box display="flex" alignItems="center" px={10}>
                   <Text fontSize="1.7em" color="gray">
                     <b>Almost 75% of respondents</b> reported having concerns about the safety and quality of the food that is available to their families.
@@ -89,6 +91,16 @@ function Summary() {
                 </Box>
                 <Box display="flex" alignItems="center" justifyContent="center">
                   <Img src={photo1} width="400px" height="400px" borderRadius="50%" objectFit="cover" />
+                </Box>
+              </SimpleGrid>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={10} py={5}>
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  <Img src={photo3} width="400px" height="400px" borderRadius="50%" objectFit="cover" />
+                </Box>
+                <Box display="flex" alignItems="center" px={10}>
+                  <Text fontSize="1.7em" color="gray">
+                    <b>Over 90% of callers felt there was something</b> they could do in their community to cope with climate change.
+                  </Text>
                 </Box>
               </SimpleGrid>
               <SimpleGrid columns={{ base: 1, sm: 2, lg: 5 }} spacing={10}>
@@ -144,7 +156,7 @@ function Summary() {
                   heading={"2,648"}
                   text={
                     <>
-                      <StatsText>Audio comments</StatsText> left
+                      <StatsText>Audio comments</StatsText> captured
                     </>
                   }
                 >

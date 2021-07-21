@@ -19,6 +19,7 @@ import ifadLogo from "../img/ifad-logo.svg";
 import farmRadioLogo from "../img/logo-farm-radio-international.png";
 import wvLogo from "../img/wv-logo.jpg";
 import logo from "../img/UNfoodSystemsLogos-300x134-1.png";
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 function SocialButton({ children, label, href }) {
   return (
@@ -59,7 +60,7 @@ function Footer() {
       bg={useColorModeValue("gray.100", "gray.900")}
       color={useColorModeValue("gray.700", "gray.200")}
     >
-      <Container as={Stack} maxW={"6xl"} py={10}>
+      <Container as={Stack} maxW={"7xl"} py={10}>
         <Grid templateColumns={{ sm: "1fr 1fr", md: "3fr 1fr" }} spacing={8}>
           <GridItem spacing={6} pb={8} colSpan={{ sm: 2, md: 1 }}>
             <Box mb={10}>
@@ -75,7 +76,9 @@ function Footer() {
                   justifyContent="center"
                   p={6}
                 >
-                  <Img src={logo} />
+                  <Link isExternal href="https://www.un.org/en/food-systems-summit">
+                    <Img src={logo} />
+                  </Link>
                 </Box>
                 <Box
                   maxWidth={200}
@@ -84,7 +87,9 @@ function Footer() {
                   justifyContent="center"
                   p={6}
                 >
-                  <Img src={farmRadioLogo} />
+                  <Link isExternal href="https://farmradio.org">
+                    <Img src={farmRadioLogo} />
+                  </Link>
                 </Box>
                 <Box
                   maxWidth={200}
@@ -93,7 +98,9 @@ function Footer() {
                   justifyContent="center"
                   p={6}
                 >
-                  <Img src={ifadLogo} />
+                  <Link isExternal href="https://www.ifad.org">
+                    <Img src={ifadLogo} w="100%" />
+                  </Link>
                 </Box>
                 <Box
                   maxWidth={200}
@@ -102,27 +109,26 @@ function Footer() {
                   justifyContent="center"
                   p={6}
                 >
-                  <Img src={wvLogo} style={{ mixBlendMode: "multiply" }} />
+                  <Link isExternal href="https://www.worldvision.ca">
+                    <Img src={wvLogo} style={{ mixBlendMode: "multiply" }} />
+                  </Link>
                 </Box>
               </SimpleGrid>
             </Box>
-            <Stack direction={"row"} spacing={3} py={4}>
-              <SocialButton label={"Twitter"} href={"#"}>
-                <FaTwitter />
-              </SocialButton>
-              <SocialButton label={"YouTube"} href={"#"}>
-                <FaYoutube />
-              </SocialButton>
-              <SocialButton label={"Instagram"} href={"#"}>
-                <FaInstagram />
-              </SocialButton>
-            </Stack>
             <Text fontSize={"xs"}>© 2021 All rights reserved</Text>
           </GridItem>
           <GridItem pb={8}>
             <Stack align={"flex-start"}>
-              <ListHeader>Food systems</ListHeader>
-              <Link href={"#"}>Sustainable Development Goals</Link>
+              <ListHeader fontWeight="bold">Links</ListHeader>
+              <Stack direction={"row"} align={"center"} spacing={2}>
+                <ExternalLinkIcon mx="2px" />
+                <Link isExternal href="https://cooperation.ca/what-we-do/canadian-food-security-policy-group/">Canadian Food Security Policy Group</Link>
+              </Stack>
+              <Stack direction={"row"} align={"center"} spacing={2}>
+                <ExternalLinkIcon mx="2px" />
+                <Link isExternal href="https://sdgs.un.org/">UN Sustainable Development Goals</Link>
+              </Stack>
+              {/*
               <Link href={"#"}>The value chain</Link>
               <Stack direction={"row"} align={"center"} spacing={2}>
                 <Link href={"#"}>Learning resources</Link>
@@ -135,6 +141,7 @@ function Footer() {
                   New
                 </Tag>
               </Stack>
+              */}
             </Stack>
           </GridItem>
         </Grid>
