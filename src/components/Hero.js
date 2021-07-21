@@ -268,10 +268,12 @@ function Hero() {
                 </Box>
                 <Heading mb={2}>Rural voices</Heading>
                 <Text mb={3}>
-We asked small-scale farmers in four countries for their perspectives on how to create equitable, sustainable, and productive food systems for all. 
+                  We asked small-scale farmers in four countries for their
+                  perspectives on how to create equitable, sustainable, and
+                  productive food systems for all.
                 </Text>
                 <Text>
-Click on the bubbles and icons to listen to their real voices.
+                  Click on the bubbles and icons to listen to their real voices.
                   Click on the bubbles and icons to listen to farmers voices.
                 </Text>
               </>

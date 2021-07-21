@@ -41,21 +41,27 @@ function MenuLinks({ isOpen }) {
       >
         <Spacer display={{ base: "none", sm: "block" }} />
         <MenuItem
-          onClick={() => { setAboutPageVisible(true); }}
+          onClick={() => {
+            setAboutPageVisible(true);
+          }}
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#about"
         >
           About the project
         </MenuItem>
         <MenuItem
-          onClick={() => { setAboutPageVisible(false); }}
+          onClick={() => {
+            setAboutPageVisible(false);
+          }}
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#insights"
         >
           Insights
         </MenuItem>
         <MenuItem
-          onClick={() => { setAboutPageVisible(false); }}
+          onClick={() => {
+            setAboutPageVisible(false);
+          }}
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#results"
         >
@@ -95,7 +101,9 @@ function MenuLinks({ isOpen }) {
         <Link
           w={{ base: "100%", sm: "auto" }}
           href="#report"
-          onClick={() => { setAboutPageVisible(false); }}
+          onClick={() => {
+            setAboutPageVisible(false);
+          }}
           _hover={{ textDecoration: "none" }}
         >
           <Button
