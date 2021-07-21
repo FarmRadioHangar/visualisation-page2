@@ -42,6 +42,12 @@ function MenuLinks({ isOpen }) {
         <Spacer display={{ base: "none", sm: "block" }} />
         <MenuItem
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
+          to="#about"
+        >
+          About the project
+        </MenuItem>
+        <MenuItem
+          color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#insights"
         >
           Insights

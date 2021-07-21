@@ -519,9 +519,7 @@ function Results() {
                 What farmers think about food systems
               </Heading>
               <Text color={"white"} fontSize={"2xl"}>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua.
+                Click on the dropdown menu below to explore the responses of farmers in each country.
               </Text>
               <Box>
                 <Select
@@ -719,11 +717,10 @@ function Results() {
               </Heading>
             </Box>
             <Text color="#4c9f38" py={4} fontSize="1.3em">
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed the
-              report
+              Want a deep dive into the results? Click here to download the full report.
             </Text>
             <Button py={8} my={5} size="lg" color="white" bg="#01add8">
-              Download the report (PDF)
+              Download (PDF)
             </Button>
           </Box>
         </SimpleGrid>

@@ -10,6 +10,13 @@ import {
 } from "@chakra-ui/react";
 import particlesAnimation from "../img/9958-particle-explosion.gif";
 import { Bar, Doughnut, Line } from "react-chartjs-2";
+import radioIcon from "../img/radio.png";
+import scriptIcon from "../img/script.png";
+import loveIcon from "../img/love.png";
+import conversationIcon from "../img/conversation.png";
+import questionIcon from "../img/question.png";
+import photo1 from "../img/photo1.jpg";
+import photo2 from "../img/photo2.jpg";
 
 function StatsText({ children }) {
   return (
@@ -52,202 +59,105 @@ function Summary() {
                 fontSize={"2xl"}
                 color={"#dfa400"}
               >
-                {"Voices from listeners"}
+                {"Listening to farmers"}
               </Text>
               <Heading
                 color={"#dfa400"}
                 mb={5}
                 fontSize={{ base: "3xl", md: "5xl" }}
               >
-                We asked listeners to leave their feedback on the topic of food
-                systems
+                We asked small-scale farmers to tell us their thoughts and concerns about food systems
               </Heading>
-              <Text fontSize={"xl"} color={"gray.800"}>
-                And here is the result. This allows you to monitor your crops
-                and get complete insights at real time. The proprietary
-                software/hardware ecosystem prevents your plants from getting
-                neglected.
+              <Text fontSize={"xl"} color={"gray.800"} color={"#dfa400"}>
+                Nearly 3,500 people in Burkina Faso, Ghana, Tanzania, and Uganda called in to express their perspectives, concerns, and experiences in 2,600+ audio messages. Here’s what they had to say.
               </Text>
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mt={10} py={5}>
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  <Img src={photo2} width="400px" height="400px" borderRadius="50%" objectFit="cover" />
+                </Box>
+                <Box display="flex" alignItems="center" px={10}>
+                  <Text fontSize="1.7em" color="gray">
+                    <b>Respondents overwhelmingly predicted</b> a future in farming for their children. Only one in ten people felt today’s youth should choose another occupation.
+                  </Text>
+                </Box>
+              </SimpleGrid>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={10} py={5}>
+                <Box display="flex" alignItems="center" px={10}>
+                  <Text fontSize="1.7em" color="gray">
+                    <b>Almost 75% of respondents</b> reported having concerns about the safety and quality of the food that is available to their families.
+                  </Text>
+                </Box>
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  <Img src={photo1} width="400px" height="400px" borderRadius="50%" objectFit="cover" />
+                </Box>
+              </SimpleGrid>
+              <SimpleGrid columns={{ base: 1, sm: 2, lg: 5 }} spacing={10}>
                 <SummaryItem
-                  heading={"1,275"}
+                  heading={"6"}
                   text={
                     <>
-                      <StatsText>Interactive voice surveys</StatsText> completed
-                      in 5 days in Ghana
+                      <StatsText>Radio stations</StatsText> in four countries
                     </>
                   }
                 >
-                  <Box height="200px" py={6}>
-                    <Line
-                      data={{
-                        labels: ["Mon", "Tue", "Wed", "Thu", "Fri"],
-                        datasets: [
-                          {
-                            data: [12, 19, 3, 5, 7],
-                            fill: false,
-                            backgroundColor: "#fdb714",
-                            borderColor: "#4c9f38",
-                          },
-                        ],
-                      }}
-                      options={{
-                        maintainAspectRatio: false,
-                        plugins: {
-                          legend: {
-                            display: false,
-                          },
-                        },
-                        scales: {
-                          x: {
-                            grid: {
-                              display: false,
-                              drawBorder: false,
-                            },
-                          },
-                          y: {
-                            grid: {
-                              display: false,
-                              drawBorder: false,
-                            },
-                            ticks: {
-                              display: false,
-                            },
-                          },
-                        },
-                      }}
-                    />
+                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                    <Img src={radioIcon} height="130px" mb={5} />
                   </Box>
                 </SummaryItem>
                 <SummaryItem
-                  heading={"???"}
+                  heading={"18"}
                   text={
                     <>
-                      <StatsText>Female and male farmers engaged</StatsText> in
-                      Burkina Faso, Ghana, Tanzania, and Uganda
+                      <StatsText>Original</StatsText>  episodes
                     </>
                   }
                 >
-                  <Box height="200px" maxWidth="200px" py={6}>
-                    <Doughnut
-                      data={{
-                        labels: [
-                          "Red",
-                          "Blue",
-                          "Yellow",
-                          "Green",
-                          "Purple",
-                          "Orange",
-                        ],
-                        datasets: [
-                          {
-                            borderWidth: 0,
-                            label: "# of Votes",
-                            data: [12, 19, 3, 5, 2, 3],
-                            backgroundColor: ["#347cb7", "#ef412a", "#fdb714"],
-                          },
-                        ],
-                      }}
-                      options={{
-                        maintainAspectRatio: false,
-                        plugins: {
-                          legend: {
-                            display: false,
-                          },
-                        },
-                      }}
-                    />
+                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                    <Img src={scriptIcon} height="130px" />
                   </Box>
                 </SummaryItem>
                 <SummaryItem
-                  heading={"24"}
+                  heading={"3,494"}
                   text={
                     <>
-                      <StatsText>WhatsApp groups</StatsText> created in Kiribati
-                      today
+                      <StatsText>Respondents</StatsText> 
                     </>
                   }
                 >
-                  <Box>
-                    <Img src={particlesAnimation} height={300} />
+                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                    <Img src={questionIcon} height="130px" />
                   </Box>
                 </SummaryItem>
                 <SummaryItem
-                  heading={"204,150"}
+                  heading={"11,854"}
                   text={
                     <>
-                      <StatsText>SMS surveys</StatsText> conducted in 1 month in
-                      Uganda
+                      <StatsText>Answered</StatsText>  questions
                     </>
                   }
                 >
-                  <Box height="300px" py={6}>
-                    <Bar
-                      data={{
-                        labels: [
-                          "Week 1",
-                          "Week 2",
-                          "Week 3",
-                          "Week 4",
-                          "Week 5",
-                          "Week 6",
-                          "Week 7",
-                        ],
-                        datasets: [
-                          {
-                            label: "My First Dataset",
-                            data: [65, 59, 80, 81, 56, 55, 40],
-                            backgroundColor: [
-                              "#4c9f38",
-                              "#01558b",
-                              "#fdb714",
-                              "#862539",
-                              "#01add8",
-                              "#ef412a",
-                              "#D2a02a",
-                            ],
-                            borderColor: [
-                              "#4c9f38",
-                              "#01558b",
-                              "#fdb714",
-                              "#862539",
-                              "#01add8",
-                              "#ef412a",
-                              "#d2A02A",
-                            ],
-                            borderWidth: 1,
-                          },
-                        ],
-                      }}
-                      options={{
-                        maintainAspectRatio: false,
-                        plugins: {
-                          legend: {
-                            display: false,
-                          },
-                        },
-                        scales: {
-                          x: {
-                            grid: {
-                              display: false,
-                              drawBorder: false,
-                            },
-                          },
-                          y: {
-                            grid: {
-                              display: false,
-                              drawBorder: false,
-                            },
-                            ticks: {
-                              display: false,
-                            },
-                          },
-                        },
-                      }}
-                    />
+                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                    <Img src={conversationIcon} height="130px" />
+                  </Box>
+                </SummaryItem>
+                <SummaryItem
+                  heading={"2,648"}
+                  text={
+                    <>
+                      <StatsText>Audio comments</StatsText> left
+                    </>
+                  }
+                >
+                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                    <Img src={loveIcon} height="130px" />
                   </Box>
                 </SummaryItem>
               </SimpleGrid>
+              <Box align="center">
+                <Text color="gray" fontSize="12px">
+                  Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                </Text>
+              </Box>
             </Box>
           </Stack>
         </Stack>
