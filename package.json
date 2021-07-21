@@ -2,7 +2,7 @@
   "name": "visualization-playground",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://FarmRadioHangar.github.io/visualisation-page",
+  "homepage": "https://dialogues.farmradio.org",
   "dependencies": {
     "@chakra-ui/icons": "^1.0.13",
     "@chakra-ui/react": "^1.6.4",
