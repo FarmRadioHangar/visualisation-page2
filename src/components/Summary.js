@@ -9,8 +9,6 @@ import {
   Tag,
   Stack,
 } from "@chakra-ui/react";
-import particlesAnimation from "../img/9958-particle-explosion.gif";
-import { Bar, Doughnut, Line } from "react-chartjs-2";
 import radioIcon from "../img/radio.png";
 import scriptIcon from "../img/script.png";
 import loveIcon from "../img/love.png";
@@ -77,7 +75,7 @@ function Summary() {
                 We asked small-scale farmers to tell us their thoughts and
                 concerns about food systems
               </Heading>
-              <Text fontSize={"xl"} color={"gray.800"} color={"#dfa400"}>
+              <Text fontSize={"xl"} color={"#dfa400"}>
                 Nearly 3,500 people in Burkina Faso, Ghana, Tanzania, and Uganda
                 called in to express their perspectives, concerns, and
                 experiences in 2,600+ audio messages. Here’s what they had to

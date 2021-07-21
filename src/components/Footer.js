@@ -1,11 +1,8 @@
 import React from "react";
 import {
-  Button,
-  VisuallyHidden,
   Grid,
   GridItem,
   Text,
-  Tag,
   Img,
   SimpleGrid,
   Link,
@@ -14,37 +11,36 @@ import {
   Stack,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import ifadLogo from "../img/ifad-logo.svg";
 import farmRadioLogo from "../img/logo-farm-radio-international.png";
 import wvLogo from "../img/wv-logo.jpg";
 import logo from "../img/UNfoodSystemsLogos-300x134-1.png";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 
-function SocialButton({ children, label, href }) {
-  return (
-    <Button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={10}
-      h={10}
-      p={0}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </Button>
-  );
-}
+//function SocialButton({ children, label, href }) {
+//  return (
+//    <Button
+//      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+//      rounded={"full"}
+//      w={10}
+//      h={10}
+//      p={0}
+//      cursor={"pointer"}
+//      as={"a"}
+//      href={href}
+//      display={"inline-flex"}
+//      alignItems={"center"}
+//      justifyContent={"center"}
+//      transition={"background 0.3s ease"}
+//      _hover={{
+//        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+//      }}
+//    >
+//      <VisuallyHidden>{label}</VisuallyHidden>
+//      {children}
+//    </Button>
+//  );
+//}
 
 function ListHeader({ children }) {
   return (

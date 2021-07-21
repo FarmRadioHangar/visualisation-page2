@@ -19,7 +19,6 @@ import resultsUg from "../data/ug.json";
 import {
   AiOutlineArrowUp,
   AiOutlineArrowRight,
-  AiOutlineFolderOpen,
   AiOutlineClose,
 } from "react-icons/ai";
 import { BiPlay, BiPause } from "react-icons/bi";
@@ -61,7 +60,6 @@ function Hero() {
       };
 
       const response = getResponse();
-      console.log(response);
 
       setAudioSrc(`${process.env.PUBLIC_URL}/audio/${response.ID}.wav`);
       //setAudioSrc(`${process.env.PUBLIC_URL}/audio/TZEP2010.wav`);
@@ -98,8 +96,6 @@ function Hero() {
     setAudioSrc(null);
     setPlaying(false);
   };
-
-  console.log(process.env.PUBLIC_URL);
 
   return (
     <>

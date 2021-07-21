@@ -1,18 +1,16 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import {
   Img,
   Link,
   Button,
   Spacer,
   Stack,
-  Select,
   Box,
   Flex,
   Text,
 } from "@chakra-ui/react";
 import logo from "../img/on-air-dialogues.svg";
 import logoAlt from "../img/on-air-dialogues-white.svg";
-import { AppContext } from "../contexts/App";
 
 function MenuItem({ children, isLast, to = "/", ...props }) {
   return (
@@ -25,7 +23,7 @@ function MenuItem({ children, isLast, to = "/", ...props }) {
 }
 
 function MenuLinks({ isOpen }) {
-  const { language, setLanguage } = useContext(AppContext);
+  //const { language, setLanguage } = useContext(AppContext);
 
   return (
     <Box
@@ -41,6 +39,7 @@ function MenuLinks({ isOpen }) {
       >
         <Spacer display={{ base: "none", sm: "block" }} />
         <MenuItem
+          onClick={() => { console.log('about'); }}
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#about"
         >
