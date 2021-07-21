@@ -705,7 +705,12 @@ function Results() {
               </a>
             </Text>
           </Box>
-          <Box justifyContent="center" display="flex" flexDirection="column">
+          <Box
+            id="report"
+            justifyContent="center"
+            display="flex"
+            flexDirection="column"
+          >
             <Box>
               <Heading
                 color="#4c9f38"

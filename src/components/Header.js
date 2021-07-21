@@ -91,7 +91,7 @@ function MenuLinks({ isOpen }) {
         */}
         <Link
           w={{ base: "100%", sm: "auto" }}
-          href="/donate"
+          href="#report"
           _hover={{ textDecoration: "none" }}
         >
           <Button

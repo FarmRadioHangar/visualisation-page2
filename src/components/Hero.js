@@ -16,7 +16,12 @@ import resultsBf from "../data/bf.json";
 import resultsGh from "../data/gh.json";
 import resultsTz from "../data/tz.json";
 import resultsUg from "../data/ug.json";
-import { AiOutlineFolderOpen, AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineArrowUp,
+  AiOutlineArrowRight,
+  AiOutlineFolderOpen,
+  AiOutlineClose,
+} from "react-icons/ai";
 import { BiPlay, BiPause } from "react-icons/bi";
 import { HiOutlineCursorClick } from "react-icons/hi";
 import { Link, VStack, IconButton, Box, Heading, Text } from "@chakra-ui/react";
@@ -66,6 +71,8 @@ function Hero() {
       setResponseInfo({
         transcription_en: response["Transcription (ENG)"],
         transcription_fr: response["Transcription (FR)"],
+        question_en: response["Corresponding Uliza poll question"],
+        question_fr: response["Corresponding Uliza poll question (FR)"],
       });
 
       audioApi().load();
@@ -159,7 +166,7 @@ function Hero() {
                           <Box fontSize="0.7em" py={3}>
                             <Link
                               color={
-                                transcriptionLang === "en" ? "gray" : "white"
+                                transcriptionLang === "en" ? "white" : "grey"
                               }
                               mr={2}
                               onClick={() => {
@@ -170,7 +177,7 @@ function Hero() {
                             </Link>
                             <Link
                               color={
-                                transcriptionLang === "fr" ? "gray" : "white"
+                                transcriptionLang === "fr" ? "white" : "grey"
                               }
                               onClick={() => {
                                 setTranscriptionLang("fr");
@@ -181,13 +188,35 @@ function Hero() {
                           </Box>
                           <Box>
                             {transcriptionLang === "en" ? (
-                              <Text fontSize="10.5pt" pb={3} color="gray">
-                                {responseInfo.transcription_en}
-                              </Text>
+                              <>
+                                <Text fontSize="10.5pt" pb={3} color="gray">
+                                  <b>Question:</b>
+                                  <br />
+                                  {responseInfo.question_en}
+                                </Text>
+                                <Text
+                                  fontSize="10.5pt"
+                                  pb={3}
+                                  color="white.700"
+                                >
+                                  {responseInfo.transcription_en}
+                                </Text>
+                              </>
                             ) : (
-                              <Text fontSize="10.5pt" pb={3} color="gray">
-                                {responseInfo.transcription_fr}
-                              </Text>
+                              <>
+                                <Text fontSize="10.5pt" pb={3} color="gray">
+                                  <b>Question:</b>
+                                  <br />
+                                  {responseInfo.question_fr}
+                                </Text>
+                                <Text
+                                  fontSize="10.5pt"
+                                  pb={3}
+                                  color="white.700"
+                                >
+                                  {responseInfo.transcription_fr}
+                                </Text>
+                              </>
                             )}
                           </Box>
                         </VStack>
@@ -226,7 +255,14 @@ function Hero() {
               {overlayExpanded ? (
                 <AiOutlineClose size={25} />
               ) : (
-                <AiOutlineFolderOpen size={25} />
+                <>
+                  <Box d={{ base: "none", md: "block" }}>
+                    <AiOutlineArrowRight size={25} />
+                  </Box>
+                  <Box d={{ base: "block", md: "none" }}>
+                    <AiOutlineArrowUp size={25} />
+                  </Box>
+                </>
               )}
             </Box>
             {overlayExpanded && (
