@@ -58,6 +58,7 @@ function MenuLinks({ isOpen }) {
         >
           Explore the results
         </MenuItem>
+        {/*
         <Select
           color={{ base: "#dfa400", md: "#4c9f38" }}
           borderColor={{ base: "#dfa400", md: "#4c9f3880" }}
@@ -85,6 +86,25 @@ function MenuLinks({ isOpen }) {
             w={{ base: "100%", sm: "auto" }}
           >
             Donate!
+          </Button>
+        </Link>
+        */}
+        <Link
+          w={{ base: "100%", sm: "auto" }}
+          href="/donate"
+          _hover={{ textDecoration: "none" }}
+        >
+          <Button
+            size="md"
+            rounded="md"
+            color={"white"}
+            bg={"#4c9f38"}
+            _hover={{
+              bg: "#4c9f38",
+            }}
+            w={{ base: "100%", sm: "auto" }}
+          >
+            Download the report!
           </Button>
         </Link>
       </Stack>

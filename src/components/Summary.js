@@ -32,7 +32,13 @@ function SummaryItem({ heading, text, children }) {
   return (
     <Box mt={5} p={3}>
       {children}
-      <Tag bg="#4c9f38" color="white" fontFamily={"heading"} fontSize={"5xl"} mb={3}>
+      <Tag
+        bg="#4c9f38"
+        color="white"
+        fontFamily={"heading"}
+        fontSize={"5xl"}
+        mb={3}
+      >
         {heading}
       </Tag>
       <Text fontSize={"xl"} color={"gray.800"}>
@@ -68,38 +74,75 @@ function Summary() {
                 mb={5}
                 fontSize={{ base: "3xl", md: "5xl" }}
               >
-                We asked small-scale farmers to tell us their thoughts and concerns about food systems
+                We asked small-scale farmers to tell us their thoughts and
+                concerns about food systems
               </Heading>
               <Text fontSize={"xl"} color={"gray.800"} color={"#dfa400"}>
-                Nearly 3,500 people in Burkina Faso, Ghana, Tanzania, and Uganda called in to express their perspectives, concerns, and experiences in 2,600+ audio messages. Here’s what they had to say.
+                Nearly 3,500 people in Burkina Faso, Ghana, Tanzania, and Uganda
+                called in to express their perspectives, concerns, and
+                experiences in 2,600+ audio messages. Here’s what they had to
+                say.
               </Text>
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mt={10} py={5}>
+              <SimpleGrid
+                columns={{ base: 1, md: 2 }}
+                spacing={10}
+                mt={10}
+                py={5}
+              >
                 <Box display="flex" alignItems="center" justifyContent="center">
-                  <Img src={photo2} width="400px" height="400px" borderRadius="50%" objectFit="cover" />
+                  <Img
+                    src={photo2}
+                    width="400px"
+                    height="400px"
+                    borderRadius="50%"
+                    objectFit="cover"
+                  />
                 </Box>
                 <Box display="flex" alignItems="center" px={10}>
                   <Text fontSize="1.7em" color="gray">
-                    <b>Respondents overwhelmingly predicted</b> a future in farming for their children. Only one in ten people felt today’s youth should choose another occupation.
+                    <b>Respondents overwhelmingly predicted</b> a future in
+                    farming for their children. Only one in ten people felt
+                    today’s youth should choose another occupation.
                   </Text>
                 </Box>
               </SimpleGrid>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} py={5}>
                 <Box display="flex" alignItems="center" px={10}>
                   <Text fontSize="1.7em" color="gray">
-                    <b>Almost 75% of respondents</b> reported having concerns about the safety and quality of the food that is available to their families.
+                    <b>Almost 75% of respondents</b> reported having concerns
+                    about the safety and quality of the food that is available
+                    to their families.
                   </Text>
                 </Box>
                 <Box display="flex" alignItems="center" justifyContent="center">
-                  <Img src={photo1} width="400px" height="400px" borderRadius="50%" objectFit="cover" />
+                  <Img
+                    src={photo1}
+                    width="400px"
+                    height="400px"
+                    borderRadius="50%"
+                    objectFit="cover"
+                  />
                 </Box>
               </SimpleGrid>
-              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={10} py={5}>
+              <SimpleGrid
+                columns={{ base: 1, md: 2 }}
+                spacing={10}
+                mb={10}
+                py={5}
+              >
                 <Box display="flex" alignItems="center" justifyContent="center">
-                  <Img src={photo3} width="400px" height="400px" borderRadius="50%" objectFit="cover" />
+                  <Img
+                    src={photo3}
+                    width="400px"
+                    height="400px"
+                    borderRadius="50%"
+                    objectFit="cover"
+                  />
                 </Box>
                 <Box display="flex" alignItems="center" px={10}>
                   <Text fontSize="1.7em" color="gray">
-                    <b>Over 90% of callers felt there was something</b> they could do in their community to cope with climate change.
+                    <b>Over 90% of callers felt there was something</b> they
+                    could do in their community to cope with climate change.
                   </Text>
                 </Box>
               </SimpleGrid>
@@ -112,7 +155,13 @@ function Summary() {
                     </>
                   }
                 >
-                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                  <Box
+                    height="180px"
+                    py={6}
+                    justifyContent="center"
+                    alignItems="center"
+                    d="flex"
+                  >
                     <Img src={radioIcon} height="130px" mb={5} />
                   </Box>
                 </SummaryItem>
@@ -120,11 +169,17 @@ function Summary() {
                   heading={"18"}
                   text={
                     <>
-                      <StatsText>Original</StatsText>  episodes
+                      <StatsText>Original</StatsText> episodes
                     </>
                   }
                 >
-                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                  <Box
+                    height="180px"
+                    py={6}
+                    justifyContent="center"
+                    alignItems="center"
+                    d="flex"
+                  >
                     <Img src={scriptIcon} height="130px" />
                   </Box>
                 </SummaryItem>
@@ -132,11 +187,17 @@ function Summary() {
                   heading={"3,494"}
                   text={
                     <>
-                      <StatsText>Respondents</StatsText> 
+                      <StatsText>Respondents</StatsText>
                     </>
                   }
                 >
-                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                  <Box
+                    height="180px"
+                    py={6}
+                    justifyContent="center"
+                    alignItems="center"
+                    d="flex"
+                  >
                     <Img src={questionIcon} height="130px" />
                   </Box>
                 </SummaryItem>
@@ -144,11 +205,17 @@ function Summary() {
                   heading={"11,854"}
                   text={
                     <>
-                      <StatsText>Answered</StatsText>  questions
+                      <StatsText>Answered</StatsText> questions
                     </>
                   }
                 >
-                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                  <Box
+                    height="180px"
+                    py={6}
+                    justifyContent="center"
+                    alignItems="center"
+                    d="flex"
+                  >
                     <Img src={conversationIcon} height="130px" />
                   </Box>
                 </SummaryItem>
@@ -160,14 +227,27 @@ function Summary() {
                     </>
                   }
                 >
-                  <Box height="180px" py={6} justifyContent="center" alignItems="center" d="flex">
+                  <Box
+                    height="180px"
+                    py={6}
+                    justifyContent="center"
+                    alignItems="center"
+                    d="flex"
+                  >
                     <Img src={loveIcon} height="130px" />
                   </Box>
                 </SummaryItem>
               </SimpleGrid>
               <Box align="center">
                 <Text color="gray" fontSize="12px">
-                  Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+                  Icons made by{" "}
+                  <a href="https://www.freepik.com" title="Freepik">
+                    Freepik
+                  </a>{" "}
+                  from{" "}
+                  <a href="https://www.flaticon.com/" title="Flaticon">
+                    www.flaticon.com
+                  </a>
                 </Text>
               </Box>
             </Box>

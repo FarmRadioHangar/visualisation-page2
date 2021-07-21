@@ -19,7 +19,7 @@ import ifadLogo from "../img/ifad-logo.svg";
 import farmRadioLogo from "../img/logo-farm-radio-international.png";
 import wvLogo from "../img/wv-logo.jpg";
 import logo from "../img/UNfoodSystemsLogos-300x134-1.png";
-import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 function SocialButton({ children, label, href }) {
   return (
@@ -76,7 +76,10 @@ function Footer() {
                   justifyContent="center"
                   p={6}
                 >
-                  <Link isExternal href="https://www.un.org/en/food-systems-summit">
+                  <Link
+                    isExternal
+                    href="https://www.un.org/en/food-systems-summit"
+                  >
                     <Img src={logo} />
                   </Link>
                 </Box>
@@ -122,11 +125,18 @@ function Footer() {
               <ListHeader fontWeight="bold">Links</ListHeader>
               <Stack direction={"row"} align={"center"} spacing={2}>
                 <ExternalLinkIcon mx="2px" />
-                <Link isExternal href="https://cooperation.ca/what-we-do/canadian-food-security-policy-group/">Canadian Food Security Policy Group</Link>
+                <Link
+                  isExternal
+                  href="https://cooperation.ca/what-we-do/canadian-food-security-policy-group/"
+                >
+                  Canadian Food Security Policy Group
+                </Link>
               </Stack>
               <Stack direction={"row"} align={"center"} spacing={2}>
                 <ExternalLinkIcon mx="2px" />
-                <Link isExternal href="https://sdgs.un.org/">UN Sustainable Development Goals</Link>
+                <Link isExternal href="https://sdgs.un.org/">
+                  UN Sustainable Development Goals
+                </Link>
               </Stack>
               {/*
               <Link href={"#"}>The value chain</Link>
