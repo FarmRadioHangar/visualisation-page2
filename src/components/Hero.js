@@ -227,7 +227,7 @@ function Hero() {
         <Box position="relative">
           <Box
             color="white"
-            h={{ base: overlayExpanded ? "40%" : "60px", md: "100%" }}
+            h={{ base: overlayExpanded ? "60%" : "60px", md: "100%" }}
             w={{ base: "100%", md: overlayExpanded ? "400px" : "60px" }}
             bottom={0}
             background="#000000a0"
@@ -266,8 +266,12 @@ function Hero() {
                 <Box mb={3} w={{ base: "60px", md: "80px", lg: "120px" }}>
                   <HiOutlineCursorClick size="100%" />
                 </Box>
-                <Heading mb={2}>Voices of farmers</Heading>
+                <Heading mb={2}>Rural voices</Heading>
+                <Text mb={3}>
+We asked small-scale farmers in four countries for their perspectives on how to create equitable, sustainable, and productive food systems for all. 
+                </Text>
                 <Text>
+Click on the bubbles and icons to listen to their real voices.
                   Click on the bubbles and icons to listen to farmers voices.
                 </Text>
               </>
