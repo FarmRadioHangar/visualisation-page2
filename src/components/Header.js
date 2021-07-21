@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   Img,
   Link,
@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import logo from "../img/on-air-dialogues.svg";
 import logoAlt from "../img/on-air-dialogues-white.svg";
+import { AppContext } from "../contexts/App";
 
 function MenuItem({ children, isLast, to = "/", ...props }) {
   return (
@@ -24,6 +25,7 @@ function MenuItem({ children, isLast, to = "/", ...props }) {
 
 function MenuLinks({ isOpen }) {
   //const { language, setLanguage } = useContext(AppContext);
+  const { setAboutPageVisible } = useContext(AppContext);
 
   return (
     <Box
@@ -39,19 +41,21 @@ function MenuLinks({ isOpen }) {
       >
         <Spacer display={{ base: "none", sm: "block" }} />
         <MenuItem
-          onClick={() => { console.log('about'); }}
+          onClick={() => { setAboutPageVisible(true); }}
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#about"
         >
           About the project
         </MenuItem>
         <MenuItem
+          onClick={() => { setAboutPageVisible(false); }}
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#insights"
         >
           Insights
         </MenuItem>
         <MenuItem
+          onClick={() => { setAboutPageVisible(false); }}
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#results"
         >
@@ -91,6 +95,7 @@ function MenuLinks({ isOpen }) {
         <Link
           w={{ base: "100%", sm: "auto" }}
           href="#report"
+          onClick={() => { setAboutPageVisible(false); }}
           _hover={{ textDecoration: "none" }}
         >
           <Button
