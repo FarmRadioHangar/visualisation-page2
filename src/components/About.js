@@ -116,9 +116,9 @@ function About() {
                     href="#results"
                   >
                     click here
-                  </Link>
+                  </Link>{" "}
                   to explore the results, and listen to the real voices of
-                  farmers.
+                  farmers. <b>The report is coming soon!</b>
                 </Text>
               </Box>
             </Stack>

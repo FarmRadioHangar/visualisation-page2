@@ -93,6 +93,7 @@ function Summary() {
                     backgroundSize="cover"
                     backgroundPosition="center center"
                     minHeight="400px"
+                    my={{ base: 10, md: 0 }}
                   />
                   <Box display="flex" alignItems="center" px={10}>
                     <Text fontSize="1.7em" color="gray">
@@ -113,12 +114,14 @@ function Summary() {
                     backgroundSize="cover"
                     backgroundPosition="center center"
                     minHeight="400px"
+                    my={{ base: 10, md: 0 }}
                   />
                   <Box
                     bg={`url(${photo3})`}
                     backgroundSize="cover"
-                    backgroundPosition="center center"
+                    backgroundPosition="top center"
                     minHeight="400px"
+                    my={{ base: 10, md: 0 }}
                   />
                   <Box display="flex" alignItems="center" px={10}>
                     <Text fontSize="1.7em" color="gray">
