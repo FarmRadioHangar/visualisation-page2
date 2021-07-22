@@ -31,6 +31,7 @@ function Hero() {
   const [responseInfo, setResponseInfo] = useState();
   const [transcriptionLang, setTranscriptionLang] = useState("en");
   const [playing, setPlaying] = useState(false);
+  const [canPlay, setCanPlay] = useState(false);
 
   const playerRef = useRef();
 
@@ -62,9 +63,6 @@ function Hero() {
       const response = getResponse();
 
       setAudioSrc(`${process.env.PUBLIC_URL}/audio/${response.ID}.wav`);
-      //setAudioSrc(`${process.env.PUBLIC_URL}/audio/TZEP2010.wav`);
-
-      //      setAudioSrc(process.env.PUBLIC_URL + '/audio/001.wav');
 
       setResponseInfo({
         transcription_en: response["Transcription (ENG)"],
@@ -73,6 +71,7 @@ function Hero() {
         question_fr: response["Corresponding Uliza poll question (FR)"],
       });
 
+      setCanPlay(false);
       audioApi().load();
       setPlaying(true);
     });
@@ -128,6 +127,9 @@ function Hero() {
           onError={(err) => {
             console.log(err);
           }}
+          onCanPlay={() => {
+            setCanPlay(true);
+          }}
         />
         {audioSrc && playing && (
           <>
@@ -144,16 +146,29 @@ function Hero() {
               {playing && (
                 <>
                   <Box mx={3} h="100%">
-                    <Spinner
-                      fadeIn="none"
-                      color="white"
-                      name="line-scale-pulse-out"
-                      style={{
-                        width: "40px",
-                        height: "100%",
-                        marginTop: "6px",
-                      }}
-                    />
+                    {canPlay ? (
+                      <Spinner
+                        fadeIn="none"
+                        color="white"
+                        name="line-scale-pulse-out"
+                        style={{
+                          width: "40px",
+                          height: "100%",
+                          marginTop: "6px",
+                        }}
+                      />
+                    ) : (
+                      <Spinner
+                        fadeIn="none"
+                        color="white"
+                        name="three-bounce"
+                        style={{
+                          width: "40px",
+                          height: "100%",
+                          marginTop: "6px",
+                        }}
+                      />
+                    )}
                   </Box>
                   <Box mx={2}>
                     {responseInfo && (
