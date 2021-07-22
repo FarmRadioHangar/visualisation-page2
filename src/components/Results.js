@@ -723,11 +723,11 @@ function Results() {
               </Heading>
             </Box>
             <Text color="#4c9f38" py={4} fontSize="1.3em">
-              Want a deep dive into the results? Click here to download the full
-              report.
+              Want a deep dive into the results?{" "}
+              <b>Stay tuned to read the full report.</b>
             </Text>
-            <Button py={8} my={5} size="lg" color="white" bg="#01add8">
-              Download (PDF)
+            <Button disabled py={8} my={5} size="lg" color="white" bg="#01add8">
+              Download (coming soon)
             </Button>
           </Box>
         </SimpleGrid>

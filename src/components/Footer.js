@@ -116,9 +116,8 @@ function Footer() {
             </Box>
             <Text fontSize={"xs"}>© 2021 All rights reserved</Text>
           </GridItem>
-          <GridItem pb={8}>
-            <Stack align={"flex-start"}>
-              <ListHeader fontWeight="bold">Links</ListHeader>
+          <GridItem pb={8} d="flex" alignItems="center">
+            <Stack align={"flex-center"}>
               <Stack direction={"row"} align={"center"} spacing={2}>
                 <ExternalLinkIcon mx="2px" />
                 <Link

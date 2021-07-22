@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Img,
   Link,
@@ -9,8 +9,11 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import photo4 from "../img/photo4.jpg";
+import { AppContext } from "../contexts/App";
 
 function About() {
+  const { setAboutPageVisible } = useContext(AppContext);
+
   return (
     <>
       <Box bg="#dfa400">
@@ -65,16 +68,16 @@ function About() {
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Img
                   src={photo4}
-                  width="400px"
-                  height="400px"
+                  width="350px"
+                  height="350px"
                   borderRadius="50%"
                   objectFit="cover"
                 />
               </Box>
             </Stack>
-            <Stack flex={1}>
-              <Box mb={6}>
-                <Text mb={3}>
+            <Stack flex={1} justifyContent="center">
+              <Box>
+                <Text mb={3} fontSize="1.4em">
                   Radio is accessible, and reaches people everywhere. And with
                   mobile phones, it has even more power.
                 </Text>
@@ -95,12 +98,34 @@ function About() {
                 </Text>
                 <Text mb={3} fontWeight="bold">
                   To read the full results,{" "}
-                  <Link href="">download the report here</Link>. Or, click here
+                  <Link
+                    color="#01aed9"
+                    onClick={() => {
+                      setAboutPageVisible(false);
+                    }}
+                    href="#report"
+                  >
+                    download the report here
+                  </Link>
+                  . Or,{" "}
+                  <Link
+                    color="#01aed9"
+                    onClick={() => {
+                      setAboutPageVisible(false);
+                    }}
+                    href="#results"
+                  >
+                    click here
+                  </Link>
                   to explore the results, and listen to the real voices of
                   farmers.
                 </Text>
               </Box>
-              <Heading size="lg">The 2021 UN Food Systems Summit</Heading>
+            </Stack>
+          </Stack>
+          <Stack direction={{ base: "column", lg: "row" }} mt={5}>
+            <Stack flex={1}>
+              <Heading size="xl">The 2021 UN Food Systems Summit</Heading>
               <Text mb={3}>
                 This project takes place within the framework of the 2021 UN
                 Food Systems Summit. Convened in 2021 by UN Secretary-General

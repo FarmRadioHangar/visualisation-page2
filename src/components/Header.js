@@ -115,8 +115,9 @@ function MenuLinks({ isOpen }) {
               bg: "#4c9f38",
             }}
             w={{ base: "100%", sm: "auto" }}
+            disabled
           >
-            Download the report!
+            Report coming soon
           </Button>
         </Link>
       </Stack>
