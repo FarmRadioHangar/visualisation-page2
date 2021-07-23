@@ -110,7 +110,7 @@ function Hero() {
           width="70px"
           height="70px"
           position="fixed"
-          zIndex={1000}
+          zIndex={4000}
           borderRadius="50%"
           background="rgb(239 65 42)"
           onClick={playing ? pause : play}
