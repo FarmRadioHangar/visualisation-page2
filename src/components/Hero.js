@@ -292,7 +292,6 @@ function Hero() {
                 </Text>
                 <Text>
                   Click on the bubbles and icons to listen to their real voices.
-                  Click on the bubbles and icons to listen to farmers voices.
                 </Text>
               </>
             )}
