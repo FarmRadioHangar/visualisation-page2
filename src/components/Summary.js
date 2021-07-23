@@ -49,7 +49,7 @@ function SummaryItem({ heading, text, children }) {
 function Summary() {
   return (
     <>
-      <Box position={"relative"}>
+      <Box bg="white" position={"relative"}>
         <Container maxW={"7xl"} zIndex={10} position={"relative"}>
           <Stack direction={{ base: "column", lg: "row" }}>
             <Stack

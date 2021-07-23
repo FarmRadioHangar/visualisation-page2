@@ -39,42 +39,44 @@ function Hero() {
     return playerRef.current.audioEl.current;
   };
 
-  const onLoaded = (container) => {
-    container.addClickHandler((e, ps) => {
-      const getResultsSet = () => {
-        switch (Math.floor(4 * Math.random())) {
-          case 0:
-            return resultsBf;
-          case 1:
-            return resultsGh;
-          case 2:
-            return resultsTz;
-          case 3:
-          default:
-            return resultsUg;
-        }
-      };
+  const handleClick = () => {
+    const getResultsSet = () => {
+      switch (Math.floor(4 * Math.random())) {
+        case 0:
+          return resultsBf;
+        case 1:
+          return resultsGh;
+        case 2:
+          return resultsTz;
+        case 3:
+        default:
+          return resultsUg;
+      }
+    };
 
-      const getResponse = () => {
-        const results = getResultsSet();
-        return results[Math.floor(results.length * Math.random())];
-      };
+    const getResponse = () => {
+      const results = getResultsSet();
+      return results[Math.floor(results.length * Math.random())];
+    };
 
-      const response = getResponse();
+    const response = getResponse();
 
-      setAudioSrc(`${process.env.PUBLIC_URL}/audio/${response.ID}.wav`);
+    setAudioSrc(`${process.env.PUBLIC_URL}/audio/${response.ID}.wav`);
 
-      setResponseInfo({
-        transcription_en: response["Transcription (ENG)"],
-        transcription_fr: response["Transcription (FR)"],
-        question_en: response["Corresponding Uliza poll question"],
-        question_fr: response["Corresponding Uliza poll question (FR)"],
-      });
-
-      setCanPlay(false);
-      audioApi().load();
-      setPlaying(true);
+    setResponseInfo({
+      transcription_en: response["Transcription (ENG)"],
+      transcription_fr: response["Transcription (FR)"],
+      question_en: response["Corresponding Uliza poll question"],
+      question_fr: response["Corresponding Uliza poll question (FR)"],
     });
+
+    setCanPlay(false);
+    audioApi().load();
+    setPlaying(true);
+  };
+
+  const onLoaded = (container) => {
+    container.addClickHandler(handleClick);
   };
 
   const toggleOverlayExpanded = () => {
@@ -248,6 +250,7 @@ function Hero() {
             background="#000000a0"
             position="absolute"
             display="flex"
+            zIndex={1000}
             alignItems="center"
             justifyContent="center"
             flexDirection="column"
@@ -294,88 +297,84 @@ function Hero() {
               </>
             )}
           </Box>
-          <Particles
-            height="500px"
-            loaded={onLoaded}
-            options={{
-              background: {
-                color: {
-                  value: "#15760d",
-                },
-              },
-              pauseOnBlur: false,
-              particles: {
-                color: {
-                  value: "#ffffff",
-                },
-                collisions: {
-                  enable: false,
-                },
-                move: {
-                  direction: "none",
+          <div
+            onClick={handleClick}
+            style={{ height: "500px", width: "100%", overflow: "hidden" }}
+          >
+            <Particles
+              loaded={onLoaded}
+              options={{
+                fullScreen: {
                   enable: true,
-                  outMode: "bounce",
-                  random: true,
-                  speed: 1.5,
-                  straight: false,
-                  attract: {
-                    enable: true,
+                  zIndex: -1,
+                },
+                background: {
+                  color: {
+                    value: "#15760d",
                   },
                 },
-                number: {
-                  value: 30,
-                },
-                opacity: {
-                  value: 0.5,
-                },
-                shape: {
-                  type: ["circle", "image"],
-                  image: [
-                    {
-                      src: fssIcon1,
-                    },
-                    {
-                      src: fssIcon2,
-                    },
-                    {
-                      src: fssIcon3,
-                    },
-                    {
-                      src: fssIcon4,
-                    },
-                    {
-                      src: fssIcon5,
-                    },
-                    {
-                      src: fssIcon6,
-                    },
-                    {
-                      src: fssIcon7,
-                    },
-                    {
-                      src: fssIcon8,
-                    },
-                    {
-                      src: fssIcon11,
-                    },
-                  ],
-                },
-                rotate: {
-                  random: true,
-                  animation: {
+                pauseOnBlur: false,
+                particles: {
+                  color: {
+                    value: "#ffffff",
+                  },
+                  collisions: {
+                    enable: false,
+                  },
+                  move: {
                     enable: true,
+                    speed: 1.5,
+                    straight: false,
+                  },
+                  number: {
+                    value: 30,
+                  },
+                  opacity: {
+                    value: 0.5,
+                  },
+                  shape: {
+                    type: ["circle", "image"],
+                    image: [
+                      {
+                        src: fssIcon1,
+                      },
+                      {
+                        src: fssIcon2,
+                      },
+                      {
+                        src: fssIcon3,
+                      },
+                      {
+                        src: fssIcon4,
+                      },
+                      {
+                        src: fssIcon5,
+                      },
+                      {
+                        src: fssIcon6,
+                      },
+                      {
+                        src: fssIcon7,
+                      },
+                      {
+                        src: fssIcon8,
+                      },
+                      {
+                        src: fssIcon11,
+                      },
+                    ],
+                  },
+                  size: {
+                    random: true,
+                    value: 75,
+                    animation: {
+                      enable: true,
+                    },
                   },
                 },
-                size: {
-                  random: true,
-                  value: 75,
-                  animation: {
-                    enable: true,
-                  },
-                },
-              },
-            }}
-          />
+              }}
+            />
+          </div>
         </Box>
       </Box>
     </>

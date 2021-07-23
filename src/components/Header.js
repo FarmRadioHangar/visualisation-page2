@@ -175,7 +175,7 @@ function NavBarContainer({ children, ...props }) {
       w="100%"
       mb={0}
       p={8}
-      bg={["#dfa400", "#dfa400", "transparent", "transparent"]}
+      bg={["#dfa400", "#dfa400", "white", "white"]}
       color={["white", "white", "primary.700", "primary.700"]}
       {...props}
     >

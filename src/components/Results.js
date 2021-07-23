@@ -503,7 +503,7 @@ function Results() {
   };
 
   return (
-    <Box>
+    <Box bg="white" display="flex" flexDirection="column">
       <Box id="results" bg="#dfa400" px={0} py={0} position="relative">
         <Box
           position="absolute"
