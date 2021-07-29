@@ -125,7 +125,7 @@ function Summary() {
                   />
                   <Box display="flex" alignItems="center" px={10}>
                     <Text fontSize="1.7em" color="gray">
-                      <b>Over 90% of callers felt there was something</b> they
+                      <b>More than 90% of callers felt there was something</b> they
                       could do in their community to cope with climate change.
                     </Text>
                   </Box>
