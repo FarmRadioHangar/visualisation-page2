@@ -127,7 +127,7 @@ function About() {
             <Stack flex={1}>
               <Heading size="xl">The 2021 UN Food Systems Summit</Heading>
               <Text mb={3}>
-                This project takes place within the framework of the
+                This project takes place within the framework of the{" "}
                 <Link
                   isExternal
                   color="#01aed9"
