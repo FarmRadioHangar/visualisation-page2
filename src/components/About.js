@@ -117,8 +117,8 @@ function About() {
                   >
                     click here
                   </Link>{" "}
-                  to explore the results, and listen to the real voices of
-                  farmers. <b>The report is coming soon!</b>
+                  to explore the results, and listen to the voices of farmers.{" "}
+                  <b>The report is coming soon!</b>
                 </Text>
               </Box>
             </Stack>
@@ -127,13 +127,20 @@ function About() {
             <Stack flex={1}>
               <Heading size="xl">The 2021 UN Food Systems Summit</Heading>
               <Text mb={3}>
-                This project takes place within the framework of the 2021 UN
-                Food Systems Summit. Convened in 2021 by UN Secretary-General
-                António Guterres, the UN Food Systems Summit brings together
-                global actors from across sectors to engage in dialogue on all
-                aspects of food systems. The aim of the Summit is to create
-                tangible, positive food system transformation through the
-                Sustainable Development Goals (SDGs).
+                This project takes place within the framework of the
+                <Link
+                  isExternal
+                  color="#01aed9"
+                  href="https://www.un.org/en/food-systems-summit"
+                >
+                  2021 UN Food Systems Summit
+                </Link>
+                . Convened in 2021 by UN Secretary-General António Guterres, the
+                UN Food Systems Summit brings together global actors from across
+                sectors to engage in dialogue on all aspects of food systems.
+                The aim of the Summit is to create tangible, positive food
+                system transformation through the Sustainable Development Goals
+                (SDGs).
               </Text>
               <Box py={8}>
                 <Text mb={3} fontSize="3xl">
