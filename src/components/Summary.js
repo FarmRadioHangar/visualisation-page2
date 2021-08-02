@@ -9,6 +9,7 @@ import {
   Tag,
   Stack,
 } from "@chakra-ui/react";
+import africaIcon from "../img/africa.png";
 import radioIcon from "../img/radio.png";
 import scriptIcon from "../img/script.png";
 import loveIcon from "../img/love.png";
@@ -28,18 +29,21 @@ function StatsText({ children }) {
 
 function SummaryItem({ heading, text, children }) {
   return (
-    <Box mt={5} p={3}>
+    <Box mt={5} p={3} align="center">
       {children}
       <Tag
         bg="#4c9f38"
         color="white"
         fontFamily={"heading"}
-        fontSize={"5xl"}
+        fontSize={"6xl"}
+        borderRadius={28}
+        px={5}
+        py={2}
         mb={3}
       >
         {heading}
       </Tag>
-      <Text fontSize={"xl"} color={"gray.800"}>
+      <Text fontSize={"2xl"} color={"gray.800"}>
         {text}
       </Text>
     </Box>
@@ -197,12 +201,30 @@ function Summary() {
               py={{ base: 4, md: 10, xl: 20 }}
             >
               <Box mb={{ base: 8, md: 20 }}>
-                <SimpleGrid columns={{ base: 1, sm: 2, lg: 5 }} spacing={10}>
+                <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={10}>
+                  <SummaryItem
+                    heading={"4"}
+                    text={
+                      <>
+                        <StatsText>Countries</StatsText>
+                      </>
+                    }
+                  >
+                    <Box
+                      height="180px"
+                      py={6}
+                      justifyContent="center"
+                      alignItems="center"
+                      d="flex"
+                    >
+                      <Img src={africaIcon} height="120px" />
+                    </Box>
+                  </SummaryItem>
                   <SummaryItem
                     heading={"6"}
                     text={
                       <>
-                        <StatsText>Radio stations</StatsText> in four countries
+                        <StatsText>Radio stations</StatsText>
                       </>
                     }
                   >
@@ -217,10 +239,10 @@ function Summary() {
                     </Box>
                   </SummaryItem>
                   <SummaryItem
-                    heading={"18"}
+                    heading={"3"}
                     text={
                       <>
-                        <StatsText>Original</StatsText> episodes
+                        <StatsText>Episodes</StatsText> per station
                       </>
                     }
                   >
@@ -238,7 +260,7 @@ function Summary() {
                     heading={"3,494"}
                     text={
                       <>
-                        <StatsText>Respondents</StatsText>
+                        <StatsText>Total callers</StatsText>
                       </>
                     }
                   >
@@ -256,7 +278,7 @@ function Summary() {
                     heading={"11,854"}
                     text={
                       <>
-                        <StatsText>Answered</StatsText> questions
+                        <StatsText>Total responses</StatsText> to questions
                       </>
                     }
                   >
@@ -274,7 +296,7 @@ function Summary() {
                     heading={"2,648"}
                     text={
                       <>
-                        <StatsText>Audio comments</StatsText> captured
+                        <StatsText>Audio messages</StatsText> left
                       </>
                     }
                   >
@@ -289,7 +311,7 @@ function Summary() {
                     </Box>
                   </SummaryItem>
                 </SimpleGrid>
-                <Box align="center">
+                <Box align="center" mt={10}>
                   <Text color="gray" fontSize="12px">
                     Icons made by{" "}
                     <a href="https://www.freepik.com" title="Freepik">
