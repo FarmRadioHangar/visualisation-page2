@@ -726,7 +726,15 @@ function Results() {
               Want a deep dive into the results?{" "}
               <b>Stay tuned to read the full report.</b>
             </Text>
-            <Button disabled py={8} my={5} size="lg" color="white" bg="#01add8">
+            <Button
+              disabled
+              py={8}
+              my={5}
+              size="lg"
+              color="white"
+              bg="#01add8"
+              _hover={{ bg: "#aaa" }}
+            >
               Download (coming soon)
             </Button>
           </Box>

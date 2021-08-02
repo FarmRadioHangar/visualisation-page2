@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
+  Button,
   SimpleGrid,
   Box,
   Text,
@@ -18,6 +19,7 @@ import questionIcon from "../img/question.png";
 import photo1 from "../img/photo1.jpg";
 import photo2 from "../img/photo2.jpg";
 import photo3 from "../img/photo3.jpg";
+import { AppContext } from "../contexts/App";
 
 function StatsText({ children }) {
   return (
@@ -51,6 +53,8 @@ function SummaryItem({ heading, text, children }) {
 }
 
 function Summary() {
+  const { setAboutPageVisible } = useContext(AppContext);
+
   return (
     <>
       <Box bg="white" position={"relative"}>
@@ -311,6 +315,23 @@ function Summary() {
                     </Box>
                   </SummaryItem>
                 </SimpleGrid>
+                <Box align="center" mt={10}>
+                  <Button
+                    onClick={() => {
+                      setAboutPageVisible(true);
+                      document.location.href = "#";
+                    }}
+                    px={8}
+                    py={8}
+                    my={5}
+                    size="lg"
+                    color="white"
+                    bg="#01add8"
+                    _hover={{ bg: "#01add8" }}
+                  >
+                    Learn more
+                  </Button>
+                </Box>
                 <Box align="center" mt={10}>
                   <Text color="gray" fontSize="12px">
                     Icons made by{" "}
