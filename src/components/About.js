@@ -62,9 +62,9 @@ function About() {
         </Container>
       </Box>
       <Box>
-        <Container maxW={"7xl"} zIndex={10} py={10}>
+        <Container maxW={"7xl"} zIndex={10} mt={8}>
           <Stack direction={{ base: "column", lg: "row" }}>
-            <Stack mx={9} mb={9}>
+            <Stack m={8}>
               <Box display="flex" alignItems="center" justifyContent="center">
                 <Img
                   src={photo4}
@@ -77,11 +77,11 @@ function About() {
             </Stack>
             <Stack flex={1} justifyContent="center">
               <Box>
-                <Text mb={3} fontSize="1.4em">
+                <Text mb={4}>
                   Radio is accessible, and reaches people everywhere. And with
                   mobile phones, it has even more power.
                 </Text>
-                <Text mb={3}>
+                <Text mb={4}>
                   We worked with six stations in Burkina Faso, Ghana, Tanzania,
                   and Uganda to create 18 original episodes of radio
                   programming, complete with mobile phone based listener
@@ -90,7 +90,7 @@ function About() {
                   air, we engaged listeners to join in the discussion with their
                   own thoughts.
                 </Text>
-                <Text mb={3}>
+                <Text mb={4}>
                   We asked listeners: Which issues impact farmers most? How do
                   barriers and opportunities play out differently for female and
                   male farmers? What is the future of food systems? And what
@@ -123,72 +123,79 @@ function About() {
               </Box>
             </Stack>
           </Stack>
-          <Stack direction={{ base: "column", lg: "row" }} mt={5}>
-            <Stack flex={1}>
-              <Heading size="xl">The 2021 UN Food Systems Summit</Heading>
-              <Text mb={3}>
-                This project takes place within the framework of the{" "}
-                <Link
-                  isExternal
-                  color="#01aed9"
-                  href="https://www.un.org/en/food-systems-summit"
-                >
-                  2021 UN Food Systems Summit
-                </Link>
-                . Convened in 2021 by UN Secretary-General António Guterres, the
-                UN Food Systems Summit brings together global actors from across
-                sectors to engage in dialogue on all aspects of food systems.
-                The aim of the Summit is to create tangible, positive food
-                system transformation through the Sustainable Development Goals
-                (SDGs).
-              </Text>
-              <Box py={8}>
-                <Text mb={3} fontSize="3xl">
-                  “The summit will only be effective at setting out the pathway
-                  to 2030 if we successfully leverage the collective knowledge
-                  and experience of the broadest possible cross-section of the
-                  population.” - UN Special Envoy Dr. Agnes Kalibata
-                </Text>
-              </Box>
-              <Box mb={6}>
-                <Heading size="lg" mb={4}>
-                  Acknowledgements
-                </Heading>
-                <Heading size="sm">Farm Radio International</Heading>
-                <Text mb={3}>
-                  Farm Radio International is a Canadian international
-                  non-governmental organization uniquely focused on improving
-                  the lives of rural Africans through the world’s most
-                  accessible communications tool, radio, in combination with
-                  ICTs.
-                </Text>
-                <Heading size="sm">
-                  International Fund for Agriculture Development
-                </Heading>
-                <Text mb={3}>
-                  IFAD is an international financial institution and a United
-                  Nations specialized agency based in Rome – the United Nations
-                  food and agriculture hub. IFAD invests in rural people,
-                  empowering them to reduce poverty, increase food security,
-                  improve nutrition and strengthen resilience.
-                </Text>
-                <Heading size="sm">World Vision Canada</Heading>
-                <Text mb={3}>
-                  World Vision Canada is a Christian relief, development and
-                  advocacy organization working to create lasting change in the
-                  lives of children, families and communities to overcome
-                  poverty and injustice.
-                </Text>
-                <Heading size="sm">Canadian Food Security Policy Group</Heading>
-                <Text mb={3}>
-                  The Canadian Food Security Policy Group is a network of
-                  Canadian development and humanitarian organizations with
-                  expertise in global food systems, and food security in the
-                  Global South.
-                </Text>
-              </Box>
-            </Stack>
-          </Stack>
+        </Container>
+      </Box>
+      <Box bg="#edf2f7" py={20} my={10}>
+        <Container maxW={"7xl"} zIndex={10}>
+          <Heading mb={4} size="lg">
+            The 2021 UN Food Systems Summit
+          </Heading>
+          <Text mb={3}>
+            This project takes place within the framework of the{" "}
+            <Link
+              isExternal
+              color="#01aed9"
+              href="https://www.un.org/en/food-systems-summit"
+            >
+              2021 UN Food Systems Summit
+            </Link>
+            . Convened in 2021 by UN Secretary-General António Guterres, the UN
+            Food Systems Summit brings together global actors from across
+            sectors to engage in dialogue on all aspects of food systems. The
+            aim of the Summit is to create tangible, positive food system
+            transformation through the Sustainable Development Goals (SDGs).
+          </Text>
+          <Box py={8} px={12} bg="#4c9f38" ml={60} my={10}>
+            <Text mb={3} fontSize="2xl" color="white">
+              “The summit will only be effective at setting out the pathway to
+              2030 if we successfully leverage the collective knowledge and
+              experience of the broadest possible cross-section of the
+              population.” &ndash; UN Special Envoy Dr. Agnes Kalibata
+            </Text>
+          </Box>
+        </Container>
+      </Box>
+      <Box>
+        <Container maxW={"7xl"} zIndex={10} py={10} mb={10}>
+          <Box>
+            <Heading size="lg" mb={4}>
+              Acknowledgements
+            </Heading>
+            <Heading size="sm" mb={2}>
+              Farm Radio International
+            </Heading>
+            <Text mb={4}>
+              Farm Radio International is a Canadian international
+              non-governmental organization uniquely focused on improving the
+              lives of rural Africans through the world’s most accessible
+              communications tool, radio, in combination with ICTs.
+            </Text>
+            <Heading size="sm" mb={2}>
+              International Fund for Agriculture Development
+            </Heading>
+            <Text mb={4}>
+              IFAD is an international financial institution and a United
+              Nations specialized agency based in Rome – the United Nations food
+              and agriculture hub. IFAD invests in rural people, empowering them
+              to reduce poverty, increase food security, improve nutrition and
+              strengthen resilience.
+            </Text>
+            <Heading size="sm mb={2}">World Vision Canada</Heading>
+            <Text mb={4}>
+              World Vision Canada is a Christian relief, development and
+              advocacy organization working to create lasting change in the
+              lives of children, families and communities to overcome poverty
+              and injustice.
+            </Text>
+            <Heading size="sm" mb={2}>
+              Canadian Food Security Policy Group
+            </Heading>
+            <Text mb={4}>
+              The Canadian Food Security Policy Group is a network of Canadian
+              development and humanitarian organizations with expertise in
+              global food systems, and food security in the Global South.
+            </Text>
+          </Box>
         </Container>
       </Box>
     </>

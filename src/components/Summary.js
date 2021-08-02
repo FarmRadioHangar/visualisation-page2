@@ -36,9 +36,9 @@ function SummaryItem({ heading, text, children }) {
         color="white"
         fontFamily={"heading"}
         fontSize={"6xl"}
-        borderRadius={28}
-        px={5}
-        py={2}
+        borderRadius={0}
+        px={7}
+        py={3}
         mb={3}
       >
         {heading}
