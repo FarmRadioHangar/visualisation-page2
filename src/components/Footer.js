@@ -42,13 +42,13 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 //  );
 //}
 
-function ListHeader({ children }) {
-  return (
-    <Text color="primary.500" fontWeight={"500"} fontSize={"lg"} mb={2}>
-      {children}
-    </Text>
-  );
-}
+//function ListHeader({ children }) {
+//  return (
+//    <Text color="primary.500" fontWeight={"500"} fontSize={"lg"} mb={2}>
+//      {children}
+//    </Text>
+//  );
+//}
 
 function Footer() {
   return (

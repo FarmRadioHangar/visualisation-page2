@@ -13,6 +13,7 @@ import {
 import logo from "../img/on-air-dialogues.svg";
 import logoAlt from "../img/on-air-dialogues-white.svg";
 import { AppContext } from "../contexts/App";
+import { useTranslation } from "react-i18next";
 
 function MenuItem({ children, isLast, to = "/", ...props }) {
   return (
@@ -27,6 +28,7 @@ function MenuItem({ children, isLast, to = "/", ...props }) {
 function MenuLinks({ isOpen }) {
   const { language, setLanguage } = useContext(AppContext);
   const { setAboutPageVisible } = useContext(AppContext);
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -48,7 +50,7 @@ function MenuLinks({ isOpen }) {
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#about"
         >
-          About the project
+          {t("About the project")}
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -57,7 +59,7 @@ function MenuLinks({ isOpen }) {
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#insights"
         >
-          Insights
+          {t("Insights")}
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -66,7 +68,7 @@ function MenuLinks({ isOpen }) {
           color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
           to="#results"
         >
-          Explore the results
+          {t("Explore the results")}
         </MenuItem>
         <Select
           color={{ base: "#dfa400", md: "#4c9f38" }}
@@ -79,8 +81,8 @@ function MenuLinks({ isOpen }) {
           size="md"
           w={{ base: "100%", sm: "140px" }}
         >
-          <option value="en">English</option>
-          <option value="fr">French</option>
+          <option value="en">{t("English")}</option>
+          <option value="fr">{t("French")}</option>
         </Select>
         {/*
         <Link w={{ base: "100%", sm: "auto" }} href="/donate">
@@ -117,7 +119,7 @@ function MenuLinks({ isOpen }) {
             w={{ base: "100%", sm: "auto" }}
             disabled
           >
-            Report coming soon
+            {t("Report coming soon")}
           </Button>
         </Link>
       </Stack>

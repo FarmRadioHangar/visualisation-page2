@@ -291,7 +291,8 @@ function Hero() {
                   productive food systems for all.
                 </Text>
                 <Text>
-                  Click on the floating bubbles and icons to listen to their voices.
+                  Click on the floating bubbles and icons to listen to their
+                  voices.
                 </Text>
               </>
             )}
