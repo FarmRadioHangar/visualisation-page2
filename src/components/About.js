@@ -10,9 +10,11 @@ import {
 } from "@chakra-ui/react";
 import photo4 from "../img/photo4.jpg";
 import { AppContext } from "../contexts/App";
+import { Trans, useTranslation } from "react-i18next";
 
 function About() {
   const { setAboutPageVisible } = useContext(AppContext);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -30,7 +32,7 @@ function About() {
                   mb={5}
                   fontSize={{ base: "3xl", md: "5xl" }}
                 >
-                  About the project
+                  {t('About the project')}
                 </Heading>
                 <Text
                   fontFamily={"heading"}
@@ -39,12 +41,7 @@ function About() {
                   fontSize={"2xl"}
                   color={"white"}
                 >
-                  Over the course of three weeks in June 2021, and in
-                  partnership with IFAD, World Vision Canada, and the Food
-                  Security Policy Group, Farm Radio International gathered
-                  thousands of small-scale farmers’ and other rural peoples’
-                  perspectives on how to create equitable, sustainable, and
-                  productive food systems.
+                  {t('ABOUT_P_1')}
                 </Text>
                 <Text
                   fontFamily={"heading"}
@@ -53,8 +50,7 @@ function About() {
                   fontSize={"2xl"}
                   color={"white"}
                 >
-                  The goal: to bring farmers’ voices to the global conversation
-                  about food systems to speak for themselves.
+                  {t('ABOUT_P_2')}
                 </Text>
               </Box>
             </Stack>
@@ -78,47 +74,29 @@ function About() {
             <Stack flex={1} justifyContent="center">
               <Box>
                 <Text mb={4}>
-                  Radio is accessible, and reaches people everywhere. And with
-                  mobile phones, it has even more power.
+                  {t('ABOUT_P_3')}
                 </Text>
                 <Text mb={4}>
-                  We worked with six stations in Burkina Faso, Ghana, Tanzania,
-                  and Uganda to create 18 original episodes of radio
-                  programming, complete with mobile phone based listener
-                  polling. On air, broadcasters invited local experts, farmers,
-                  and guests to speak their mind and share their knowledge. Off
-                  air, we engaged listeners to join in the discussion with their
-                  own thoughts.
+                  {t('ABOUT_P_4')}
                 </Text>
                 <Text mb={4}>
-                  We asked listeners: Which issues impact farmers most? How do
-                  barriers and opportunities play out differently for female and
-                  male farmers? What is the future of food systems? And what
-                  needs to happen to make life better for farming families?
+                  {t('ABOUT_P_5')}
                 </Text>
                 <Text mb={3} fontWeight="bold">
-                  To read the full results,{" "}
-                  <Link
-                    color="#01aed9"
-                    onClick={() => {
-                      setAboutPageVisible(false);
-                    }}
-                    href="#report"
-                  >
-                    download the report here
-                  </Link>
-                  . Or,{" "}
-                  <Link
-                    color="#01aed9"
-                    onClick={() => {
-                      setAboutPageVisible(false);
-                    }}
-                    href="#results"
-                  >
-                    click here
-                  </Link>{" "}
-                  to explore the results, and listen to the voices of farmers.{" "}
-                  <b>The report is coming soon!</b>
+                  <Trans i18nKey="ABOUT_P_6">
+                    To read the full results,&nbsp;
+                    <Link color="#01aed9" onClick={() => { setAboutPageVisible(false); }} href="#report">
+                      download the report here
+                    </Link>.&nbsp; 
+                  </Trans>
+                  <Trans i18nKey="ABOUT_P_7">
+                    Or,&nbsp;
+                    <Link color="#01aed9" onClick={() => { setAboutPageVisible(false); }} href="#results">
+                      click here
+                    </Link>{" "}
+                    to explore the results, and listen to the voices of farmers.{" "}
+                    <b>The report is coming soon!</b>
+                  </Trans>
                 </Text>
               </Box>
             </Stack>
@@ -128,29 +106,28 @@ function About() {
       <Box bg="#edf2f7" py={20} my={10}>
         <Container maxW={"7xl"} zIndex={10}>
           <Heading mb={4} size="lg">
-            The 2021 UN Food Systems Summit
+            {t('The 2021 UN Food Systems Summit')}
           </Heading>
           <Text mb={3}>
-            This project takes place within the framework of the{" "}
-            <Link
-              isExternal
-              color="#01aed9"
-              href="https://www.un.org/en/food-systems-summit"
-            >
-              2021 UN Food Systems Summit
-            </Link>
-            . Convened in 2021 by UN Secretary-General António Guterres, the UN
-            Food Systems Summit brings together global actors from across
-            sectors to engage in dialogue on all aspects of food systems. The
-            aim of the Summit is to create tangible, positive food system
-            transformation through the Sustainable Development Goals (SDGs).
+            <Trans i18nKey="ABOUT_P_8">
+              This project takes place within the framework of the{" "}
+              <Link
+                isExternal
+                color="#01aed9"
+                href="https://www.un.org/en/food-systems-summit"
+              >
+                2021 UN Food Systems Summit
+              </Link>. 
+              Convened in 2021 by UN Secretary-General António Guterres, the UN
+              Food Systems Summit brings together global actors from across
+              sectors to engage in dialogue on all aspects of food systems. The
+              aim of the Summit is to create tangible, positive food system
+              transformation through the Sustainable Development Goals (SDGs).
+            </Trans>
           </Text>
           <Box py={8} px={12} bg="#4c9f38" ml={60} my={10}>
             <Text mb={3} fontSize="2xl" color="white">
-              “The summit will only be effective at setting out the pathway to
-              2030 if we successfully leverage the collective knowledge and
-              experience of the broadest possible cross-section of the
-              population.” &ndash; UN Special Envoy Dr. Agnes Kalibata
+              {t('ABOUT_P_9')}
             </Text>
           </Box>
         </Container>
@@ -159,41 +136,29 @@ function About() {
         <Container maxW={"7xl"} zIndex={10} py={10} mb={10}>
           <Box>
             <Heading size="lg" mb={4}>
-              Acknowledgements
+              {t('Acknowledgements')}
             </Heading>
             <Heading size="sm" mb={2}>
-              Farm Radio International
+              {t('Farm Radio International')}
             </Heading>
             <Text mb={4}>
-              Farm Radio International is a Canadian international
-              non-governmental organization uniquely focused on improving the
-              lives of rural Africans through the world’s most accessible
-              communications tool, radio, in combination with ICTs.
+              {t('ABOUT_P_10')}
             </Text>
             <Heading size="sm" mb={2}>
-              International Fund for Agriculture Development
+              {t('International Fund for Agriculture Development')}
             </Heading>
             <Text mb={4}>
-              IFAD is an international financial institution and a United
-              Nations specialized agency based in Rome – the United Nations food
-              and agriculture hub. IFAD invests in rural people, empowering them
-              to reduce poverty, increase food security, improve nutrition and
-              strengthen resilience.
+              {t('ABOUT_P_11')}
             </Text>
-            <Heading size="sm mb={2}">World Vision Canada</Heading>
+            <Heading size="sm mb={2}">{t('World Vision Canada')}</Heading>
             <Text mb={4}>
-              World Vision Canada is a Christian relief, development and
-              advocacy organization working to create lasting change in the
-              lives of children, families and communities to overcome poverty
-              and injustice.
+              {t('ABOUT_P_12')}
             </Text>
             <Heading size="sm" mb={2}>
               Canadian Food Security Policy Group
             </Heading>
             <Text mb={4}>
-              The Canadian Food Security Policy Group is a network of Canadian
-              development and humanitarian organizations with expertise in
-              global food systems, and food security in the Global South.
+              {t('ABOUT_P_13')}
             </Text>
           </Box>
         </Container>

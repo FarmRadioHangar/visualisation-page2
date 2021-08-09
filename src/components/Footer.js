@@ -16,6 +16,7 @@ import farmRadioLogo from "../img/logo-farm-radio-international.png";
 import wvLogo from "../img/wv-logo.jpg";
 import logo from "../img/UNfoodSystemsLogos-300x134-1.png";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { useTranslation } from "react-i18next";
 
 //function SocialButton({ children, label, href }) {
 //  return (
@@ -51,6 +52,8 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 //}
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <Box
       bg={useColorModeValue("gray.100", "gray.900")}
@@ -124,13 +127,13 @@ function Footer() {
                   isExternal
                   href="https://cooperation.ca/what-we-do/canadian-food-security-policy-group/"
                 >
-                  Canadian Food Security Policy Group
+                  {t('Canadian Food Security Policy Group')}
                 </Link>
               </Stack>
               <Stack direction={"row"} align={"center"} spacing={2}>
                 <ExternalLinkIcon mx="2px" />
                 <Link isExternal href="https://sdgs.un.org/">
-                  UN Sustainable Development Goals
+                  {t('UN Sustainable Development Goals')}
                 </Link>
               </Stack>
               {/*

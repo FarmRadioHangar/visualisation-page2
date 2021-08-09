@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import Particles from "react-tsparticles";
 import ReactAudioPlayer from "react-audio-player";
 import Spinner from "react-spinkit";
-//import audioFile from "../audio/test.mp3";
 import fssIcon1 from "../img/icons/fss_icon_1.png";
 import fssIcon11 from "../img/icons/fss_icon_11.png";
 import fssIcon2 from "../img/icons/fss_icon_2.png";
@@ -24,6 +23,7 @@ import {
 import { BiPlay, BiPause } from "react-icons/bi";
 import { HiOutlineCursorClick } from "react-icons/hi";
 import { Link, VStack, IconButton, Box, Heading, Text } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 function Hero() {
   const [overlayExpanded, setOverlayExpanded] = useState(true);
@@ -32,6 +32,7 @@ function Hero() {
   const [transcriptionLang, setTranscriptionLang] = useState("en");
   const [playing, setPlaying] = useState(false);
   const [canPlay, setCanPlay] = useState(false);
+  const { t } = useTranslation();
 
   const playerRef = useRef();
 
@@ -284,15 +285,12 @@ function Hero() {
                 <Box mb={3} w={{ base: "60px", md: "80px", lg: "120px" }}>
                   <HiOutlineCursorClick size="100%" />
                 </Box>
-                <Heading mb={2}>Rural voices</Heading>
+                <Heading mb={2}>{t('Rural voices')}</Heading>
                 <Text mb={3}>
-                  We asked small-scale farmers in four countries for their
-                  perspectives on how to create equitable, sustainable, and
-                  productive food systems for all.
+                  {t('HERO_INTRO_1')}
                 </Text>
                 <Text>
-                  Click on the floating bubbles and icons to listen to their
-                  voices.
+                  {t('HERO_INTRO_2')}
                 </Text>
               </>
             )}
