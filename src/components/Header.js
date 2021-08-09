@@ -3,6 +3,7 @@ import {
   Img,
   Link,
   Button,
+  Select,
   Spacer,
   Stack,
   Box,
@@ -24,7 +25,7 @@ function MenuItem({ children, isLast, to = "/", ...props }) {
 }
 
 function MenuLinks({ isOpen }) {
-  //const { language, setLanguage } = useContext(AppContext);
+  const { language, setLanguage } = useContext(AppContext);
   const { setAboutPageVisible } = useContext(AppContext);
 
   return (
@@ -67,7 +68,6 @@ function MenuLinks({ isOpen }) {
         >
           Explore the results
         </MenuItem>
-        {/*
         <Select
           color={{ base: "#dfa400", md: "#4c9f38" }}
           borderColor={{ base: "#dfa400", md: "#4c9f3880" }}
@@ -81,8 +81,8 @@ function MenuLinks({ isOpen }) {
         >
           <option value="en">English</option>
           <option value="fr">French</option>
-          <option value="ki">Swahili</option>
         </Select>
+        {/*
         <Link w={{ base: "100%", sm: "auto" }} href="/donate">
           <Button
             size="md"
