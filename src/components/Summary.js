@@ -18,7 +18,7 @@ import conversationIcon from "../img/conversation.png";
 import questionIcon from "../img/question.png";
 import photo1 from "../img/photo1.jpg";
 import photo2 from "../img/photo2.jpg";
-import photo3 from "../img/photo3.jpg";
+import photo3 from "../img/Adosante.jpg";
 import { AppContext } from "../contexts/App";
 import { Trans, useTranslation } from "react-i18next";
 
@@ -136,58 +136,6 @@ function Summary() {
                     </Text>
                   </Box>
                 </SimpleGrid>
-                {/*
-                <SimpleGrid
-                  columns={{ base: 1, md: 2 }}
-                  spacing={10}
-                  mt={10}
-                  py={5}
-                >
-                  <Box display="flex" alignItems="center" justifyContent="center">
-                    <Img
-                      src={photo2}
-                    />
-                  </Box>
-                  <Box display="flex" alignItems="center" px={10}>
-                    <Text fontSize="1.7em" color="gray">
-                      <b>Respondents overwhelmingly predicted</b> a future in
-                      farming for their children. Only one in nine people felt
-                      today’s youth should choose another occupation.
-                    </Text>
-                  </Box>
-                </SimpleGrid>
-                <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} py={5}>
-                  <Box display="flex" alignItems="center" px={10}>
-                    <Text fontSize="1.7em" color="gray">
-                      <b>Almost 75% of respondents</b> reported having concerns
-                      about the safety and quality of the food that is available
-                      to their families.
-                    </Text>
-                  </Box>
-                  <Box display="flex" alignItems="center" justifyContent="center">
-                    <Img
-                      src={photo1}
-                    />
-                  </Box>
-                </SimpleGrid>
-                <SimpleGrid
-                  columns={{ base: 1, md: 2 }}
-                  spacing={10}
-                  py={5}
-                >
-                  <Box display="flex" alignItems="center" justifyContent="center">
-                    <Img
-                      src={photo3}
-                    />
-                  </Box>
-                  <Box display="flex" alignItems="center" px={10}>
-                    <Text fontSize="1.7em" color="gray">
-                      <b>Over 90% of callers felt there was something</b> they
-                      could do in their community to cope with climate change.
-                    </Text>
-                  </Box>
-                </SimpleGrid>
-                */}
               </Box>
             </Stack>
           </Stack>

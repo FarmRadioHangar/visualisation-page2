@@ -564,7 +564,7 @@ function Results() {
                 alignItems="center"
               >
                 <Icon mr={3} my={5} as={AiOutlineLineChart} />
-                Results from {getCountryName(country)}{" "}
+                {t('Results from')}{' '}{getCountryName(country)}{" "}
               </Heading>
             </Box>
             <SimpleGrid
@@ -578,7 +578,7 @@ function Results() {
                 </Box>
                 <VStack align={"start"} width="100%" spacing={5}>
                   <Heading fontSize="xl" fontWeight={600}>
-                    Episode 1
+                  {t('Episode')} 1
                   </Heading>
                   <QuestionCard
                     episode={1}
@@ -616,7 +616,7 @@ function Results() {
                 </Box>
                 <VStack align={"start"} width="100%" spacing={5}>
                   <Heading fontSize="xl" fontWeight={600}>
-                    Episode 2
+                    {t('Episode')} 2
                   </Heading>
                   <QuestionCard
                     episode={2}
@@ -655,7 +655,7 @@ function Results() {
                 </Box>
                 <VStack align={"start"} width="100%" spacing={5}>
                   <Heading fontSize="xl" fontWeight={600}>
-                    Episode 3
+                    {t('Episode')} 3
                   </Heading>
                   <QuestionCard
                     episode={3}
