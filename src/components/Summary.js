@@ -153,9 +153,7 @@ function Summary() {
                 <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={10}>
                   <SummaryItem
                     heading={"4"}
-                    text={
-                      <strong>{t('Countries')}</strong>
-                    }
+                    text={<strong>{t("Countries")}</strong>}
                   >
                     <Box
                       height="180px"
@@ -169,9 +167,7 @@ function Summary() {
                   </SummaryItem>
                   <SummaryItem
                     heading={"6"}
-                    text={
-                      <strong>{t('Radio stations')}</strong>
-                    }
+                    text={<strong>{t("Radio stations")}</strong>}
                   >
                     <Box
                       height="180px"
@@ -203,9 +199,7 @@ function Summary() {
                   </SummaryItem>
                   <SummaryItem
                     heading={"3,494"}
-                    text={
-                      <strong>{t('Total callers')}</strong>
-                    }
+                    text={<strong>{t("Total callers")}</strong>}
                   >
                     <Box
                       height="180px"
@@ -268,7 +262,7 @@ function Summary() {
                     bg="#01add8"
                     _hover={{ bg: "#01add8" }}
                   >
-                    {t('Learn more')}
+                    {t("Learn more")}
                   </Button>
                 </Box>
                 <Box align="center" mt={10}>

@@ -45,12 +45,18 @@ i18n.use(initReactI18next).init({
           "We asked small-scale farmers to tell us their thoughts and concerns about food systems",
         SUMMARY_P_2:
           "Nearly 3,500 people in Burkina Faso, Ghana, Tanzania, and Uganda called in to express their perspectives, concerns, and experiences in 2,600+ audio messages. Here’s what they had to say.",
-        RESULTS_QUESTION_1: "If you think about the safety and quality of the food your family eats, are you most worried that:",
-        RESULTS_QUESTION_2: "When food is scarce, what is the first thing your family does to cope?",
-        RESULTS_QUESTION_3: "Which of the following five options would give you the most success as a farmer:",
-        RESULTS_QUESTION_4: "What will farming look like in the future for today’s children?",
-        RESULTS_QUESTION_5: "Where would you turn to for information to help you cope with future threats to your family and livelihood?",
-        RESULTS_QUESTION_6: "Climate change can have a big effect on farming. Which of the following would help you as a farmer to best deal with changes in the weather?",
+        RESULTS_QUESTION_1:
+          "If you think about the safety and quality of the food your family eats, are you most worried that:",
+        RESULTS_QUESTION_2:
+          "When food is scarce, what is the first thing your family does to cope?",
+        RESULTS_QUESTION_3:
+          "Which of the following five options would give you the most success as a farmer:",
+        RESULTS_QUESTION_4:
+          "What will farming look like in the future for today’s children?",
+        RESULTS_QUESTION_5:
+          "Where would you turn to for information to help you cope with future threats to your family and livelihood?",
+        RESULTS_QUESTION_6:
+          "Climate change can have a big effect on farming. Which of the following would help you as a farmer to best deal with changes in the weather?",
       },
     },
     fr: {
@@ -118,7 +124,7 @@ i18n.use(initReactI18next).init({
           "<strong>Près de 75 % des personnes interrogées</strong> ont déclaré avoir des inquiétudes au sujet de la salubrité et de la qualité des aliments disponibles pour leurs familles.",
         SUMMARY_P_5:
           "<strong>Plus de 90 % des appelants</strong> ont estimé qu'ils pouvaient faire quelque chose dans leur communauté pour faire face au changement climatique.",
-        "Countries": "Pays",
+        Countries: "Pays",
         "Radio stations": "stations de radio",
         SUMMARY_P_6: "<strong>épisodes</strong> par station",
         "Total callers": "Appelants au total",
@@ -126,55 +132,78 @@ i18n.use(initReactI18next).init({
         SUMMARY_P_8: "<strong>Messages audios</strong> enregistrés",
         "Learn more": "En savoir plus sur",
         // Results
-        "What farmers think about food systems": "Ce que pensent les agriculteurs(trices) des systèmes alimentaires",
-        "Click on the dropdown menu below to explore the responses of farmers in each country.": "Cliquez sur le menu déroulant ci-dessous pour explorer les réponses des agriculteurs(trices) dans chaque pays.",
+        "What farmers think about food systems":
+          "Ce que pensent les agriculteurs(trices) des systèmes alimentaires",
+        "Click on the dropdown menu below to explore the responses of farmers in each country.":
+          "Cliquez sur le menu déroulant ci-dessous pour explorer les réponses des agriculteurs(trices) dans chaque pays.",
         "Select a country": "Choisissez un pays",
-        "Report": "Rapport",
-        RESULTS_P_1: "Vous voulez une analyse approfondie des résultats? <strong>Restez à l'écoute pour lire le rapport complet.</strong>",
+        Report: "Rapport",
+        RESULTS_P_1:
+          "Vous voulez une analyse approfondie des résultats? <strong>Restez à l'écoute pour lire le rapport complet.</strong>",
         "Download (coming soon)": "Télécharger (prochainement)",
-        RESULTS_QUESTION_1: "Si vous pensez à la sûreté et à la qualité des aliments que mangent votre famille, vous êtes préoccupé par le fait que : ",
-        RESULTS_QUESTION_2: "Lorsque la nourriture est insuffisante, quelle est la première chose que votre famille fait pour y faire face ? Est-ce que : ",
-        RESULTS_QUESTION_3: "Laquelle des cinq options suivantes vous apporterait le plus de succès en tant qu'agriculteur : ",
-        RESULTS_QUESTION_4: "À quoi ressemblera l'agriculture du futur pour les enfants d'aujourd'hui ?",
-        RESULTS_QUESTION_5: "Vers qui vous tourneriez-vous pour obtenir des informations pour vous aider à faire face aux futures menaces pour votre famille et vos moyens de subsistance ?",
-        RESULTS_QUESTION_6: "Le changement climatique peut avoir un impact important sur l'agriculture. Lequel des éléments suivants vous aiderait, en tant qu'agriculteur, à mieux faire face à ces changements climatiques ?",
+        RESULTS_QUESTION_1:
+          "Si vous pensez à la sûreté et à la qualité des aliments que mangent votre famille, vous êtes préoccupé par le fait que : ",
+        RESULTS_QUESTION_2:
+          "Lorsque la nourriture est insuffisante, quelle est la première chose que votre famille fait pour y faire face ? Est-ce que : ",
+        RESULTS_QUESTION_3:
+          "Laquelle des cinq options suivantes vous apporterait le plus de succès en tant qu'agriculteur : ",
+        RESULTS_QUESTION_4:
+          "À quoi ressemblera l'agriculture du futur pour les enfants d'aujourd'hui ?",
+        RESULTS_QUESTION_5:
+          "Vers qui vous tourneriez-vous pour obtenir des informations pour vous aider à faire face aux futures menaces pour votre famille et vos moyens de subsistance ?",
+        RESULTS_QUESTION_6:
+          "Le changement climatique peut avoir un impact important sur l'agriculture. Lequel des éléments suivants vous aiderait, en tant qu'agriculteur, à mieux faire face à ces changements climatiques ?",
         "Burkina Faso": "Burkina Faso",
-        "Ghana": "Ghana",
-        "Tanzania": "Tanzanie",
-        "Uganda": "Ouganda",
-        "It might cause illness due to poor food hygiene practices": "Cela pourrait causer des maladies en raison de mauvaises pratiques d'hygiène alimentaire",
-        "The range of available foods doesn’t have all the nutrients needed for good health": "La variété d’aliments disponibles ne contient pas tous les nutriments nécessaires à une bonne santé",
-        "It might contain harmful chemicals": "Ils peuvent contenir des produits chimiques nocifs", 
-        "I don’t worry - the food my family eats is already safe and nutritious": "La nourriture que ma famille mange est déjà sans danger et nutritive",
-        "Those most in need eat first and others sacrifice": "Ceux qui en ont le plus besoin mangent d'abord et les autres se sacrifient",
-        "Ask everyone to cut back equally": "Vous demandez à tout le monde de réduire leur quantité de façon égale",
+        Ghana: "Ghana",
+        Tanzania: "Tanzanie",
+        Uganda: "Ouganda",
+        "It might cause illness due to poor food hygiene practices":
+          "Cela pourrait causer des maladies en raison de mauvaises pratiques d'hygiène alimentaire",
+        "The range of available foods doesn’t have all the nutrients needed for good health":
+          "La variété d’aliments disponibles ne contient pas tous les nutriments nécessaires à une bonne santé",
+        "It might contain harmful chemicals":
+          "Ils peuvent contenir des produits chimiques nocifs",
+        "I don’t worry - the food my family eats is already safe and nutritious":
+          "La nourriture que ma famille mange est déjà sans danger et nutritive",
+        "Those most in need eat first and others sacrifice":
+          "Ceux qui en ont le plus besoin mangent d'abord et les autres se sacrifient",
+        "Ask everyone to cut back equally":
+          "Vous demandez à tout le monde de réduire leur quantité de façon égale",
         "Sell assets like animals": "Vous vendez des biens comme des animaux",
-        "Find other ways to earn money": "Vous trouvez d'autres moyens de gagner de l'argent",
+        "Find other ways to earn money":
+          "Vous trouvez d'autres moyens de gagner de l'argent",
         "Loans or credit": "Prêts ou crédit",
-        "Secure access to and control over land": "Sécuriser l'accès et le contrôle des terres",
+        "Secure access to and control over land":
+          "Sécuriser l'accès et le contrôle des terres",
         "High quality inputs": "Apports de haute qualité",
         "Better information": "De meilleures informations",
         "Better market access": "Meilleur accès aux marchés",
         "They will be successful": "Ils réussiront",
-        "They will struggle to succeed unless things change": "Ils auront du mal à réussir si les choses ne changent pas", 
-        "Young people should avoid farming and pick another occupation": "Les jeunes devraient éviter l'agriculture et choisir un autre métier",
-        "Young people will farm, but they will need to earn money from other sources too": "Les jeunes seront agriculteurs, mais ils devront aussi gagner de l'argent par d'autres moyens",
+        "They will struggle to succeed unless things change":
+          "Ils auront du mal à réussir si les choses ne changent pas",
+        "Young people should avoid farming and pick another occupation":
+          "Les jeunes devraient éviter l'agriculture et choisir un autre métier",
+        "Young people will farm, but they will need to earn money from other sources too":
+          "Les jeunes seront agriculteurs, mais ils devront aussi gagner de l'argent par d'autres moyens",
         "Family, friends, and neighbours": "Famille, amis et voisins",
-        "Farmers’ co-operative/group": "Coopérative / groupement d'agriculteurs",
-        "Radio": "Radio",
+        "Farmers’ co-operative/group":
+          "Coopérative / groupement d'agriculteurs",
+        Radio: "Radio",
         "Agricultural experts": "Autres experts agricoles",
         "Input suppliers": "Fournisseurs d'apports",
         "Improved inputs": "De meilleurs apports",
-        "Good information on how to adapt": "Bonnes informations sur comment s'adapter",
+        "Good information on how to adapt":
+          "Bonnes informations sur comment s'adapter",
         "Better use of water": "Meilleure utilisation de l'eau",
-        "Protecting the natural environment": "Protéger l'environnement naturel",
+        "Protecting the natural environment":
+          "Protéger l'environnement naturel",
         "Moving to another place": "Déménager",
-        "Adults": "Adultes",
-        "Youth": "Jeunes",
-        "Female": "Femme",
-        "Male": "Homme",
+        Adults: "Adultes",
+        Youth: "Jeunes",
+        Female: "Femme",
+        Male: "Homme",
         "Results from": "Résultats de",
-        "Episode": "Épisode",
+        Episode: "Épisode",
       },
     },
   },

@@ -284,10 +284,10 @@ function QuestionCard({ episode, question, chart: Chart, options = [] }) {
       </Table>
       <Tabs variant="soft-rounded" size="sm" onChange={setTabIndex}>
         <TabList>
-          <Tab>{t('Adults')}</Tab>
-          <Tab>{t('Youth')}</Tab>
-          <Tab>{t('Female')}</Tab>
-          <Tab>{t('Male')}</Tab>
+          <Tab>{t("Adults")}</Tab>
+          <Tab>{t("Youth")}</Tab>
+          <Tab>{t("Female")}</Tab>
+          <Tab>{t("Male")}</Tab>
         </TabList>
       </Tabs>
       <Box mt={5} height="190px" width="100%">
@@ -519,10 +519,12 @@ function Results() {
           <Box>
             <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"left"}>
               <Heading fontSize={"4xl"} color="white">
-                {t('What farmers think about food systems')}
+                {t("What farmers think about food systems")}
               </Heading>
               <Text color={"white"} fontSize={"2xl"}>
-                {t('Click on the dropdown menu below to explore the responses of farmers in each country.')}
+                {t(
+                  "Click on the dropdown menu below to explore the responses of farmers in each country."
+                )}
               </Text>
               <Box>
                 <Select
@@ -535,10 +537,18 @@ function Results() {
                   border="none"
                   size="lg"
                 >
-                  <option value="bf">{getFlag("bf")} {t('Burkina Faso')}</option>
-                  <option value="gh">{getFlag("gh")} {t('Ghana')}</option>
-                  <option value="tz">{getFlag("tz")} {t('Tanzania')}</option>
-                  <option value="ug">{getFlag("ug")} {t('Uganda')}</option>
+                  <option value="bf">
+                    {getFlag("bf")} {t("Burkina Faso")}
+                  </option>
+                  <option value="gh">
+                    {getFlag("gh")} {t("Ghana")}
+                  </option>
+                  <option value="tz">
+                    {getFlag("tz")} {t("Tanzania")}
+                  </option>
+                  <option value="ug">
+                    {getFlag("ug")} {t("Uganda")}
+                  </option>
                 </Select>
               </Box>
             </Stack>
@@ -564,7 +574,7 @@ function Results() {
                 alignItems="center"
               >
                 <Icon mr={3} my={5} as={AiOutlineLineChart} />
-                {t('Results from')}{' '}{getCountryName(country)}{" "}
+                {t("Results from")} {getCountryName(country)}{" "}
               </Heading>
             </Box>
             <SimpleGrid
@@ -578,20 +588,26 @@ function Results() {
                 </Box>
                 <VStack align={"start"} width="100%" spacing={5}>
                   <Heading fontSize="xl" fontWeight={600}>
-                  {t('Episode')} 1
+                    {t("Episode")} 1
                   </Heading>
                   <QuestionCard
                     episode={1}
                     chart={Chart2}
                     question={{
                       number: 1,
-                      text: t('RESULTS_QUESTION_1'),
+                      text: t("RESULTS_QUESTION_1"),
                     }}
                     options={[
-                      t("It might cause illness due to poor food hygiene practices"),
-                      t("The range of available foods doesn’t have all the nutrients needed for good health"),
+                      t(
+                        "It might cause illness due to poor food hygiene practices"
+                      ),
+                      t(
+                        "The range of available foods doesn’t have all the nutrients needed for good health"
+                      ),
                       t("It might contain harmful chemicals"),
-                      t("I don’t worry - the food my family eats is already safe and nutritious"),
+                      t(
+                        "I don’t worry - the food my family eats is already safe and nutritious"
+                      ),
                     ]}
                   />
                   <QuestionCard
@@ -599,7 +615,7 @@ function Results() {
                     chart={Chart1}
                     question={{
                       number: 2,
-                      text: t('RESULTS_QUESTION_2'),
+                      text: t("RESULTS_QUESTION_2"),
                     }}
                     options={[
                       t("Those most in need eat first and others sacrifice"),
@@ -616,14 +632,14 @@ function Results() {
                 </Box>
                 <VStack align={"start"} width="100%" spacing={5}>
                   <Heading fontSize="xl" fontWeight={600}>
-                    {t('Episode')} 2
+                    {t("Episode")} 2
                   </Heading>
                   <QuestionCard
                     episode={2}
                     chart={Chart1}
                     question={{
                       number: 1,
-                      text: t('RESULTS_QUESTION_3'),
+                      text: t("RESULTS_QUESTION_3"),
                     }}
                     options={[
                       t("Loans or credit"),
@@ -638,13 +654,17 @@ function Results() {
                     chart={Chart3}
                     question={{
                       number: 2,
-                      text: t('RESULTS_QUESTION_4'),
+                      text: t("RESULTS_QUESTION_4"),
                     }}
                     options={[
                       t("They will be successful"),
                       t("They will struggle to succeed unless things change"),
-                      t("Young people should avoid farming and pick another occupation"),
-                      t("Young people will farm, but they will need to earn money from other sources too"),
+                      t(
+                        "Young people should avoid farming and pick another occupation"
+                      ),
+                      t(
+                        "Young people will farm, but they will need to earn money from other sources too"
+                      ),
                     ]}
                   />
                 </VStack>
@@ -655,14 +675,14 @@ function Results() {
                 </Box>
                 <VStack align={"start"} width="100%" spacing={5}>
                   <Heading fontSize="xl" fontWeight={600}>
-                    {t('Episode')} 3
+                    {t("Episode")} 3
                   </Heading>
                   <QuestionCard
                     episode={3}
                     chart={Chart4}
                     question={{
                       number: 1,
-                      text: t('RESULTS_QUESTION_5'),
+                      text: t("RESULTS_QUESTION_5"),
                     }}
                     options={[
                       t("Family, friends, and neighbours"),
@@ -677,7 +697,7 @@ function Results() {
                     chart={Chart1}
                     question={{
                       number: 2,
-                      text: t('RESULTS_QUESTION_6'),
+                      text: t("RESULTS_QUESTION_6"),
                     }}
                     options={[
                       t("Improved inputs"),
@@ -721,12 +741,13 @@ function Results() {
                 alignItems="center"
               >
                 <Icon mr={3} as={RiBook2Line} />
-                {t('Report')}
+                {t("Report")}
               </Heading>
             </Box>
             <Text color="#4c9f38" py={4} fontSize="1.3em">
               <Trans i18nKey="RESULTS_P_1">
-                Want a deep dive into the results? <strong>Stay tuned to read the full report.</strong>
+                Want a deep dive into the results?{" "}
+                <strong>Stay tuned to read the full report.</strong>
               </Trans>
             </Text>
             <Button
@@ -738,7 +759,7 @@ function Results() {
               bg="#01add8"
               _hover={{ bg: "#aaa" }}
             >
-              {t('Download (coming soon)')}
+              {t("Download (coming soon)")}
             </Button>
           </Box>
         </SimpleGrid>
