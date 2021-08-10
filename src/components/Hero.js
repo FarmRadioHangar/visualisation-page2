@@ -285,13 +285,9 @@ function Hero() {
                 <Box mb={3} w={{ base: "60px", md: "80px", lg: "120px" }}>
                   <HiOutlineCursorClick size="100%" />
                 </Box>
-                <Heading mb={2}>{t('Rural voices')}</Heading>
-                <Text mb={3}>
-                  {t('HERO_INTRO_1')}
-                </Text>
-                <Text>
-                  {t('HERO_INTRO_2')}
-                </Text>
+                <Heading mb={2}>{t("Rural voices")}</Heading>
+                <Text mb={3}>{t("HERO_INTRO_1")}</Text>
+                <Text>{t("HERO_INTRO_2")}</Text>
               </>
             )}
           </Box>

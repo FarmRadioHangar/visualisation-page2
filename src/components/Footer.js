@@ -127,13 +127,13 @@ function Footer() {
                   isExternal
                   href="https://cooperation.ca/what-we-do/canadian-food-security-policy-group/"
                 >
-                  {t('Canadian Food Security Policy Group')}
+                  {t("Canadian Food Security Policy Group")}
                 </Link>
               </Stack>
               <Stack direction={"row"} align={"center"} spacing={2}>
                 <ExternalLinkIcon mx="2px" />
                 <Link isExternal href="https://sdgs.un.org/">
-                  {t('UN Sustainable Development Goals')}
+                  {t("UN Sustainable Development Goals")}
                 </Link>
               </Stack>
               {/*

@@ -32,7 +32,7 @@ function About() {
                   mb={5}
                   fontSize={{ base: "3xl", md: "5xl" }}
                 >
-                  {t('About the project')}
+                  {t("About the project")}
                 </Heading>
                 <Text
                   fontFamily={"heading"}
@@ -41,7 +41,7 @@ function About() {
                   fontSize={"2xl"}
                   color={"white"}
                 >
-                  {t('ABOUT_P_1')}
+                  {t("ABOUT_P_1")}
                 </Text>
                 <Text
                   fontFamily={"heading"}
@@ -50,7 +50,7 @@ function About() {
                   fontSize={"2xl"}
                   color={"white"}
                 >
-                  {t('ABOUT_P_2')}
+                  {t("ABOUT_P_2")}
                 </Text>
               </Box>
             </Stack>
@@ -73,25 +73,32 @@ function About() {
             </Stack>
             <Stack flex={1} justifyContent="center">
               <Box>
-                <Text mb={4}>
-                  {t('ABOUT_P_3')}
-                </Text>
-                <Text mb={4}>
-                  {t('ABOUT_P_4')}
-                </Text>
-                <Text mb={4}>
-                  {t('ABOUT_P_5')}
-                </Text>
+                <Text mb={4}>{t("ABOUT_P_3")}</Text>
+                <Text mb={4}>{t("ABOUT_P_4")}</Text>
+                <Text mb={4}>{t("ABOUT_P_5")}</Text>
                 <Text mb={3} fontWeight="bold">
                   <Trans i18nKey="ABOUT_P_6">
                     To read the full results,&nbsp;
-                    <Link color="#01aed9" onClick={() => { setAboutPageVisible(false); }} href="#report">
+                    <Link
+                      color="#01aed9"
+                      onClick={() => {
+                        setAboutPageVisible(false);
+                      }}
+                      href="#report"
+                    >
                       download the report here
-                    </Link>.&nbsp; 
+                    </Link>
+                    .&nbsp;
                   </Trans>
                   <Trans i18nKey="ABOUT_P_7">
                     Or,&nbsp;
-                    <Link color="#01aed9" onClick={() => { setAboutPageVisible(false); }} href="#results">
+                    <Link
+                      color="#01aed9"
+                      onClick={() => {
+                        setAboutPageVisible(false);
+                      }}
+                      href="#results"
+                    >
                       click here
                     </Link>{" "}
                     to explore the results, and listen to the voices of farmers.{" "}
@@ -106,7 +113,7 @@ function About() {
       <Box bg="#edf2f7" py={20} my={10}>
         <Container maxW={"7xl"} zIndex={10}>
           <Heading mb={4} size="lg">
-            {t('The 2021 UN Food Systems Summit')}
+            {t("The 2021 UN Food Systems Summit")}
           </Heading>
           <Text mb={3}>
             <Trans i18nKey="ABOUT_P_8">
@@ -117,9 +124,9 @@ function About() {
                 href="https://www.un.org/en/food-systems-summit"
               >
                 2021 UN Food Systems Summit
-              </Link>. 
-              Convened in 2021 by UN Secretary-General António Guterres, the UN
-              Food Systems Summit brings together global actors from across
+              </Link>
+              . Convened in 2021 by UN Secretary-General António Guterres, the
+              UN Food Systems Summit brings together global actors from across
               sectors to engage in dialogue on all aspects of food systems. The
               aim of the Summit is to create tangible, positive food system
               transformation through the Sustainable Development Goals (SDGs).
@@ -127,7 +134,7 @@ function About() {
           </Text>
           <Box py={8} px={12} bg="#4c9f38" ml={60} my={10}>
             <Text mb={3} fontSize="2xl" color="white">
-              {t('ABOUT_P_9')}
+              {t("ABOUT_P_9")}
             </Text>
           </Box>
         </Container>
@@ -136,30 +143,22 @@ function About() {
         <Container maxW={"7xl"} zIndex={10} py={10} mb={10}>
           <Box>
             <Heading size="lg" mb={4}>
-              {t('Acknowledgements')}
+              {t("Acknowledgements")}
             </Heading>
             <Heading size="sm" mb={2}>
-              {t('Farm Radio International')}
+              {t("Farm Radio International")}
             </Heading>
-            <Text mb={4}>
-              {t('ABOUT_P_10')}
-            </Text>
+            <Text mb={4}>{t("ABOUT_P_10")}</Text>
             <Heading size="sm" mb={2}>
-              {t('International Fund for Agriculture Development')}
+              {t("International Fund for Agriculture Development")}
             </Heading>
-            <Text mb={4}>
-              {t('ABOUT_P_11')}
-            </Text>
-            <Heading size="sm mb={2}">{t('World Vision Canada')}</Heading>
-            <Text mb={4}>
-              {t('ABOUT_P_12')}
-            </Text>
+            <Text mb={4}>{t("ABOUT_P_11")}</Text>
+            <Heading size="sm mb={2}">{t("World Vision Canada")}</Heading>
+            <Text mb={4}>{t("ABOUT_P_12")}</Text>
             <Heading size="sm" mb={2}>
               Canadian Food Security Policy Group
             </Heading>
-            <Text mb={4}>
-              {t('ABOUT_P_13')}
-            </Text>
+            <Text mb={4}>{t("ABOUT_P_13")}</Text>
           </Box>
         </Container>
       </Box>

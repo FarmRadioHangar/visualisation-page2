@@ -20,14 +20,7 @@ import photo1 from "../img/photo1.jpg";
 import photo2 from "../img/photo2.jpg";
 import photo3 from "../img/photo3.jpg";
 import { AppContext } from "../contexts/App";
-
-function StatsText({ children }) {
-  return (
-    <Text as={"span"} fontWeight={700} color={"gray.800"}>
-      {children}
-    </Text>
-  );
-}
+import { Trans, useTranslation } from "react-i18next";
 
 function SummaryItem({ heading, text, children }) {
   return (
@@ -54,6 +47,7 @@ function SummaryItem({ heading, text, children }) {
 
 function Summary() {
   const { setAboutPageVisible } = useContext(AppContext);
+  const { t } = useTranslation();
 
   return (
     <>
@@ -74,21 +68,17 @@ function Summary() {
                   fontSize={"2xl"}
                   color={"#dfa400"}
                 >
-                  {"Listening to farmers"}
+                  {t("Listening to farmers")}
                 </Text>
                 <Heading
                   color={"#dfa400"}
                   mb={5}
                   fontSize={{ base: "3xl", md: "5xl" }}
                 >
-                  We asked small-scale farmers to tell us their thoughts and
-                  concerns about food systems
+                  {t("SUMMARY_P_1")}
                 </Heading>
                 <Text fontSize={"xl"} color={"#dfa400"}>
-                  Nearly 3,500 people in Burkina Faso, Ghana, Tanzania, and
-                  Uganda called in to express their perspectives, concerns, and
-                  experiences in 2,600+ audio messages. Here’s what they had to
-                  say.
+                  {t("SUMMARY_P_2")}
                 </Text>
                 <SimpleGrid
                   columns={{ base: 1, md: 2 }}
@@ -105,16 +95,21 @@ function Summary() {
                   />
                   <Box display="flex" alignItems="center" px={10}>
                     <Text fontSize="1.7em" color="gray">
-                      <b>Respondents overwhelmingly predicted</b> a future in
-                      farming for their children. Only one in nine people felt
-                      today’s youth should choose another occupation.
+                      <Trans i18nKey="SUMMARY_P_3">
+                        <strong>Respondents overwhelmingly predicted</strong> a
+                        future in farming for their children. Only one in nine
+                        people felt today’s youth should choose another
+                        occupation.
+                      </Trans>
                     </Text>
                   </Box>
                   <Box display="flex" alignItems="center" px={10}>
                     <Text fontSize="1.7em" color="gray">
-                      <b>Almost 75% of respondents</b> reported having concerns
-                      about the safety and quality of the food that is available
-                      to their families.
+                      <Trans i18nKey="SUMMARY_P_4">
+                        <b>Almost 75% of respondents</b> reported having
+                        concerns about the safety and quality of the food that
+                        is available to their families.
+                      </Trans>
                     </Text>
                   </Box>
                   <Box
@@ -133,9 +128,11 @@ function Summary() {
                   />
                   <Box display="flex" alignItems="center" px={10}>
                     <Text fontSize="1.7em" color="gray">
-                      <b>More than 90% of callers felt there was something</b>{" "}
-                      they could do in their community to cope with climate
-                      change.
+                      <Trans i18nKey="SUMMARY_P_5">
+                        <b>More than 90% of callers</b> felt there was something
+                        they could do in their community to cope with climate
+                        change.
+                      </Trans>
                     </Text>
                   </Box>
                 </SimpleGrid>
@@ -209,9 +206,7 @@ function Summary() {
                   <SummaryItem
                     heading={"4"}
                     text={
-                      <>
-                        <StatsText>Countries</StatsText>
-                      </>
+                      <strong>{t('Countries')}</strong>
                     }
                   >
                     <Box
@@ -227,9 +222,7 @@ function Summary() {
                   <SummaryItem
                     heading={"6"}
                     text={
-                      <>
-                        <StatsText>Radio stations</StatsText>
-                      </>
+                      <strong>{t('Radio stations')}</strong>
                     }
                   >
                     <Box
@@ -245,9 +238,9 @@ function Summary() {
                   <SummaryItem
                     heading={"3"}
                     text={
-                      <>
-                        <StatsText>Episodes</StatsText> per station
-                      </>
+                      <Trans i18nKey="SUMMARY_P_6">
+                        <strong>Episodes</strong> per station
+                      </Trans>
                     }
                   >
                     <Box
@@ -263,9 +256,7 @@ function Summary() {
                   <SummaryItem
                     heading={"3,494"}
                     text={
-                      <>
-                        <StatsText>Total callers</StatsText>
-                      </>
+                      <strong>{t('Total callers')}</strong>
                     }
                   >
                     <Box
@@ -281,9 +272,9 @@ function Summary() {
                   <SummaryItem
                     heading={"11,854"}
                     text={
-                      <>
-                        <StatsText>Total responses</StatsText> to questions
-                      </>
+                      <Trans i18nKey="SUMMARY_P_7">
+                        <strong>Total responses</strong> to questions
+                      </Trans>
                     }
                   >
                     <Box
@@ -299,9 +290,9 @@ function Summary() {
                   <SummaryItem
                     heading={"2,648"}
                     text={
-                      <>
-                        <StatsText>Audio messages</StatsText> left
-                      </>
+                      <Trans i18nKey="SUMMARY_P_8">
+                        <strong>Audio messages</strong> left
+                      </Trans>
                     }
                   >
                     <Box
