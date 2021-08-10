@@ -237,6 +237,7 @@ function getResults(country, question) {
 function QuestionCard({ episode, question, chart: Chart, options = [] }) {
   const [tabIndex, setTabIndex] = useState(0);
   const { country } = useContext(AppContext);
+  const { t } = useTranslation();
 
   const results = getResults(country, `${episode}.${question.number}`);
 
@@ -283,10 +284,10 @@ function QuestionCard({ episode, question, chart: Chart, options = [] }) {
       </Table>
       <Tabs variant="soft-rounded" size="sm" onChange={setTabIndex}>
         <TabList>
-          <Tab>Adults</Tab>
-          <Tab>Youth</Tab>
-          <Tab>Female</Tab>
-          <Tab>Male</Tab>
+          <Tab>{t('Adults')}</Tab>
+          <Tab>{t('Youth')}</Tab>
+          <Tab>{t('Female')}</Tab>
+          <Tab>{t('Male')}</Tab>
         </TabList>
       </Tabs>
       <Box mt={5} height="190px" width="100%">
@@ -477,13 +478,13 @@ function Results() {
   const getCountryName = (code) => {
     switch (code) {
       case "gh":
-        return "Ghana";
+        return t("Ghana");
       case "tz":
-        return "Tanzania";
+        return t("Tanzania");
       case "ug":
-        return "Uganda";
+        return t("Uganda");
       case "bf":
-        return "Burkina Faso";
+        return t("Burkina Faso");
       default:
         return "";
     }
@@ -534,10 +535,10 @@ function Results() {
                   border="none"
                   size="lg"
                 >
-                  <option value="bf">{getFlag("bf")} Burkina Faso</option>
-                  <option value="gh">{getFlag("gh")} Ghana</option>
-                  <option value="tz">{getFlag("tz")} Tanzania</option>
-                  <option value="ug">{getFlag("ug")} Uganda</option>
+                  <option value="bf">{getFlag("bf")} {t('Burkina Faso')}</option>
+                  <option value="gh">{getFlag("gh")} {t('Ghana')}</option>
+                  <option value="tz">{getFlag("tz")} {t('Tanzania')}</option>
+                  <option value="ug">{getFlag("ug")} {t('Uganda')}</option>
                 </Select>
               </Box>
             </Stack>
@@ -584,7 +585,7 @@ function Results() {
                     chart={Chart2}
                     question={{
                       number: 1,
-                      text: "If you think about the safety and quality of the food your family eats, are you most worried that:",
+                      text: t('RESULTS_QUESTION_1'),
                     }}
                     options={[
                       "It might cause illness due to poor food hygiene practices",
@@ -598,7 +599,7 @@ function Results() {
                     chart={Chart1}
                     question={{
                       number: 2,
-                      text: "When food is scarce, what is the first thing your family does to cope?",
+                      text: t('RESULTS_QUESTION_2'),
                     }}
                     options={[
                       "Those most in need eat first and others sacrifice",
@@ -622,7 +623,7 @@ function Results() {
                     chart={Chart1}
                     question={{
                       number: 1,
-                      text: "Which of the following five options would give you the most success as a farmer:",
+                      text: t('RESULTS_QUESTION_3'),
                     }}
                     options={[
                       "Loans or credit",
@@ -637,7 +638,7 @@ function Results() {
                     chart={Chart3}
                     question={{
                       number: 2,
-                      text: "What will farming look like in the future for today’s children?",
+                      text: t('RESULTS_QUESTION_4'),
                     }}
                     options={[
                       "They will be successful",
@@ -661,7 +662,7 @@ function Results() {
                     chart={Chart4}
                     question={{
                       number: 1,
-                      text: "Where would you turn to for information to help you cope with future threats to your family and livelihood?",
+                      text: t('RESULTS_QUESTION_5'),
                     }}
                     options={[
                       "Family, friends, and neighbours",
@@ -676,7 +677,7 @@ function Results() {
                     chart={Chart1}
                     question={{
                       number: 2,
-                      text: "Climate change can have a big effect on farming. Which of the following would help you as a farmer to best deal with changes in the weather?",
+                      text: t('RESULTS_QUESTION_6'),
                     }}
                     options={[
                       "Improved inputs",
