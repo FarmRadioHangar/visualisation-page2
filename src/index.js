@@ -130,7 +130,7 @@ i18n.use(initReactI18next).init({
         "Total callers": "Appelants au total",
         SUMMARY_P_7: "<strong>Réponses totales</strong> aux questions",
         SUMMARY_P_8: "<strong>Messages audios</strong> enregistrés",
-        "Learn more": "En savoir plus sur",
+        "Learn more": "En savoir plus",
         // Results
         "What farmers think about food systems":
           "Ce que pensent les agriculteurs(trices) des systèmes alimentaires",
