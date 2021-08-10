@@ -27,6 +27,7 @@ import {
 import { AppContext } from "../contexts/App";
 import { RiBook2Line } from "react-icons/ri";
 import illustration from "../img/illustration.png";
+import { Trans, useTranslation } from "react-i18next";
 
 function getResults(country, question) {
   switch (question) {
@@ -467,6 +468,7 @@ function Chart4({ data, labels, colors }) {
 
 function Results() {
   const { country, setCountry } = useContext(AppContext);
+  const { t } = useTranslation();
 
   const handleChangeCountry = (e) => {
     setCountry(e.target.value);
@@ -516,11 +518,10 @@ function Results() {
           <Box>
             <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"left"}>
               <Heading fontSize={"4xl"} color="white">
-                What farmers think about food systems
+                {t('What farmers think about food systems')}
               </Heading>
               <Text color={"white"} fontSize={"2xl"}>
-                Click on the dropdown menu below to explore the responses of
-                farmers in each country.
+                {t('Click on the dropdown menu below to explore the responses of farmers in each country.')}
               </Text>
               <Box>
                 <Select
@@ -529,7 +530,7 @@ function Results() {
                   bg="#ffffffa8"
                   color="#dfa400"
                   fontWeight="bold"
-                  placeholder="Select a country"
+                  placeholder={t("Select a country")}
                   border="none"
                   size="lg"
                 >
@@ -719,12 +720,13 @@ function Results() {
                 alignItems="center"
               >
                 <Icon mr={3} as={RiBook2Line} />
-                Report
+                {t('Report')}
               </Heading>
             </Box>
             <Text color="#4c9f38" py={4} fontSize="1.3em">
-              Want a deep dive into the results?{" "}
-              <b>Stay tuned to read the full report.</b>
+              <Trans i18nKey="RESULTS_P_1">
+                Want a deep dive into the results? <strong>Stay tuned to read the full report.</strong>
+              </Trans>
             </Text>
             <Button
               disabled
@@ -735,7 +737,7 @@ function Results() {
               bg="#01add8"
               _hover={{ bg: "#aaa" }}
             >
-              Download (coming soon)
+              {t('Download (coming soon)')}
             </Button>
           </Box>
         </SimpleGrid>

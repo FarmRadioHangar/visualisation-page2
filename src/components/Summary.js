@@ -320,7 +320,7 @@ function Summary() {
                     bg="#01add8"
                     _hover={{ bg: "#01add8" }}
                   >
-                    Learn more
+                    {t('Learn more')}
                   </Button>
                 </Box>
                 <Box align="center" mt={10}>
