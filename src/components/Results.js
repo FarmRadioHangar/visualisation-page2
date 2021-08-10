@@ -588,10 +588,10 @@ function Results() {
                       text: t('RESULTS_QUESTION_1'),
                     }}
                     options={[
-                      "It might cause illness due to poor food hygiene practices",
-                      "The range of available foods doesn’t have all the nutrients needed for good health",
-                      "It might contain harmful chemicals",
-                      "I don’t worry - the food my family eats is already safe and nutritious",
+                      t("It might cause illness due to poor food hygiene practices"),
+                      t("The range of available foods doesn’t have all the nutrients needed for good health"),
+                      t("It might contain harmful chemicals"),
+                      t("I don’t worry - the food my family eats is already safe and nutritious"),
                     ]}
                   />
                   <QuestionCard
@@ -602,10 +602,10 @@ function Results() {
                       text: t('RESULTS_QUESTION_2'),
                     }}
                     options={[
-                      "Those most in need eat first and others sacrifice",
-                      "Ask everyone to cut back equally",
-                      "Sell assets like animals",
-                      "Find other ways to earn money",
+                      t("Those most in need eat first and others sacrifice"),
+                      t("Ask everyone to cut back equally"),
+                      t("Sell assets like animals"),
+                      t("Find other ways to earn money"),
                     ]}
                   />
                 </VStack>
@@ -626,11 +626,11 @@ function Results() {
                       text: t('RESULTS_QUESTION_3'),
                     }}
                     options={[
-                      "Loans or credit",
-                      "Secure access to and control over land",
-                      "High quality inputs",
-                      "Better information",
-                      "Better market access",
+                      t("Loans or credit"),
+                      t("Secure access to and control over land"),
+                      t("High quality inputs"),
+                      t("Better information"),
+                      t("Better market access"),
                     ]}
                   />
                   <QuestionCard
@@ -641,10 +641,10 @@ function Results() {
                       text: t('RESULTS_QUESTION_4'),
                     }}
                     options={[
-                      "They will be successful",
-                      "They will struggle to succeed unless things change",
-                      "Young people should avoid farming and pick another occupation",
-                      "Young people will farm, but they will need to earn money from other sources too",
+                      t("They will be successful"),
+                      t("They will struggle to succeed unless things change"),
+                      t("Young people should avoid farming and pick another occupation"),
+                      t("Young people will farm, but they will need to earn money from other sources too"),
                     ]}
                   />
                 </VStack>
@@ -665,11 +665,11 @@ function Results() {
                       text: t('RESULTS_QUESTION_5'),
                     }}
                     options={[
-                      "Family, friends, and neighbours",
-                      "Farmers’ co-operative/group",
-                      "Radio",
-                      "Agricultural experts",
-                      "Input suppliers",
+                      t("Family, friends, and neighbours"),
+                      t("Farmers’ co-operative/group"),
+                      t("Radio"),
+                      t("Agricultural experts"),
+                      t("Input suppliers"),
                     ]}
                   />
                   <QuestionCard
@@ -680,11 +680,11 @@ function Results() {
                       text: t('RESULTS_QUESTION_6'),
                     }}
                     options={[
-                      "Improved inputs",
-                      "Good information on how to adapt",
-                      "Better use of water",
-                      "Protecting the natural environment",
-                      "Moving to another place",
+                      t("Improved inputs"),
+                      t("Good information on how to adapt"),
+                      t("Better use of water"),
+                      t("Protecting the natural environment"),
+                      t("Moving to another place"),
                     ]}
                   />
                 </VStack>
