@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/static/js/main.a7e9c7d2.chunk.js",
-    "main.js.map": "/static/js/main.a7e9c7d2.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.71c5a136.js",
-    "runtime-main.js.map": "/static/js/runtime-main.71c5a136.js.map",
-    "static/css/2.2d3242fe.chunk.css": "/static/css/2.2d3242fe.chunk.css",
-    "static/js/2.2e640464.chunk.js": "/static/js/2.2e640464.chunk.js",
-    "static/js/2.2e640464.chunk.js.map": "/static/js/2.2e640464.chunk.js.map",
-    "static/js/3.70362d2c.chunk.js": "/static/js/3.70362d2c.chunk.js",
-    "static/js/3.70362d2c.chunk.js.map": "/static/js/3.70362d2c.chunk.js.map",
+    "main.js": "/static/js/main.4ad140a1.chunk.js",
+    "main.js.map": "/static/js/main.4ad140a1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e7c2fd6a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e7c2fd6a.js.map",
+    "static/css/2.6237e11d.chunk.css": "/static/css/2.6237e11d.chunk.css",
+    "static/js/2.50d2d9ca.chunk.js": "/static/js/2.50d2d9ca.chunk.js",
+    "static/js/2.50d2d9ca.chunk.js.map": "/static/js/2.50d2d9ca.chunk.js.map",
+    "static/js/3.65cca1ae.chunk.js": "/static/js/3.65cca1ae.chunk.js",
+    "static/js/3.65cca1ae.chunk.js.map": "/static/js/3.65cca1ae.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.2d3242fe.chunk.css.map": "/static/css/2.2d3242fe.chunk.css.map",
+    "static/css/2.6237e11d.chunk.css.map": "/static/css/2.6237e11d.chunk.css.map",
     "static/css/main.4a4137e4.chunk.css.map": "/static/css/main.4a4137e4.chunk.css.map",
-    "static/js/2.2e640464.chunk.js.LICENSE.txt": "/static/js/2.2e640464.chunk.js.LICENSE.txt",
+    "static/js/2.50d2d9ca.chunk.js.LICENSE.txt": "/static/js/2.50d2d9ca.chunk.js.LICENSE.txt",
     "static/media/Adosante.797b202e.jpg": "/static/media/Adosante.797b202e.jpg",
     "static/media/UNfoodSystemsLogos-300x134-1.44279b1c.png": "/static/media/UNfoodSystemsLogos-300x134-1.44279b1c.png",
     "static/media/africa.5daa12ea.png": "/static/media/africa.5daa12ea.png",
@@ -41,10 +41,10 @@
     "static/media/wv-logo.ce79785d.jpg": "/static/media/wv-logo.ce79785d.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.71c5a136.js",
-    "static/css/2.2d3242fe.chunk.css",
-    "static/js/2.2e640464.chunk.js",
+    "static/js/runtime-main.e7c2fd6a.js",
+    "static/css/2.6237e11d.chunk.css",
+    "static/js/2.50d2d9ca.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.a7e9c7d2.chunk.js"
+    "static/js/main.4ad140a1.chunk.js"
   ]
 }
