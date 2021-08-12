@@ -1,3 +1,4 @@
+import "@brainhubeu/react-carousel/lib/style.css";
 import React, { useState, useContext } from "react";
 import MapChart from "./MapChart";
 import { ChatIcon } from "@chakra-ui/icons";
@@ -28,6 +29,26 @@ import { AppContext } from "../contexts/App";
 import { RiBook2Line } from "react-icons/ri";
 import illustration from "../img/illustration.png";
 import { Trans, useTranslation } from "react-i18next";
+import Carousel from "@brainhubeu/react-carousel";
+
+function getSummary(question) {
+  const bf = getResults("bf", question);
+  const gh = getResults("gh", question);
+  const tz = getResults("tz", question);
+  const ug = getResults("ug", question);
+
+  const getAll = (i) =>
+    bf.female[i] +
+    bf.male[i] +
+    gh.female[i] +
+    gh.male[i] +
+    tz.female[i] +
+    tz.male[i] +
+    ug.female[i] +
+    ug.male[i];
+
+  return bf.female.map((_, i) => getAll(i));
+}
 
 function getResults(country, question) {
   switch (question) {
@@ -234,6 +255,58 @@ function getResults(country, question) {
   }
 }
 
+function SummaryCard({ title, subtitle, results, options, colors }) {
+  return (
+    <div
+      style={{
+        display: "flex",
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Card maxW="2xl">
+        <VStack>
+          <Heading fontSize="xl" fontWeight={600}>
+            {title}
+          </Heading>
+          <Heading fontSize="md" my={9}>
+            {subtitle}
+          </Heading>
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} mb={10}>
+            <Table size="sm" mb={6}>
+              <Tbody>
+                {options.map((option, i) => (
+                  <Tr key={i}>
+                    <Td fontSize="0.7em">
+                      <Box
+                        borderRadius="50%"
+                        w="24px"
+                        h="23px"
+                        background={colors[i]}
+                        d="flex"
+                        color="white"
+                        alignItems="center"
+                        justifyContent="center"
+                      >
+                        {i + 1}
+                      </Box>
+                    </Td>
+                    <Td fontSize="0.8em">{option}</Td>
+                  </Tr>
+                ))}
+              </Tbody>
+            </Table>
+            <Box mt={5} height="190px" width="100%">
+              <Chart2 data={results} labels={options} colors={colors} />
+            </Box>
+          </SimpleGrid>
+        </VStack>
+      </Card>
+    </div>
+  );
+}
+
 function QuestionCard({ episode, question, chart: Chart, options = [] }) {
   const [tabIndex, setTabIndex] = useState(0);
   const { country } = useContext(AppContext);
@@ -301,9 +374,9 @@ function QuestionCard({ episode, question, chart: Chart, options = [] }) {
   );
 }
 
-function Card({ children }) {
+function Card({ children, ...props }) {
   return (
-    <Box border="1px solid #e2e8f0" borderRadius={12} p={4} w="100%">
+    <Box border="1px solid #e2e8f0" borderRadius={12} p={4} w="100%" {...props}>
       {children}
     </Box>
   );
@@ -563,7 +636,7 @@ function Results() {
         </Box>
       </Box>
       <Container maxW={"6xl"} my={10} pt={8} pb={10}>
-        {country && (
+        {country ? (
           <>
             <Box>
               <Heading
@@ -711,6 +784,144 @@ function Results() {
               </HStack>
             </SimpleGrid>
           </>
+        ) : (
+          <div>
+            <Carousel plugins={["arrows"]}>
+              <SummaryCard
+                title={`${t("Episode")} 1`}
+                subtitle={`Q1: ${t("RESULTS_QUESTION_1")}`}
+                results={getSummary("1.1")}
+                options={[
+                  t(
+                    "It might cause illness due to poor food hygiene practices"
+                  ),
+                  t(
+                    "The range of available foods doesn’t have all the nutrients needed for good health"
+                  ),
+                  t("It might contain harmful chemicals"),
+                  t(
+                    "I don’t worry - the food my family eats is already safe and nutritious"
+                  ),
+                ]}
+                colors={[
+                  "#4c9f38",
+                  "#01558b",
+                  "#fdb714",
+                  "#862539",
+                  "#01add8",
+                  "#ef412a",
+                  "#d2a02a",
+                ]}
+              />
+              <SummaryCard
+                title={`${t("Episode")} 1`}
+                subtitle={`Q2: ${t("RESULTS_QUESTION_2")}`}
+                results={getSummary("1.2")}
+                options={[
+                  t("Those most in need eat first and others sacrifice"),
+                  t("Ask everyone to cut back equally"),
+                  t("Sell assets like animals"),
+                  t("Find other ways to earn money"),
+                ]}
+                colors={[
+                  "#4c9f38",
+                  "#01558b",
+                  "#fdb714",
+                  "#862539",
+                  "#01add8",
+                  "#ef412a",
+                  "#d2a02a",
+                ]}
+              />
+              <SummaryCard
+                title={`${t("Episode")} 2`}
+                subtitle={`Q1: ${t("RESULTS_QUESTION_3")}`}
+                results={getSummary("2.1")}
+                options={[
+                  t("Loans or credit"),
+                  t("Secure access to and control over land"),
+                  t("High quality inputs"),
+                  t("Better information"),
+                  t("Better market access"),
+                ]}
+                colors={[
+                  "#4c9f38",
+                  "#01558b",
+                  "#fdb714",
+                  "#862539",
+                  "#01add8",
+                  "#ef412a",
+                  "#d2a02a",
+                ]}
+              />
+              <SummaryCard
+                title={`${t("Episode")} 2`}
+                subtitle={`Q2: ${t("RESULTS_QUESTION_4")}`}
+                results={getSummary("2.2")}
+                options={[
+                  t("They will be successful"),
+                  t("They will struggle to succeed unless things change"),
+                  t(
+                    "Young people should avoid farming and pick another occupation"
+                  ),
+                  t(
+                    "Young people will farm, but they will need to earn money from other sources too"
+                  ),
+                ]}
+                colors={[
+                  "#4c9f38",
+                  "#01558b",
+                  "#fdb714",
+                  "#862539",
+                  "#01add8",
+                  "#ef412a",
+                  "#d2a02a",
+                ]}
+              />
+              <SummaryCard
+                title={`${t("Episode")} 3`}
+                subtitle={`Q1: ${t("RESULTS_QUESTION_5")}`}
+                results={getSummary("3.1")}
+                options={[
+                  t("Family, friends, and neighbours"),
+                  t("Farmers’ co-operative/group"),
+                  t("Radio"),
+                  t("Agricultural experts"),
+                  t("Input suppliers"),
+                ]}
+                colors={[
+                  "#4c9f38",
+                  "#01558b",
+                  "#fdb714",
+                  "#862539",
+                  "#01add8",
+                  "#ef412a",
+                  "#d2a02a",
+                ]}
+              />
+              <SummaryCard
+                title={`${t("Episode")} 3`}
+                subtitle={`Q2: ${t("RESULTS_QUESTION_6")}`}
+                results={getSummary("3.2")}
+                options={[
+                  t("Improved inputs"),
+                  t("Good information on how to adapt"),
+                  t("Better use of water"),
+                  t("Protecting the natural environment"),
+                  t("Moving to another place"),
+                ]}
+                colors={[
+                  "#4c9f38",
+                  "#01558b",
+                  "#fdb714",
+                  "#862539",
+                  "#01add8",
+                  "#ef412a",
+                  "#d2a02a",
+                ]}
+              />
+            </Carousel>
+          </div>
         )}
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Box
