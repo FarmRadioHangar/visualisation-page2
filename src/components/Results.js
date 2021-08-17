@@ -580,6 +580,143 @@ function Results() {
 
   return (
     <Box bg="white" display="flex" flexDirection="column">
+      <Box position="relative" py={10} my={10} mx={10}>
+        <div>
+          <Carousel plugins={["arrows"]}>
+            <SummaryCard
+              title={`${t("Episode")} 1`}
+              subtitle={`Q1: ${t("RESULTS_QUESTION_1")}`}
+              results={getSummary("1.1")}
+              options={[
+                t("It might cause illness due to poor food hygiene practices"),
+                t(
+                  "The range of available foods doesn’t have all the nutrients needed for good health"
+                ),
+                t("It might contain harmful chemicals"),
+                t(
+                  "I don’t worry - the food my family eats is already safe and nutritious"
+                ),
+              ]}
+              colors={[
+                "#4c9f38",
+                "#01558b",
+                "#fdb714",
+                "#862539",
+                "#01add8",
+                "#ef412a",
+                "#d2a02a",
+              ]}
+            />
+            <SummaryCard
+              title={`${t("Episode")} 1`}
+              subtitle={`Q2: ${t("RESULTS_QUESTION_2")}`}
+              results={getSummary("1.2")}
+              options={[
+                t("Those most in need eat first and others sacrifice"),
+                t("Ask everyone to cut back equally"),
+                t("Sell assets like animals"),
+                t("Find other ways to earn money"),
+              ]}
+              colors={[
+                "#4c9f38",
+                "#01558b",
+                "#fdb714",
+                "#862539",
+                "#01add8",
+                "#ef412a",
+                "#d2a02a",
+              ]}
+            />
+            <SummaryCard
+              title={`${t("Episode")} 2`}
+              subtitle={`Q1: ${t("RESULTS_QUESTION_3")}`}
+              results={getSummary("2.1")}
+              options={[
+                t("Loans or credit"),
+                t("Secure access to and control over land"),
+                t("High quality inputs"),
+                t("Better information"),
+                t("Better market access"),
+              ]}
+              colors={[
+                "#4c9f38",
+                "#01558b",
+                "#fdb714",
+                "#862539",
+                "#01add8",
+                "#ef412a",
+                "#d2a02a",
+              ]}
+            />
+            <SummaryCard
+              title={`${t("Episode")} 2`}
+              subtitle={`Q2: ${t("RESULTS_QUESTION_4")}`}
+              results={getSummary("2.2")}
+              options={[
+                t("They will be successful"),
+                t("They will struggle to succeed unless things change"),
+                t(
+                  "Young people should avoid farming and pick another occupation"
+                ),
+                t(
+                  "Young people will farm, but they will need to earn money from other sources too"
+                ),
+              ]}
+              colors={[
+                "#4c9f38",
+                "#01558b",
+                "#fdb714",
+                "#862539",
+                "#01add8",
+                "#ef412a",
+                "#d2a02a",
+              ]}
+            />
+            <SummaryCard
+              title={`${t("Episode")} 3`}
+              subtitle={`Q1: ${t("RESULTS_QUESTION_5")}`}
+              results={getSummary("3.1")}
+              options={[
+                t("Family, friends, and neighbours"),
+                t("Farmers’ co-operative/group"),
+                t("Radio"),
+                t("Agricultural experts"),
+                t("Input suppliers"),
+              ]}
+              colors={[
+                "#4c9f38",
+                "#01558b",
+                "#fdb714",
+                "#862539",
+                "#01add8",
+                "#ef412a",
+                "#d2a02a",
+              ]}
+            />
+            <SummaryCard
+              title={`${t("Episode")} 3`}
+              subtitle={`Q2: ${t("RESULTS_QUESTION_6")}`}
+              results={getSummary("3.2")}
+              options={[
+                t("Improved inputs"),
+                t("Good information on how to adapt"),
+                t("Better use of water"),
+                t("Protecting the natural environment"),
+                t("Moving to another place"),
+              ]}
+              colors={[
+                "#4c9f38",
+                "#01558b",
+                "#fdb714",
+                "#862539",
+                "#01add8",
+                "#ef412a",
+                "#d2a02a",
+              ]}
+            />
+          </Carousel>
+        </div>
+      </Box>
       <Box id="results" bg="#dfa400" px={0} py={0} position="relative">
         <Box
           position="absolute"
@@ -636,7 +773,7 @@ function Results() {
         </Box>
       </Box>
       <Container maxW={"6xl"} my={10} pt={8} pb={10}>
-        {country ? (
+        {country && (
           <>
             <Box>
               <Heading
@@ -784,144 +921,6 @@ function Results() {
               </HStack>
             </SimpleGrid>
           </>
-        ) : (
-          <div>
-            <Carousel plugins={["arrows"]}>
-              <SummaryCard
-                title={`${t("Episode")} 1`}
-                subtitle={`Q1: ${t("RESULTS_QUESTION_1")}`}
-                results={getSummary("1.1")}
-                options={[
-                  t(
-                    "It might cause illness due to poor food hygiene practices"
-                  ),
-                  t(
-                    "The range of available foods doesn’t have all the nutrients needed for good health"
-                  ),
-                  t("It might contain harmful chemicals"),
-                  t(
-                    "I don’t worry - the food my family eats is already safe and nutritious"
-                  ),
-                ]}
-                colors={[
-                  "#4c9f38",
-                  "#01558b",
-                  "#fdb714",
-                  "#862539",
-                  "#01add8",
-                  "#ef412a",
-                  "#d2a02a",
-                ]}
-              />
-              <SummaryCard
-                title={`${t("Episode")} 1`}
-                subtitle={`Q2: ${t("RESULTS_QUESTION_2")}`}
-                results={getSummary("1.2")}
-                options={[
-                  t("Those most in need eat first and others sacrifice"),
-                  t("Ask everyone to cut back equally"),
-                  t("Sell assets like animals"),
-                  t("Find other ways to earn money"),
-                ]}
-                colors={[
-                  "#4c9f38",
-                  "#01558b",
-                  "#fdb714",
-                  "#862539",
-                  "#01add8",
-                  "#ef412a",
-                  "#d2a02a",
-                ]}
-              />
-              <SummaryCard
-                title={`${t("Episode")} 2`}
-                subtitle={`Q1: ${t("RESULTS_QUESTION_3")}`}
-                results={getSummary("2.1")}
-                options={[
-                  t("Loans or credit"),
-                  t("Secure access to and control over land"),
-                  t("High quality inputs"),
-                  t("Better information"),
-                  t("Better market access"),
-                ]}
-                colors={[
-                  "#4c9f38",
-                  "#01558b",
-                  "#fdb714",
-                  "#862539",
-                  "#01add8",
-                  "#ef412a",
-                  "#d2a02a",
-                ]}
-              />
-              <SummaryCard
-                title={`${t("Episode")} 2`}
-                subtitle={`Q2: ${t("RESULTS_QUESTION_4")}`}
-                results={getSummary("2.2")}
-                options={[
-                  t("They will be successful"),
-                  t("They will struggle to succeed unless things change"),
-                  t(
-                    "Young people should avoid farming and pick another occupation"
-                  ),
-                  t(
-                    "Young people will farm, but they will need to earn money from other sources too"
-                  ),
-                ]}
-                colors={[
-                  "#4c9f38",
-                  "#01558b",
-                  "#fdb714",
-                  "#862539",
-                  "#01add8",
-                  "#ef412a",
-                  "#d2a02a",
-                ]}
-              />
-              <SummaryCard
-                title={`${t("Episode")} 3`}
-                subtitle={`Q1: ${t("RESULTS_QUESTION_5")}`}
-                results={getSummary("3.1")}
-                options={[
-                  t("Family, friends, and neighbours"),
-                  t("Farmers’ co-operative/group"),
-                  t("Radio"),
-                  t("Agricultural experts"),
-                  t("Input suppliers"),
-                ]}
-                colors={[
-                  "#4c9f38",
-                  "#01558b",
-                  "#fdb714",
-                  "#862539",
-                  "#01add8",
-                  "#ef412a",
-                  "#d2a02a",
-                ]}
-              />
-              <SummaryCard
-                title={`${t("Episode")} 3`}
-                subtitle={`Q2: ${t("RESULTS_QUESTION_6")}`}
-                results={getSummary("3.2")}
-                options={[
-                  t("Improved inputs"),
-                  t("Good information on how to adapt"),
-                  t("Better use of water"),
-                  t("Protecting the natural environment"),
-                  t("Moving to another place"),
-                ]}
-                colors={[
-                  "#4c9f38",
-                  "#01558b",
-                  "#fdb714",
-                  "#862539",
-                  "#01add8",
-                  "#ef412a",
-                  "#d2a02a",
-                ]}
-              />
-            </Carousel>
-          </div>
         )}
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Box
