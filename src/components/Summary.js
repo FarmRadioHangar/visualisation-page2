@@ -96,10 +96,12 @@ function Summary() {
                   <Box display="flex" alignItems="center" px={10}>
                     <Text fontSize="1.7em" color="gray">
                       <Trans i18nKey="SUMMARY_P_3">
-                        <strong>Respondents overwhelmingly predicted</strong> a
-                        future in farming for their children. Only one in nine
-                        people felt today’s youth should choose another
-                        occupation.
+                        <strong>
+                          1 in 3 believe their children will succeed at farming
+                        </strong>{" "}
+                        and 10% believe they should avoid it. Most said their
+                        children will succeed only if they supplement their
+                        farming income, or if things change.
                       </Trans>
                     </Text>
                   </Box>

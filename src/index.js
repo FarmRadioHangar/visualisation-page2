@@ -119,7 +119,7 @@ i18n.use(initReactI18next).init({
         SUMMARY_P_2:
           "Près de 3 500 personnes au Burkina Faso, au Ghana, en Tanzanie et en Ouganda ont appelé pour exprimer leurs points de vue, leurs préoccupations et leurs expériences sur plus de 2 600 messages audio. Voici ce qu'elles avaient à dire.",
         SUMMARY_P_3:
-          "<strong>Les appelants avaient beaucoup</strong> à dire sur l'avenir de l'agriculture pour leurs enfants. Seule une personne sur neuf estime que les jeunes d'aujourd'hui ne devraient pas devenir agriculteurs(trices). Toutefois, plus d'un tiers d'entre eux estiment que des changements seraient nécessaires pour permettre à la prochaine génération d'agriculteurs(trices) de réussir.",
+          "<strong>1 sur 3 croit que ses enfants réussiront dans l'agriculture</strong> et 10 % pensent qu'ils devraient l'éviter. La plupart ont dit que leurs enfants ne réussiront que s'ils complètent leur revenu agricole, ou si les choses changent.",
         SUMMARY_P_4:
           "<strong>Près de 75 % des personnes interrogées</strong> ont déclaré avoir des inquiétudes au sujet de la salubrité et de la qualité des aliments disponibles pour leurs familles.",
         SUMMARY_P_5:
