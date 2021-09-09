@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/static/js/main.d6e0c996.chunk.js",
-    "main.js.map": "/static/js/main.d6e0c996.chunk.js.map",
+    "main.js": "/static/js/main.61fa5dcc.chunk.js",
+    "main.js.map": "/static/js/main.61fa5dcc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e7c2fd6a.js",
     "runtime-main.js.map": "/static/js/runtime-main.e7c2fd6a.js.map",
     "static/css/2.6237e11d.chunk.css": "/static/css/2.6237e11d.chunk.css",
@@ -19,6 +19,7 @@
     "static/media/africa.5daa12ea.png": "/static/media/africa.5daa12ea.png",
     "static/media/conversation.5e5b5392.png": "/static/media/conversation.5e5b5392.png",
     "static/media/dialogues_fr.850af3dc.png": "/static/media/dialogues_fr.850af3dc.png",
+    "static/media/dialogues_fr_alt.361f98b3.png": "/static/media/dialogues_fr_alt.361f98b3.png",
     "static/media/fida_fr.b8256641.png": "/static/media/fida_fr.b8256641.png",
     "static/media/fss_icon_1.23f0b731.png": "/static/media/fss_icon_1.23f0b731.png",
     "static/media/fss_icon_11.fc905c9c.png": "/static/media/fss_icon_11.fc905c9c.png",
@@ -48,6 +49,6 @@
     "static/css/2.6237e11d.chunk.css",
     "static/js/2.50d2d9ca.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.d6e0c996.chunk.js"
+    "static/js/main.61fa5dcc.chunk.js"
   ]
 }
