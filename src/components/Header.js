@@ -11,6 +11,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import logo from "../img/on-air-dialogues.svg";
+import logoFr from "../img/dialogues_fr.png";
+import logoFrAlt from "../img/dialogues_fr_alt.png";
 import logoAlt from "../img/on-air-dialogues-white.svg";
 import { AppContext } from "../contexts/App";
 import { useTranslation } from "react-i18next";
@@ -189,16 +191,25 @@ function NavBarContainer({ children, ...props }) {
 function Header(props) {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const { language } = useContext(AppContext);
 
   return (
     <NavBarContainer {...props}>
       <Box cursor="pointer">
         <Box display={["flex", "flex", "none", "none"]}>
-          <Img src={logoAlt} w={90} />
+          {'fr' === language ? (
+            <Img src={logoFrAlt} w={110} />
+          ) : (
+            <Img src={logoAlt} w={90} />
+          )}
         </Box>
         <Box display={["none", "none", "flex", "flex"]}>
           <a href="/">
-            <Img src={logo} w={120} />
+            {'fr' === language ? (
+              <Img src={logoFr} w={140} />
+            ) : (
+              <Img src={logo} w={120} />
+            )}
           </a>
         </Box>
       </Box>

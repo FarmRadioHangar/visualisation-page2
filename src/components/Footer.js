@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Grid,
   GridItem,
@@ -12,10 +12,14 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import ifadLogo from "../img/ifad-logo.svg";
+import fidaFr from "../img/fida_fr.png";
 import farmRadioLogo from "../img/logo-farm-radio-international.png";
+import farmRadioLogoFr from "../img/FRI_fr.png";
 import wvLogo from "../img/wv-logo.jpg";
+import wvLogoFr from "../img/wv-mondiale-logo.png";
 import logo from "../img/UNfoodSystemsLogos-300x134-1.png";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { AppContext } from "../contexts/App";
 import { useTranslation } from "react-i18next";
 
 //function SocialButton({ children, label, href }) {
@@ -53,6 +57,7 @@ import { useTranslation } from "react-i18next";
 
 function Footer() {
   const { t } = useTranslation();
+  const { language } = useContext(AppContext);
 
   return (
     <Box
@@ -90,7 +95,7 @@ function Footer() {
                   p={6}
                 >
                   <Link isExternal href="https://farmradio.org">
-                    <Img src={farmRadioLogo} />
+                    <Img src={'fr' === language ? farmRadioLogoFr : farmRadioLogo} />
                   </Link>
                 </Box>
                 <Box
@@ -101,7 +106,7 @@ function Footer() {
                   p={6}
                 >
                   <Link isExternal href="https://www.ifad.org">
-                    <Img src={ifadLogo} w="100%" />
+                    <Img src={'fr' === language ? fidaFr : ifadLogo} w="100%" />
                   </Link>
                 </Box>
                 <Box
@@ -112,7 +117,7 @@ function Footer() {
                   p={6}
                 >
                   <Link isExternal href="https://www.worldvision.ca">
-                    <Img src={wvLogo} style={{ mixBlendMode: "multiply" }} />
+                    <Img src={'fr' === language ? wvLogoFr : wvLogo} style={{ mixBlendMode: "multiply" }} />
                   </Link>
                 </Box>
               </SimpleGrid>
