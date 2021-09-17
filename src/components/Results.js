@@ -3,11 +3,13 @@ import React, { useState, useContext } from "react";
 import MapChart from "./MapChart";
 import { ChatIcon } from "@chakra-ui/icons";
 import { AiOutlineLineChart } from "react-icons/ai";
+import { VscFilePdf } from "react-icons/vsc";
 import { Doughnut, Pie, Bar } from "react-chartjs-2";
 import {
   SimpleGrid,
   Box,
   Table,
+  Link,
   Tr,
   Td,
   Tbody,
@@ -541,7 +543,7 @@ function Chart4({ data, labels, colors }) {
 }
 
 function Results() {
-  const { country, setCountry } = useContext(AppContext);
+  const { language, setLanguage , country, setCountry } = useContext(AppContext);
   const { t } = useTranslation();
 
   const handleChangeCountry = (e) => {
@@ -956,20 +958,45 @@ function Results() {
             </Box>
             <Text color="#4c9f38" py={4} fontSize="1.3em">
               <Trans i18nKey="RESULTS_P_1">
-                Want a deep dive into the results?{" "}
-                <strong>Stay tuned to read the full report.</strong>
+                Want a deep dive into the results?
               </Trans>
             </Text>
             <Button
-              disabled
+              onClick={() => {
+                if ('fr' === language) {
+                  document.location.href="/Dialogues_à_l'antenne_-_À_l'écoute_des_populations_rurales_(intégrale).pdf";
+                } else {
+                  document.location.href='/On_Air_Dialogues_-_Listening_to_rural_people_(full).pdf';
+                }
+              }}
               py={8}
-              my={5}
+              mt={5}
               size="lg"
               color="white"
               bg="#01add8"
-              _hover={{ bg: "#aaa" }}
+              _hover={{ bg: "#008db8" }}
             >
-              {t("Download (coming soon)")}
+              <VscFilePdf size="33" style={{ marginRight: '8px' }} />
+              {t("Download full report")} (PDF)
+            </Button>
+            <Button
+              onClick={() => {
+                if ('fr' === language) {
+                  document.location.href="/Dialogues_à_l'antenne_-_À_l'écoute_des_populations_rurales_(points_saillants).pdf";
+                } else {
+                  document.location.href='/On_Air_Dialogues_-_Listening_to_rural_people_(highlights).pdf';
+                }
+              }}
+              py={8}
+              mt={2}
+              mb={5}
+              size="lg"
+              color="white"
+              bg="#01add8"
+              _hover={{ bg: "#008db8" }}
+            >
+              <VscFilePdf size="33" style={{ marginRight: '8px' }} />
+              {t("Download highlights")} (PDF)
             </Button>
           </Box>
         </SimpleGrid>

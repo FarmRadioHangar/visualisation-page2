@@ -119,9 +119,8 @@ function MenuLinks({ isOpen }) {
               bg: "#4c9f38",
             }}
             w={{ base: "100%", sm: "auto" }}
-            disabled
           >
-            {t("Report coming soon")}
+            {t("Download the report")}
           </Button>
         </Link>
       </Stack>

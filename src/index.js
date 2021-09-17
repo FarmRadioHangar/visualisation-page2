@@ -68,6 +68,7 @@ i18n.use(initReactI18next).init({
         English: "English",
         French: "Français",
         "Report coming soon": "Rapport à venir",
+        "Download the report": "Télécharger le rapport",
         // Hero
         "Rural voices": "Voix rurales",
         HERO_INTRO_1:
@@ -139,8 +140,9 @@ i18n.use(initReactI18next).init({
         "Select a country": "Choisissez un pays",
         Report: "Rapport",
         RESULTS_P_1:
-          "Vous voulez une analyse approfondie des résultats? <strong>Restez à l'écoute pour lire le rapport complet.</strong>",
-        "Download (coming soon)": "Télécharger (prochainement)",
+          "Vous voulez une analyse approfondie des résultats?",
+        "Download full report": "Télécharger (intégrale)",
+        "Download highlights": "Télécharger (prochainement)",
         RESULTS_QUESTION_1:
           "Si vous pensez à la sûreté et à la qualité des aliments que mangent votre famille, vous êtes préoccupé par le fait que : ",
         RESULTS_QUESTION_2:
