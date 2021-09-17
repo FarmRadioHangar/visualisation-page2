@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4a4137e4.chunk.css",
-    "main.js": "/static/js/main.61fa5dcc.chunk.js",
-    "main.js.map": "/static/js/main.61fa5dcc.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.e7c2fd6a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.e7c2fd6a.js.map",
+    "main.js": "/static/js/main.3e2d23d6.chunk.js",
+    "main.js.map": "/static/js/main.3e2d23d6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e3930d61.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e3930d61.js.map",
     "static/css/2.6237e11d.chunk.css": "/static/css/2.6237e11d.chunk.css",
-    "static/js/2.50d2d9ca.chunk.js": "/static/js/2.50d2d9ca.chunk.js",
-    "static/js/2.50d2d9ca.chunk.js.map": "/static/js/2.50d2d9ca.chunk.js.map",
-    "static/js/3.65cca1ae.chunk.js": "/static/js/3.65cca1ae.chunk.js",
-    "static/js/3.65cca1ae.chunk.js.map": "/static/js/3.65cca1ae.chunk.js.map",
+    "static/js/2.b55f6054.chunk.js": "/static/js/2.b55f6054.chunk.js",
+    "static/js/2.b55f6054.chunk.js.map": "/static/js/2.b55f6054.chunk.js.map",
+    "static/js/3.3300f27a.chunk.js": "/static/js/3.3300f27a.chunk.js",
+    "static/js/3.3300f27a.chunk.js.map": "/static/js/3.3300f27a.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.6237e11d.chunk.css.map": "/static/css/2.6237e11d.chunk.css.map",
     "static/css/main.4a4137e4.chunk.css.map": "/static/css/main.4a4137e4.chunk.css.map",
-    "static/js/2.50d2d9ca.chunk.js.LICENSE.txt": "/static/js/2.50d2d9ca.chunk.js.LICENSE.txt",
+    "static/js/2.b55f6054.chunk.js.LICENSE.txt": "/static/js/2.b55f6054.chunk.js.LICENSE.txt",
     "static/media/Adosante.797b202e.jpg": "/static/media/Adosante.797b202e.jpg",
     "static/media/UNfoodSystemsLogos-300x134-1.44279b1c.png": "/static/media/UNfoodSystemsLogos-300x134-1.44279b1c.png",
     "static/media/africa.5daa12ea.png": "/static/media/africa.5daa12ea.png",
@@ -45,10 +45,10 @@
     "static/media/wv-mondiale-logo.d49eef19.png": "/static/media/wv-mondiale-logo.d49eef19.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e7c2fd6a.js",
+    "static/js/runtime-main.e3930d61.js",
     "static/css/2.6237e11d.chunk.css",
-    "static/js/2.50d2d9ca.chunk.js",
+    "static/js/2.b55f6054.chunk.js",
     "static/css/main.4a4137e4.chunk.css",
-    "static/js/main.61fa5dcc.chunk.js"
+    "static/js/main.3e2d23d6.chunk.js"
   ]
 }
