@@ -142,7 +142,7 @@ i18n.use(initReactI18next).init({
         RESULTS_P_1:
           "Vous voulez une analyse approfondie des résultats?",
         "Download full report": "Télécharger (intégrale)",
-        "Download highlights": "Télécharger (prochainement)",
+        "Download highlights": "Télécharger (points saillants)",
         RESULTS_QUESTION_1:
           "Si vous pensez à la sûreté et à la qualité des aliments que mangent votre famille, vous êtes préoccupé par le fait que : ",
         RESULTS_QUESTION_2:
