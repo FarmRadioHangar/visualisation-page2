@@ -106,7 +106,7 @@ function Footer() {
                   p={6}
                 >
                   <Link isExternal href="https://www.ifad.org">
-                    <Img src={'fr' === language ? fidaFr : ifadLogo} w="100%" />
+                    <Img src={'fr' === language ? fidaFr : ifadLogo} style={{ width: '300px' }} />
                   </Link>
                 </Box>
                 <Box

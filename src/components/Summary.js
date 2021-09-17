@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import {
   Button,
   SimpleGrid,
+  Link,
   Box,
   Text,
   Img,
@@ -142,6 +143,13 @@ function Summary() {
             </Stack>
           </Stack>
         </Container>
+      </Box>
+      <Box position={"relative"} bg="#003870" color="#fff" h="200px" style={{ display: 'flex', fontSize: '1.3em', textAlign: 'center', justifyContent: 'center', alignItems: 'center' }}>
+        <div style={{ maxWidth: '700px' }}>
+          Please also visit <a style={{ fontWeight: 'bold' }} href="https://www.ifad.org/ruralvoices/">ifad.org/ruralvoices</a>{' '}
+          to learn about the Rural Voices initiative from the
+          International Fund for Agricultural Development
+        </div>
       </Box>
       <Box position={"relative"} bg="#edf2f7">
         <Container maxW={"7xl"} zIndex={10} position={"relative"}>
