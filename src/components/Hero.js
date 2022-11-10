@@ -12,18 +12,33 @@ import fssIcon6 from "../img/icons/fss_icon_6.png";
 import fssIcon7 from "../img/icons/fss_icon_7.png";
 import fssIcon8 from "../img/icons/fss_icon_8.png";
 import resultsBf from "../data/bf.json";
-import resultsGh from "../data/gh.json";
-import resultsTz from "../data/tz.json";
-import resultsUg from "../data/ug.json";
+import resultsEt from "../data/et.json";
 import {
   AiOutlineArrowUp,
   AiOutlineArrowRight,
   AiOutlineClose,
 } from "react-icons/ai";
+import Header from "./Header";
 import { BiPlay, BiPause } from "react-icons/bi";
 import { HiOutlineCursorClick } from "react-icons/hi";
-import { Link, VStack, IconButton, Box, Heading, Text } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
+import { Link, VStack, IconButton, Box, Heading, Text, Container, SimpleGrid, Button } from "@chakra-ui/react";
+import { Trans, useTranslation } from "react-i18next";
+import hero from "../img/Hero.jpg"
+import lbg from "../img/layoutBG.png"
+
+// import africaIcon from "../img/africa.png";
+// import radioIcon from "../img/radio.png";
+// import scriptIcon from "../img/script.png";
+// import loveIcon from "../img/love.png";
+// import conversationIcon from "../img/conversation.png";
+// import questionIcon from "../img/question.png";
+// import photo1 from "../img/photo1.jpg";
+// import photo2 from "../img/photo2.jpg";
+// import hero from "../img/Hero.jpg"
+// import lbg from "../img/layoutBG.png"
+// import photo3 from "../img/Adosante.jpg";
+// import { AppContext } from "../contexts/App";
+// import { Trans, useTranslation } from "react-i18next";
 
 function Hero() {
   const [overlayExpanded, setOverlayExpanded] = useState(true);
@@ -42,16 +57,12 @@ function Hero() {
 
   const handleClick = () => {
     const getResultsSet = () => {
-      switch (Math.floor(4 * Math.random())) {
+      switch (Math.floor(2 * Math.random())) {
         case 0:
           return resultsBf;
         case 1:
-          return resultsGh;
-        case 2:
-          return resultsTz;
-        case 3:
         default:
-          return resultsUg;
+          return resultsEt;
       }
     };
 
@@ -242,7 +253,7 @@ function Hero() {
             </Box>
           </>
         )}
-        <Box position="relative">
+        {/* <Box position="relative">
           <Box
             color="white"
             h={{ base: overlayExpanded ? "60%" : "60px", md: "100%" }}
@@ -285,12 +296,13 @@ function Hero() {
                 <Box mb={3} w={{ base: "60px", md: "80px", lg: "120px" }}>
                   <HiOutlineCursorClick size="100%" />
                 </Box>
-                <Heading mb={2}>{t("Rural voices")}</Heading>
+                <Heading mb={2}>{t("Listening to Rural People 2022")}</Heading>
                 <Text mb={3}>{t("HERO_INTRO_1")}</Text>
                 <Text>{t("HERO_INTRO_2")}</Text>
               </>
             )}
           </Box>
+          
           <div
             onClick={handleClick}
             style={{ height: "500px", width: "100%", overflow: "hidden" }}
@@ -369,7 +381,107 @@ function Hero() {
               }}
             />
           </div>
-        </Box>
+        </Box> */}
+
+
+                <Box
+                  bg={`linear-gradient(0deg, rgb(0 0 0 / 52%), rgb(76 159 56 / 0%)),url(${hero})`}
+                  backgroundSize="cover"
+                  backgroundPosition="center top"
+                  color={"white"}
+                  verticalAlign="center"
+                  minHeight="800px"
+                  pb={100}
+                  
+                >
+                
+                <Container maxW={"8xl"} zIndex={10} position={"relative"} mb={35}>
+                  <Header  bg={"transparent"} mb={20}/>
+                  <SimpleGrid columns={3} spacing={1} minHeight="500px" alignItems={"center"}>
+                    
+                    <Box>
+                      <Heading mb={2} fontFamily="BebasB" fontSize={"90px"} lineHeight={"95px"} fontWeight={"400"} textTransform={"Uppercase"}>
+                        {t("Listening to Rural People 2022")}
+                      </Heading>
+                      <Text mb={3}>{t("HERO_INTRO_1")}</Text>
+                      <Button
+                          onClick={handleClick}
+                          px={8}
+                          py={8}
+                          mt={2}
+                          size="md"
+                          color="white"
+                          bg="#4c9f38"
+                          border={"1px solid #4c9f38"}
+                          _hover={{ bg: "transparent", border:"1px solid #fff" }}
+                        >
+                          {t("Click to listen to their voices")}
+                      </Button>
+                      <Text fontSize={"xs"} textAlign="left" pt={-1}> Click repeatedly to shuffle playbacks</Text>
+                    </Box>
+
+                    <Box  height='80px'>
+                      
+                    </Box>
+                    <Box  height='80px'>
+                      
+                    </Box>
+                    
+                  </SimpleGrid>
+                </Container> 
+                </Box>
+
+                <Box
+                  // bg={useColorModeValue("gray.100", "gray.900")}
+                  // color={useColorModeValue("gray.700", "gray.200")}
+                  bg={`url(${lbg})`} backgroundSize="contain"
+                  mt="-75px"
+                  color="white"
+                  fontFamily={"BebasR"}
+                  textTransform={"Uppercase"}
+                >
+                <Container maxW={"8xl"} zIndex={10} position={"relative"} bg='#4c9f38' borderRadius="5px" >
+                  <SimpleGrid columns={6} spacing={0} minHeight='150px' py="15">
+                    <Box  borderRight="1px solid #fff" textAlign="center" > 
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"}>2</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}> Countries</Text>
+                        </Trans>
+                    </Box>
+                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                      <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"}>7</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Radio Stations</Text>
+                        </Trans>
+                    </Box>
+                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"} letterSpacing={2}>21</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Original Episodes</Text>
+                        </Trans>
+                    </Box>
+                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"} letterSpacing={2}>14,356</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Respondents</Text>
+                        </Trans>
+                    </Box>
+                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"} letterSpacing={2}>122,529</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Poll Responses</Text>
+                        </Trans>
+                    </Box>
+                    <Box textAlign="center" >
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"} letterSpacing={2}>9,317</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Audio Comments</Text>
+                        </Trans>
+                    </Box>
+                  </SimpleGrid>
+                </Container> 
+                </Box>
+
       </Box>
     </>
   );

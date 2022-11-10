@@ -49,7 +49,7 @@ function MenuLinks({ isOpen }) {
           onClick={() => {
             setAboutPageVisible(true);
           }}
-          color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
+          color={{ lg: "#fff", md: "#fff", sm: "white" }}
           to="#about"
         >
           {t("About the project")}
@@ -58,7 +58,7 @@ function MenuLinks({ isOpen }) {
           onClick={() => {
             setAboutPageVisible(false);
           }}
-          color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
+          color={{ lg: "#fff", md: "#fff", sm: "white" }}
           to="#insights"
         >
           {t("Insights")}
@@ -67,15 +67,15 @@ function MenuLinks({ isOpen }) {
           onClick={() => {
             setAboutPageVisible(false);
           }}
-          color={{ lg: "#4c9f38", md: "#4c9f38", sm: "white" }}
+          color={{ lg: "#fff", md: "#fff", sm: "white" }}
           to="#results"
         >
           {t("Explore the results")}
         </MenuItem>
-        <Select
-          color={{ base: "#dfa400", md: "#4c9f38" }}
-          borderColor={{ base: "#dfa400", md: "#4c9f3880" }}
-          bg={{ sm: "white" }}
+        {/* <Select
+          color={{ base: "#dfa400", md: "#fff" }}
+          borderColor={{ base: "#dfa400", md: "#fff" }}
+          bg={{ sm: "white", md:"transparent" }}
           onChange={(e) => {
             setLanguage(e.target.value);
           }}
@@ -85,7 +85,7 @@ function MenuLinks({ isOpen }) {
         >
           <option value="en">{t("English")}</option>
           <option value="fr">{t("French")}</option>
-        </Select>
+        </Select> */}
         {/*
         <Link w={{ base: "100%", sm: "auto" }} href="/donate">
           <Button
@@ -115,8 +115,11 @@ function MenuLinks({ isOpen }) {
             rounded="md"
             color={"white"}
             bg={"#4c9f38"}
+            border={"2px solid #4c9f38"}
             _hover={{
-              bg: "#4c9f38",
+              bg: "transparent",
+              color:"white",
+              border:"2px solid white",
             }}
             w={{ base: "100%", sm: "auto" }}
           >
@@ -177,7 +180,7 @@ function NavBarContainer({ children, ...props }) {
       wrap="wrap"
       w="100%"
       mb={0}
-      p={8}
+      pt={8}
       bg={["#dfa400", "#dfa400", "white", "white"]}
       color={["white", "white", "primary.700", "primary.700"]}
       {...props}
@@ -205,9 +208,9 @@ function Header(props) {
         <Box display={["none", "none", "flex", "flex"]}>
           <a href="/">
             {'fr' === language ? (
-              <Img src={logoFr} w={140} />
+              <Img src={logoFrAlt} w={140} />
             ) : (
-              <Img src={logo} w={120} />
+              <Img src={logoAlt} w={130} />
             )}
           </a>
         </Box>

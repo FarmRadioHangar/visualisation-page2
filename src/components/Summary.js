@@ -1,5 +1,8 @@
 import React, { useContext } from "react";
 import {
+  Grid,
+  GridItem,
+  useColorModeValue,
   Button,
   SimpleGrid,
   Link,
@@ -11,17 +14,23 @@ import {
   Tag,
   Stack,
 } from "@chakra-ui/react";
-import africaIcon from "../img/africa.png";
-import radioIcon from "../img/radio.png";
-import scriptIcon from "../img/script.png";
-import loveIcon from "../img/love.png";
-import conversationIcon from "../img/conversation.png";
-import questionIcon from "../img/question.png";
-import photo1 from "../img/photo1.jpg";
-import photo2 from "../img/photo2.jpg";
-import photo3 from "../img/Adosante.jpg";
+// import africaIcon from "../img/africa.png";
+// import radioIcon from "../img/radio.png";
+// import scriptIcon from "../img/script.png";
+// import loveIcon from "../img/love.png";
+// import conversationIcon from "../img/conversation.png";
+// import questionIcon from "../img/question.png";
+import photo1 from "../img/Feature1.jpg";
+import photo2 from "../img/Feature2.jpg";
+import photo4 from "../img/Feature3.jpg";
+import lbg from "../img/layoutBG.png"
 import { AppContext } from "../contexts/App";
 import { Trans, useTranslation } from "react-i18next";
+
+import ifadLogo from "../img/ifad-logo.svg";
+import fidaFr from "../img/fida_fr.png";
+import farmRadioLogo from "../img/logo-farm-radio-international.png";
+import farmRadioLogoFr from "../img/FRI_fr.png";
 
 function SummaryItem({ heading, text, children }) {
   return (
@@ -50,10 +59,108 @@ function Summary() {
   const { setAboutPageVisible } = useContext(AppContext);
   const { t } = useTranslation();
 
+  const { language } = useContext(AppContext);
+
   return (
     <>
-      <Box bg="white" position={"relative"}>
-        <Container maxW={"7xl"} zIndex={10} position={"relative"}>
+                {/* <Box
+                  bg={`url(${hero})`}
+                  backgroundSize="cover"
+                  backgroundPosition="center top"
+                  color={"white"}
+                  verticalAlign="center"
+                >
+                <Container maxW={"7xl"} zIndex={10} position={"relative"}>
+                  <SimpleGrid columns={3} spacing={1} height="900px" alignItems={"center"}>
+                    
+                    <Box>
+                      <Heading mb={2} fontFamily="BebasB" fontSize={"90px"} lineHeight={"95px"} fontWeight={"400"} textTransform={"Uppercase"}>
+                        {t("Listening to Rural People 2022")}
+                      </Heading>
+                      <Text mb={3}>{t("HERO_INTRO_1")}</Text>
+                      <Button
+                          onClick={() => {
+                            setAboutPageVisible(true);
+                            document.location.href = "#";
+                          }}
+                          px={8}
+                          py={8}
+                          my={2}
+                          size="md"
+                          color="white"
+                          bg="transparent"
+                          border={"1px solid #fff"}
+                          _hover={{ bg: "#4c9f38", border:"1px solid transparent" }}
+                        >
+                          {t("Click to listen to their voices.")}
+                      </Button>
+                    </Box>
+
+                    <Box  height='80px'>
+                      
+                    </Box>
+                    <Box  height='80px'>
+                      
+                    </Box>
+                    
+                  </SimpleGrid>
+                </Container> 
+                </Box>
+
+                <Box
+                  // bg={useColorModeValue("gray.100", "gray.900")}
+                  // color={useColorModeValue("gray.700", "gray.200")}
+                  mt="-75px"
+                  color="white"
+                  fontFamily={"BebasR"}
+                  textTransform={"Uppercase"}
+                >
+                <Container maxW={"7xl"} zIndex={10} position={"relative"} bg='#4c9f38' borderRadius="5px" >
+                  <SimpleGrid columns={6} spacing={0} minHeight='150px' py="15">
+                    <Box  borderRight="1px solid #fff" textAlign="center" > 
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"}>2</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}> Countries</Text>
+                        </Trans>
+                    </Box>
+                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                      <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"}>7</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Radio Stations</Text>
+                        </Trans>
+                    </Box>
+                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"}>21</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Original Episodes</Text>
+                        </Trans>
+                    </Box>
+                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"}>14,356</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Respondents</Text>
+                        </Trans>
+                    </Box>
+                    <Box borderRight="1px solid #fff"  textAlign="center" >
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"}>122,529</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Poll Responses</Text>
+                        </Trans>
+                    </Box>
+                    <Box textAlign="center" >
+                        <Text fontSize={"70px"} lineHeight={"85px"} fontWeight={"600"}>9,317</Text>
+                        <Trans i18nKey="SUMMARY_P_6">
+                        <Text fontSize={"30px"} lineHeight={"30px"}>Audio Comments</Text>
+                        </Trans>
+                    </Box>
+                  </SimpleGrid>
+                </Container> 
+                </Box> */}
+
+                
+
+      <Box bg={`url(${lbg})`} backgroundSize="contain" position={"relative"}>
+        <Container maxW={"8xl"} zIndex={10} position={"relative"}>
           <Stack direction={{ base: "column", lg: "row" }}>
             <Stack
               flex={1}
@@ -69,49 +176,59 @@ function Summary() {
                   fontSize={"2xl"}
                   color={"#dfa400"}
                 >
-                  {t("Listening to farmers")}
+                  {/* {t("Listening to farmers")} */}
                 </Text>
                 <Heading
-                  color={"#dfa400"}
+                  color={"#4c9f38"}
                   mb={5}
-                  fontSize={{ base: "3xl", md: "5xl" }}
+                  fontSize={{ base: "4xl", md: "6xl" }}
+                  fontFamily="BebasR" textTransform={"uppercase"}
                 >
                   {t("SUMMARY_P_1")}
                 </Heading>
-                <Text fontSize={"xl"} color={"#dfa400"}>
+                <Text fontSize={"xl"} >
                   {t("SUMMARY_P_2")}
                 </Text>
+
+
                 <SimpleGrid
                   columns={{ base: 1, md: 2 }}
-                  spacing={0}
+                  spacing={10}
                   mt={10}
-                  py={5}
+                  py={30}
                 >
                   <Box
                     bg={`url(${photo2})`}
                     backgroundSize="cover"
                     backgroundPosition="center center"
-                    minHeight="400px"
+                    minHeight="700px"
+                    borderRadius="5px"
                     my={{ base: 10, md: 0 }}
                   />
                   <Box display="flex" alignItems="center" px={10}>
-                    <Text fontSize="1.7em" color="gray">
+                    <Text fontSize="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_3">
-                        <strong>
-                          1 in 3 believe their children will succeed at farming
-                        </strong>{" "}
-                        and 10% believe they should avoid it. Most said their
-                        children will succeed only if they supplement their
-                        farming income, or if things change.
+                      Communities in Burkina Faso and Ethiopia told us 
+                      over and over again that climate change was harming 
+                      their communities. <b>Almost 90% of respondents identified 
+                      changes due to climate change</b> in at least one of these areas: 
+                      the timing and duration of rainy seasons, the volume of rainfall, 
+                      the frequency of flooding, average temperatures and the type and quantity 
+                      of food available since their youth. What struck us was this: the majority 
+                      of respondents told us that farming and raising livestock is more difficult 
+                      today than it was in the past.
+                        
                       </Trans>
                     </Text>
                   </Box>
                   <Box display="flex" alignItems="center" px={10}>
-                    <Text fontSize="1.7em" color="gray">
+                    <Text fontSize="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_4">
-                        <b>Almost 75% of respondents</b> reported having
-                        concerns about the safety and quality of the food that
-                        is available to their families.
+                      It’s clear that climate change is affecting rural farmers
+                       — but rural farmers haven’t given up. <b>An average of 70% of respondents told us 
+                        they are taking steps to mitigate the impact in their communities and on their livelihoods.</b> 
+                        They are planting native plants and trees, adopting methods to find and preserve water, 
+                        taking steps to prevent natural disasters, and working together to improve farming for everyone. 
                       </Trans>
                     </Text>
                   </Box>
@@ -119,22 +236,30 @@ function Summary() {
                     bg={`url(${photo1})`}
                     backgroundSize="cover"
                     backgroundPosition="center center"
-                    minHeight="400px"
+                    minHeight="700px"
+                    borderRadius="5px"
                     my={{ base: 10, md: 0 }}
                   />
                   <Box
-                    bg={`url(${photo3})`}
+                    bg={`url(${photo4})`}
                     backgroundSize="cover"
                     backgroundPosition="top center"
-                    minHeight="400px"
+                    minHeight="700px"
+                    borderRadius="5px"
                     my={{ base: 10, md: 0 }}
                   />
-                  <Box display="flex" alignItems="center" px={10}>
-                    <Text fontSize="1.7em" color="gray">
+                  <Box display="flex" alignItems="center" px={5}>
+                    <Text fontSize="1.4em" color="gray" textAlign="justify">
                       <Trans i18nKey="SUMMARY_P_5">
-                        <b>More than 90% of callers</b> felt there was something
-                        they could do in their community to cope with climate
-                        change.
+                        Remarkably, <b>96% of participants in both countries agreed that it was important 
+                        to take action to protect biodiversity.</b> 
+                        Rural farmers in both countries believe that the most effective 
+                        approach to increase biodiversity is to promote and support more 
+                        nature-friendly farming and livestock practices and to enable farmers 
+                        to earn income by protecting and restoring biodiversity. But they want 
+                        their governments to assist them in climate-change adaptation. Highest 
+                        on their priority list? The improvement of water supply through irrigation 
+                        and support for protecting nature and planting native trees.
                       </Trans>
                     </Text>
                   </Box>
@@ -151,7 +276,7 @@ function Summary() {
           International Fund for Agricultural Development
         </div>
       </Box>
-      <Box position={"relative"} bg="#edf2f7">
+      {/* <Box position={"relative"} bg="#edf2f7">
         <Container maxW={"7xl"} zIndex={10} position={"relative"}>
           <Stack direction={{ base: "column", lg: "row" }}>
             <Stack
@@ -162,7 +287,7 @@ function Summary() {
               <Box mb={{ base: 8, md: 20 }}>
                 <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={10}>
                   <SummaryItem
-                    heading={"4"}
+                    heading={"2"}
                     text={<strong>{t("Countries")}</strong>}
                   >
                     <Box
@@ -176,8 +301,8 @@ function Summary() {
                     </Box>
                   </SummaryItem>
                   <SummaryItem
-                    heading={"6"}
-                    text={<strong>{t("Radio stations")}</strong>}
+                    heading={"7"}
+                    text={<strong>{t("Radio Stations")}</strong>}
                   >
                     <Box
                       height="180px"
@@ -190,10 +315,10 @@ function Summary() {
                     </Box>
                   </SummaryItem>
                   <SummaryItem
-                    heading={"3"}
+                    heading={"21"}
                     text={
                       <Trans i18nKey="SUMMARY_P_6">
-                        <strong>Episodes</strong> per station
+                        <strong>Original Episodes</strong>
                       </Trans>
                     }
                   >
@@ -208,8 +333,8 @@ function Summary() {
                     </Box>
                   </SummaryItem>
                   <SummaryItem
-                    heading={"3,494"}
-                    text={<strong>{t("Total callers")}</strong>}
+                    heading={"14,356"}
+                    text={<strong>{t("Respondents")}</strong>}
                   >
                     <Box
                       height="180px"
@@ -222,10 +347,10 @@ function Summary() {
                     </Box>
                   </SummaryItem>
                   <SummaryItem
-                    heading={"11,854"}
+                    heading={"122,529"}
                     text={
                       <Trans i18nKey="SUMMARY_P_7">
-                        <strong>Total responses</strong> to questions
+                        <strong>Poll Responses</strong>
                       </Trans>
                     }
                   >
@@ -240,10 +365,10 @@ function Summary() {
                     </Box>
                   </SummaryItem>
                   <SummaryItem
-                    heading={"2,648"}
+                    heading={"9,317"}
                     text={
                       <Trans i18nKey="SUMMARY_P_8">
-                        <strong>Audio messages</strong> left
+                        <strong>Audio Comment</strong>
                       </Trans>
                     }
                   >
@@ -291,7 +416,7 @@ function Summary() {
             </Stack>
           </Stack>
         </Container>
-      </Box>
+      </Box> */}
     </>
   );
 }

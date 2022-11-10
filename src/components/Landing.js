@@ -12,7 +12,7 @@ function Landing() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {aboutPageVisible ? (
         <About />
       ) : (

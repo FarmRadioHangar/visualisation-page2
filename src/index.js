@@ -7,6 +7,11 @@ import reportWebVitals from "./reportWebVitals";
 import theme from "./theme";
 import { ChakraProvider } from "@chakra-ui/react";
 import { initReactI18next } from "react-i18next";
+import "./font/BebasBold.woff2";
+import "./font/BebasBook.woff2";
+import "./font/BebasRegular.woff2";
+import "./font/BebasLight.woff2";
+
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -16,20 +21,22 @@ i18n.use(initReactI18next).init({
         French: "Français",
         // Hero
         HERO_INTRO_1:
-          "We asked small-scale farmers in four countries for their perspectives on how to create equitable, sustainable, and productive food systems for all.",
+          "We asked rural people in Burkina Faso and Ethiopia about climate change: how it’s impacting them; what changes they’ve made on their farms; and what governments can do to support the most vulnerable when it comes to adapting to climate change.",
         HERO_INTRO_2:
           "Click on the floating bubbles and icons to listen to their voices.",
         // About page
         ABOUT_P_1:
-          "Over the course of three weeks in June 2021, and in partnership with IFAD, World Vision Canada, and the Food Security Policy Group, Farm Radio International gathered thousands of small-scale farmers’ and other rural peoples’ perspectives on how to create equitable, sustainable, and productive food systems.",
+          "In October 2022,  Farm Radio International, in partnership with IFAD, asked rural people in Burkina Faso and Ethiopia how climate change is impacting them and how they’ve changed their practices to keep up.",
         ABOUT_P_2:
-          "The goal: to bring farmers’ voices to the global conversation about food systems to speak for themselves.",
+          "The goal: bring the voices of rural farmers to the global conversation on climate change ahead of COP27.",
+        ABOUT_P_2i:
+          "Thousands of people responded to the call, sharing the work their communities have done on climate change – and what support is needed most.",
         ABOUT_P_3:
           "Radio is accessible, and reaches people everywhere. And with mobile phones, it has even more power.",
         ABOUT_P_4:
-          "We worked with six stations in Burkina Faso, Ghana, Tanzania, and Uganda to create 18 original episodes of radio programming, complete with mobile phone based listener polling. On air, broadcasters invited local experts, farmers, and guests to speak their mind and share their knowledge. Off air, we engaged listeners to join in the discussion with their own thoughts.",
+          "We worked with seven stations in Burkina Faso, and Ethiopia to create 21 original episodes of radio programming, complete with mobile phone-based listener polling. In other words “on air dialogues.” On air, broadcasters invited local experts, farmers, and guests to speak their mind and share their knowledge. Off air, we engaged listeners to join in the discussion with their own thoughts.",
         ABOUT_P_5:
-          "We asked listeners: Which issues impact farmers most? How do barriers and opportunities play out differently for female and male farmers? What is the future of food systems? And what needs to happen to make life better for farming families?",
+          "We wanted to know: What changes have had the biggest impact on their farms? How have their communities taken action in response to climate change? What kind of information and advice is needed to help them adapt? And what message did they want to send to governments and global leaders?",
         ABOUT_P_9:
           "“The summit will only be effective at setting out the pathway to 2030 if we successfully leverage the collective knowledge and experience of the broadest possible cross-section of the population.” – UN Special Envoy Dr. Agnes Kalibata",
         ABOUT_P_10:
@@ -42,21 +49,25 @@ i18n.use(initReactI18next).init({
           "The Canadian Food Security Policy Group is a network of Canadian development and humanitarian organizations with expertise in global food systems, and food security in the Global South.",
         // Summary
         SUMMARY_P_1:
-          "We asked small-scale farmers to tell us their thoughts and concerns about food systems",
+          "What we learned",
         SUMMARY_P_2:
-          "Nearly 3,500 people in Burkina Faso, Ghana, Tanzania, and Uganda called in to express their perspectives, concerns, and experiences in 2,600+ audio messages. Here’s what they had to say.",
+          "Using call-in polling in combination with radio programs, we asked small-scale farmers to tell us their thoughts and concerns about climate change. Here’s what they had to say:",
         RESULTS_QUESTION_1:
-          "If you think about the safety and quality of the food your family eats, are you most worried that:",
+          "Worldwide, there have been changes in the climate. What kind of changes have you seen in your area since you were a child?",
         RESULTS_QUESTION_2:
-          "When food is scarce, what is the first thing your family does to cope?",
+          "What change in the environment has had the biggest impact on your farming?",
         RESULTS_QUESTION_3:
-          "Which of the following five options would give you the most success as a farmer:",
+          "How is farming or livestock keeping now compared to the past?",
         RESULTS_QUESTION_4:
-          "What will farming look like in the future for today’s children?",
+          "What types of changes have you and your family made on your own farm?",
         RESULTS_QUESTION_5:
-          "Where would you turn to for information to help you cope with future threats to your family and livelihood?",
+          "Has your community taken action in response to climate change?",
         RESULTS_QUESTION_6:
-          "Climate change can have a big effect on farming. Which of the following would help you as a farmer to best deal with changes in the weather?",
+          "What is the most important kind of information and advice that farmers need to adapt to changes in the environment?",
+        RESULTS_QUESTION_7:
+          "What can the government do to help farmers like you adapt to these changes?",
+        RESULTS_QUESTION_8:
+          "What is the best way to protect or increase the diversity of plants, animals, insects, fish and other forms of life?",
       },
     },
     fr: {
@@ -70,7 +81,7 @@ i18n.use(initReactI18next).init({
         "Report coming soon": "Rapport à venir",
         "Download the report": "Télécharger le rapport",
         // Hero
-        "Rural voices": "Voix rurales",
+        "Listening to Rural People 2022": "Voix rurales",
         HERO_INTRO_1:
           "Nous avons demandé aux agriculteurs(trices) de petites exploitations dans quatre pays leurs points de vue sur la manière de créer des systèmes alimentaires équitables, durables et productifs pour tous.",
         HERO_INTRO_2:
@@ -141,7 +152,7 @@ i18n.use(initReactI18next).init({
         Report: "Rapport",
         RESULTS_P_1:
           "Vous voulez une analyse approfondie des résultats?",
-        "Download full report": "Télécharger (intégrale)",
+        "Download Report": "Télécharger",
         "Download highlights": "Télécharger (points saillants)",
         RESULTS_QUESTION_1:
           "Si vous pensez à la sûreté et à la qualité des aliments que mangent votre famille, vous êtes préoccupé par le fait que : ",
@@ -155,6 +166,11 @@ i18n.use(initReactI18next).init({
           "Vers qui vous tourneriez-vous pour obtenir des informations pour vous aider à faire face aux futures menaces pour votre famille et vos moyens de subsistance ?",
         RESULTS_QUESTION_6:
           "Le changement climatique peut avoir un impact important sur l'agriculture. Lequel des éléments suivants vous aiderait, en tant qu'agriculteur, à mieux faire face à ces changements climatiques ?",
+        RESULTS_QUESTION_7:
+          "Climate change can have a big effect on farming. Which of the following would help you as a farmer to best deal with changes in the weather?",
+        RESULTS_QUESTION_8:
+          "Climate change can have a big effect on farming. Which of the following would help you as a farmer to best deal with changes in the weather?",
+        
         "Burkina Faso": "Burkina Faso",
         Ghana: "Ghana",
         Tanzania: "Tanzanie",

@@ -13,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 import ifadLogo from "../img/ifad-logo.svg";
 import fidaFr from "../img/fida_fr.png";
-import farmRadioLogo from "../img/logo-farm-radio-international.png";
+import farmRadioLogo from "../img/FRI_logo_BI.png";
 import farmRadioLogoFr from "../img/FRI_fr.png";
 import wvLogo from "../img/wv-logo.jpg";
 import wvLogoFr from "../img/wv-mondiale-logo.png";
@@ -65,99 +65,51 @@ function Footer() {
       color={useColorModeValue("gray.700", "gray.200")}
     >
       <Container as={Stack} maxW={"7xl"} py={10}>
-        <Grid templateColumns={{ sm: "1fr 1fr", md: "3fr 1fr" }} spacing={8}>
-          <GridItem spacing={6} pb={8} colSpan={{ sm: 2, md: 1 }}>
-            <Box mb={10}>
               <SimpleGrid
-                columns={{ sm: 2, lg: 4 }}
-                spacing="20px"
-                mr={[0, null, 10]}
+                columns={{ sm: 2, lg: 3 }}
+                spacing="0px"
+                // mr={[0, null, 10]}
+                alignItems={"center"}
               >
-                <Box
-                  maxWidth={200}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  p={6}
-                >
-                  <Link
-                    isExternal
-                    href="https://www.un.org/en/food-systems-summit"
+                <Box>
+
+                  <SimpleGrid
+                    columns={{ sm: 1, lg: 2 }}
+                    spacing="10px"
+                    mr={[0, null, 10]}
+                    alignItems={"center"}
                   >
-                    <Img src={logo} />
-                  </Link>
+                    <Box
+                      maxWidth={100}
+                      // display="flex"
+                      alignItems="left"
+                      justifyContent="left"
+                      p={0}
+                    >
+                      <Link isExternal href="https://www.ifad.org">
+                        <Img src={'fr' === language ? fidaFr : ifadLogo} style={{ width: '300px' }} />
+                      </Link>
+                    </Box>
+
+                    <Box
+                      maxWidth={400}
+                      display="flex"
+                      alignItems="center"
+                      justifyContent="center"
+                      pt={3}
+                    >
+                      <Link isExternal href="https://farmradio.org">
+                        <Img src={'fr' === language ? farmRadioLogo : farmRadioLogo} />
+                      </Link>
+                    </Box>
+
+                  </SimpleGrid>
+
                 </Box>
-                <Box
-                  maxWidth={200}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  p={6}
-                >
-                  <Link isExternal href="https://farmradio.org">
-                    <Img src={'fr' === language ? farmRadioLogoFr : farmRadioLogo} />
-                  </Link>
-                </Box>
-                <Box
-                  maxWidth={200}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  p={6}
-                >
-                  <Link isExternal href="https://www.ifad.org">
-                    <Img src={'fr' === language ? fidaFr : ifadLogo} style={{ width: '300px' }} />
-                  </Link>
-                </Box>
-                <Box
-                  maxWidth={200}
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  p={6}
-                >
-                  <Link isExternal href="https://www.worldvision.ca">
-                    <Img src={'fr' === language ? wvLogoFr : wvLogo} style={{ mixBlendMode: "multiply" }} />
-                  </Link>
-                </Box>
+                
+                
               </SimpleGrid>
-            </Box>
-            <Text fontSize={"xs"}>© 2021 All rights reserved</Text>
-          </GridItem>
-          <GridItem pb={8} d="flex" alignItems="center">
-            <Stack align={"flex-center"}>
-              <Stack direction={"row"} align={"center"} spacing={2}>
-                <ExternalLinkIcon mx="2px" />
-                <Link
-                  isExternal
-                  href="https://cooperation.ca/what-we-do/canadian-food-security-policy-group/"
-                >
-                  {t("Canadian Food Security Policy Group")}
-                </Link>
-              </Stack>
-              <Stack direction={"row"} align={"center"} spacing={2}>
-                <ExternalLinkIcon mx="2px" />
-                <Link isExternal href="https://sdgs.un.org/">
-                  {t("UN Sustainable Development Goals")}
-                </Link>
-              </Stack>
-              {/*
-              <Link href={"#"}>The value chain</Link>
-              <Stack direction={"row"} align={"center"} spacing={2}>
-                <Link href={"#"}>Learning resources</Link>
-                <Tag
-                  size={"sm"}
-                  bg={useColorModeValue("green.300", "green.800")}
-                  ml={2}
-                  color={"white"}
-                >
-                  New
-                </Tag>
-              </Stack>
-              */}
-            </Stack>
-          </GridItem>
-        </Grid>
+        <Text fontSize={"xs"} pt={5}>© 2022 All rights reserved</Text>
       </Container>
     </Box>
   );
