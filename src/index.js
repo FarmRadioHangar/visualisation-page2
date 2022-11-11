@@ -26,7 +26,7 @@ i18n.use(initReactI18next).init({
           "Click on the floating bubbles and icons to listen to their voices.",
         // About page
         ABOUT_P_1:
-          "In October 2022,  Farm Radio International, in partnership with IFAD, asked rural people in Burkina Faso and Ethiopia how climate change is impacting them and how they’ve changed their practices to keep up.",
+          "In October 2022,  Farm Radio International, in partnership with IFAD, asked rural people in Burkina Faso and Ethiopia how climate change is impacting them and how they’ve changed their practices to keep up. This research was made possible by financial support from IFAD and Global Affairs Canada.",
         ABOUT_P_2:
           "The goal: bring the voices of rural farmers to the global conversation on climate change ahead of COP27.",
         ABOUT_P_2i:
@@ -40,13 +40,13 @@ i18n.use(initReactI18next).init({
         ABOUT_P_9:
           "“The summit will only be effective at setting out the pathway to 2030 if we successfully leverage the collective knowledge and experience of the broadest possible cross-section of the population.” – UN Special Envoy Dr. Agnes Kalibata",
         ABOUT_P_10:
-          "Farm Radio International is a Canadian international non-governmental organization uniquely focused on improving the lives of rural Africans through the world’s most accessible communications tool, radio, in combination with ICTs.",
+          "This research was led by Farm Radio International in partnership with  the International Fund for Agricultural Development (IFAD)  ahead of the 2022 United Nations Climate Change Conference, COP27. Farm Radio International would like to thank all those who made this report possible. We express our deep gratitude to all the farmers and broadcasters who shared their time and information with us. This research was made possible by financial support from IFAD and Global Affairs Canada.",
         ABOUT_P_11:
-          "IFAD is an international financial institution and a United Nations specialized agency based in Rome – the United Nations food and agriculture hub. IFAD invests in rural people, empowering them to reduce poverty, increase food security, improve nutrition and strengthen resilience.",
+          "Farm Radio International is an international non-governmental organization uniquely focused on improving the lives of rural Africans through the world’s most accessible communications tool, radio, in combination with ICTs.",
         ABOUT_P_12:
-          "World Vision Canada is a Christian relief, development and advocacy organization working to create lasting change in the lives of children, families and communities to overcome poverty and injustice.",
+          "IFAD is an international financial institution and a United Nations specialized agency based in Rome – the United Nations food and agriculture hub. IFAD invests in rural people, empowering them to reduce poverty, increase food security, improve nutrition and strengthen resilience.",
         ABOUT_P_13:
-          "The Canadian Food Security Policy Group is a network of Canadian development and humanitarian organizations with expertise in global food systems, and food security in the Global South.",
+          "World Vision Canada is a Christian relief, development and advocacy organization working to create lasting change in the lives of children, families and communities to overcome poverty and injustice.",
         // Summary
         SUMMARY_P_1:
           "What we learned",

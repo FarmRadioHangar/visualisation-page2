@@ -25,11 +25,11 @@ function About() {
 
   return (
     <>
-      <Box bg={`linear-gradient(0deg, rgb(76 159 56 / 75%), rgb(76 159 56 / 12%)),url(${hero})`} 
+      <Box bg={`linear-gradient(0deg, rgb(76 159 56 / 85%), rgb(12 32 7 / 72%)),url(${hero})`} 
             backgroundSize="cover"
             backgroundPosition="center top"
-      >
-        <Container maxW={"8xl"} zIndex={10} position={"relative"}>
+      > 
+        <Container maxW={"6xl"} zIndex={10} position={"relative"}>
           <Header bg={"transparent"}/>
           <Stack direction={{ base: "column", lg: "row" }}>
             <Stack
@@ -80,7 +80,7 @@ function About() {
         </Container>
       </Box>
       <Box>
-        <Container maxW={"7xl"} zIndex={10} mt={8} py={10}>
+        <Container maxW={"6xl"} zIndex={10} mt={8} py={10}>
           <Stack direction={{ base: "column", lg: "row" }}>
             <Stack m={8}>
               <Box display="flex" alignItems="center" justifyContent="center">
@@ -124,7 +124,7 @@ function About() {
         </Container>
       </Box>
       <Box bg="#edf2f7" py={20} my={10}>
-        <Container maxW={"7xl"} zIndex={10}>
+        <Container maxW={"6xl"} zIndex={10}>
           <Heading mb={7} fontSize={"5xl"} fontFamily="BebasR" textTransform={"uppercase"}>
             {t("How it works - Listener polling")}
           </Heading>
@@ -161,19 +161,20 @@ function About() {
         </Container>
       </Box>
       <Box>
-        <Container maxW={"7xl"} zIndex={10} py={10} mb={10}>
+        <Container maxW={"6xl"} zIndex={10} py={10} mb={10}>
           <Box>
             <Heading fontSize={"5xl"} fontFamily="BebasR" mb={7} textTransform={"uppercase"}>
               {t("Acknowledgements")}
             </Heading>
+            <Text fontFamily={"heading"} fontSize={"xl"} fontWeight={300} mb={10}>{t("ABOUT_P_10")}</Text>
             <Heading size="lg" mb={2} fontFamily="BebasB">
               {t("Farm Radio International")}
             </Heading>
-            <Text fontFamily={"heading"} fontSize={"xl"} fontWeight={300} mb={10}>{t("ABOUT_P_10")}</Text>
+            <Text fontFamily={"heading"} fontSize={"xl"} fontWeight={300} mb={10}>{t("ABOUT_P_11")}</Text>
             <Heading size="lg" fontFamily="BebasB" mb={2}>
               {t("International Fund for Agriculture Development")}
             </Heading>
-            <Text fontFamily={"heading"} fontSize={"xl"} fontWeight={300} mb={10}>{t("ABOUT_P_11")}</Text>
+            <Text fontFamily={"heading"} fontSize={"xl"} fontWeight={300} mb={10}>{t("ABOUT_P_12")}</Text>
             
           </Box>
         </Container>
